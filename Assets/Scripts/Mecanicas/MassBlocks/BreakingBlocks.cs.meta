@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 40760ea90b1f2cd42961d162709eaf53
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - platforms: {instanceID: 0}
+  - respawn: {fileID: 400000, guid: 09c6e205ccd86394aa49c122dada40ae, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

@@ -1,0 +1,68 @@
+Collider:
+Collider - Box Collider, Mesh Collider e etc. Precisa de um Rigidbody
+Quando um objeto colide com o outro ele gera um OnCollisionEnter, OnCollisionStay, OnCollisionExit. Enter é quando os objetos começam a se colidir, stay é quando eles estão na colisão e exit é quando eles deixam de se colidir.
+Para colocar um collider em um objeto mais complexo, é sugerível usar uma familia de colliders do que o mesh collider em si, pois o mesmo irá diminuir a performance.
+
+Trigger:
+Um collider quando está com o "Is Trigger" ligado.
+Ele faz eventos acontecerem mesmo sem nada fisíco estar na cena.
+Gera os mesmos eventos que um Collider normal (OnTriggerEnger, OnTriggerStay, OnTriggerExit)
+
+Rigidbody:
+Um rigidbody é um objeto que começa a ser afetado pela fisíca.
+Ele ganha propriedades como:
+"Mass" - Sua massa definirá como irá reagir com outro objeto. Um objeto com uma massa maior reagirá menos que um objeto de massa menor.
+"Drag" - O quanto a velocidade linear irá diminuir ou aumentar. Seria como a resistencia do ar.
+"Drag Angular" Se irá girar mais rapido ou mais lento na colisão.
+"Gravity" - Gravidade, setada em -9,81. Pode ser modificada. Edit - Project Settings - Physical Settings
+"Is Kinematic" - Se um objeto será afetado quando outro colide. O objeto afetará outros, sem ser afetado.
+"Interpolate" - Apenas para resolver certos problemas de objeto tremido.
+"Collision Detection" - Use Discrete, apenas mude para outro caso sejam objetos rápidos.
+"Constraints" - Freeze Position ou Rotation servem para "lockar" a posição e a rotação do objeto colisor. Caso uma caixa caia sobre uma cama, ela poderá girar para cair no chão. Caso seus eixos estejam habilitados, ele não irá girar.
+
+AddForce:
+Usado para criar uma força sobre o objeto. Ele necessita de um parametro e outro opcional:
+Um Vector3 transform & magnitude. O primeiro irá dizer para onde a força aplicada levará o objeto, magnitude é a intensidade dessa força;
+(rigidbody.UseGravity, ativará a gravidade.)
+ForceMode será usado para mudanças que envolvem ou não a massa. Force, Acceleration, Velocity Change e Impulse. Essas forças são enfraqucidas com a mudança no "Drag".
+
+AddTorque:
+Funciona da mesma maneira que o addforce, entretanto, ele aplica uma rotação sobre o objeto. Ele necessita de um parametro e outro opcional (Sendo que o opcional é o mesmo que o AddForce e elas são afetadas com o Drag Angular.
+
+Physical Materials:
+Usado para controlar como o objeto reage e como reage com os outros.
+Dynamic Friction: O quanto de fricção existe no objeto que está se movimentando.
+Static Friction: O quanto de força precisa para mover um objeto de sua posição estática.
+Bounciness: O quanto o objeto quica.
+Combine Settings: Como irão responder com outro objeto
+Friction Direction: Permite controlar a fricção do objeto através de um eixo em particular.
+Os outros irão ajudar a controlar a friçção. Quanto maior o numero colocado, maior o controle.
+Você pode aplicar Physical Material colocando como material no collider.
+
+Joints:
+Fixed, Spring e Hinge.
+
+Fixed funcionam de maneira parecida com parentesco
+Spring tentam fazer o mesmo movimento que o objeto ligado
+Hinge é perfeito para portas dentre outros. Caso coloque algum numero no eixo e aplique uma força, a porta continuará ligada ao lugar. Entretanto existe o Break Force e Break Torque que dizem o quanto de força é necessaria para quebrar essa Joint.
+
+OnCollisionEnter:
+Esse script é aplicado a uma bola (ou uma magia)
+publiclic class DestroyCubes : MonoBehaviour
+{
+    void OnCollisionEnter (Collision col) //col é a variavel de colisão
+    {
+        if(col.gameObject.name == "prop_powerCube") //se a varíavel de colisão for igual ao objeto da unity (no caso, madeira ou metal)
+        {
+            Destroy(col.gameObject);//o objeto que está com esse script destruirá o que colidiu. (a magia destruirá o objeto)
+        }
+    }
+
+Raycasting:
+Modo para prever colisores em uma linha.
+Sintaxe do RayCasting: 
+Physics.Raycast(Vector3 origin[1] - ponto de origem -, Vector3 direction[1] - direção do lançamento -, RaycastHit hitInfo - armazena os colliders que irá interagir,. E há dois opcionais: float distance, que é a distancia do raio, e int LayerMask, que seriam que objetos seriam ignorados no raio.
+
+[1] = pode ser resumido em: Ray myRay = new Ray (Vector3 origin, Vector3 direction) e na sintaxe ficara o nome da variavel substituindo ambos.
+
+

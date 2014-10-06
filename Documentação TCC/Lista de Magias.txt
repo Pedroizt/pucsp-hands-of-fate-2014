@@ -1,0 +1,93 @@
+Ar
+Fogo
+Agua
+Terra
+Gelo
+Eletricidade
+Folhas
+Vazio
+Manipulação Corpórea
+Manipulação Espaço-Tempo
+Luz
+
+Utilidade:
+
+Elemento I: Ar
+Criar Impactos 
+Criar Tornados, usando para carregar coisas
+Desoxigenação - Remover todo o ar existente do local. Fogo não pode queimar sem ar.
+Encontrado: Você começa com ele.
+
+Elemento II: Fogo
+Queimar ou derreter coisas
+Fogo se torna mais forte. Vermelho > Azul > Verde. Acontece com o aumento ou a mistura de algum elemento quimico
+Encontrado: Iron Ruins
+
+Elemento III: Agua:
+Molhar, apagar o fogo
+Criação de agua
+Em conjunto com fogo e impacto, quebra metal
+Encontrado em: Subterraneo Eras (Final)
+
+Elemento IV: Terra:
+Modificação do solo
+Desidratação, remoção de agua via areia.
+Encontrado: Light Temple (Final)
+
+Elemento V: Gelo
+Criação de objetos de gelo
+Encontrado: Iron Ruins
+
+Elemento VI: Eletricidade
+Eletrificar, energizar.
+Encontrado: Dark Forest (Final) //DELETADO
+
+Elemento VII: Folhas:
+Aumento de oxigênio na atmosfera. Três tipos de árvores
+Talvez: Acelerar o crescimento de plantas
+Encontrado: Dark Forest (Final)
+
+Elemento VIII: Vazio:
+Apagar um objeto do jogo
+Encontrado: Light Temple (Final II)
+
+Elemento IX: Modificação Córporea
+Aumentar, diminuir o peso
+Se tornar menor
+Se tornar mais rapido
+Encontrado: Eras (Final)
+
+Elemento X: Veneno
+Corroer plantas, destruir certos objetos
+Encontrado: Light Temple (Final I) // DELETADO
+
+Elemento XI: Luz
+Criar luz de diversos tipos
+Encontrado: Iron Ruins (Final)
+
+Elemento XII: Manipulação de espaço tempo.
+Parar qualquer tipo de movimento de objetos
+Mudar a rotação das fases da lua
+Encontrado: Após a destruição das Iron Ruins com vácuo.
+
+Resumo:
+
+Eras:
+Ar (Inicio)
+Mudança Corporal (Final)
+Água (Secreto, Subterrâneo)
+
+Iron Ruins:
+Gelo
+Fogo
+Luz (Final)
+Espaço-Tempo (Destruição)
+
+Dark Forest:
+Folhas
+Eletricidade (Final)
+
+Light Temple:
+Terra
+Veneno (Final Parte I)
+Vácuo (Final Parte II)

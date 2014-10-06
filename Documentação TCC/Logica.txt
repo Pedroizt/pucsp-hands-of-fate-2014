@@ -1,0 +1,6 @@
+Lógica:
+
+Criar switches ativadas por um botão.
+Cada switch terá uma bool que estará setada em false
+Ao apertar o botão ela será setada em true
+Quando as 4 bools estiverem setadas em true, o objeto se destruirá

@@ -1,0 +1,38 @@
+Luz (Macaco) que é na verdade é a magia da arvore, é necessario encontrar ele
+Encontrar bananas para dar pra ele, quest
+Monstro gigante que na verdade é uma ilusão
+Arvores falsas, sem colisão
+coletar pedaços de coisas
+Magia da luz, feita para descobrir coisas
+Sons ambientes, ao chegar próximo de certos lugares, eles aumentam
+Placas mentirosas
+
+Encontrar o macaco em sétimo lugar
+O ultimo estará um inimigo MUITO pequeno, após derrotar, o macaco vira a magia da arvore, mas para isso vc precisa ter bananas.
+Dica: "As ilusões e as mentiras sempre existirão, para limpar os seus pecados, tenha certeza de ter rezado para a estátua da floresta"
+
+o penultimo encontro vc encontra com a magia da modificação corporal, encolhimento.
+Dica: "Se não explorou a floresta quando era criança, não tente fazer isso agora!"
+
+o quinto encontro vc precisa da magia da luz para saber onde pisar.
+Dica: "Para seguir o caminho verdadeiro, um novo caminho feito de gelo usará"
+
+o quarto encontro, você encontra uma estatua de pedra, ele está atrás dela, destrua para conseguir as bananas.
+Dica: "Não há segredos no coração da estátua"
+
+o terceiro encontro consiste em usar a magia de gelo (Ice Cube), usar o salto nela, e encontrar com ele em cima da arvore.
+Dica: "É impossível alcançar o céu, mesmo que você pule ou tenha algo para lhe fazer pular ainda mais alto, nada encontrará no céu"
+
+o segundo encontro está atrás de arvores sem colisão, onde você pode saber disso usando a magia de luz.
+Dica: "A luz não lhe guiará pela floresta, ela não te trará a verdade, mesmo que a use entre as árvores".
+
+o primeiro encontro está dentro de uma lápide logo no inicio da floresta, é preciso destruí-la com a magia de impacto.
+Dica: "A floresta é mentirosa, não acredite no que ela diz e vá sempre adiante. Não destrua essa lápide de maneira nenhuma, não há nada que possa te interessar em uma lápide feita de pedra".
+
+
+O QUE É NECESSARIO PROGRAMAR:
+
+- Objetos sem colisão, que quando um certo objeto se aproxima, se torna invisivel.
+- Magia da arvore
+- Frases em pedras
+- Ajustar o script de modificação de lugar;

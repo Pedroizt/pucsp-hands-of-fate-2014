@@ -1,0 +1,29 @@
+"Mecanicas diferentes que juntas tornam uma nova mecanica"
+
+Hands of Fate, mecânicas atuais:
+
+Mecanica de combinação de numeros: Sihir usa diversos numeros do teclado para criar uma magia.
+Mecanica de sensibiliade a dor: Ao Sihir sofrer algum dano, sua dor aumenta, sua velocidade diminui e quando chega no aximo, ela desmaia.
+Mecanica de destruição: Via combinação de números, com um certo tipo de magia 
+Mecanica de projéteis: Via combinação de números, é possível soltar projéteis em uma direção.
+Mecânica da criação de objetos: Via combinação de números, é possível criar objetos feitos de gelo que possuem varias utilidades
+Mecanica de modificação corporal: Via combinação de números, você pode encolher, aumentar a própria velocidade, ficar mais pesado, saltar mais alto.
+Mecanica de iluminação: Enxergar coisas escondidas.
+Mecanica de switches: Existem switches que apenas ativá-las é o suficiente, outras terão que 
+
+
+Iron Ruins - Objetivo Final: Coletar as 4 partes da armadura;
+Onde Conseguir o ultimo pedaço? Ultima sala, usar o salto para chegar na parte de cima da sala, destruir a pedra, ativar a switch. Voltar a sala 1, 2 e 3 e ativar as switches remanescentes. Criando uma plataforma embaixo da switch principal onde deve ser usado a bola de gelo, atravessar o lugar com a ponte de gelo e conseguir o ultimo pedaço. Para isso você precisa da magia de gelo.
+
+Onde Conseguir o terceiro pedaço?
+Pisar na plataforma, enquanto ela se movimenta, usar a magia de diminuição para passar pelas frestas, destruição de rochas e diminuiçao para desviar de objetos caindo. No final, você consegue a magia de fogo, volte para a sala das estalactites caindo, destrua o cristal e consiga a magia de gelo. Volte a sala do fogo e passe para o outro lado com a magia de gelo e consiga o terceiro pedaço.
+
+Onde Conseguir o segundo pedaço?
+Atravessar todo o labirinto usando a magia de modificação corporal, deixando a massa corporal menor e atravessando todo o terreno e conseguindo o segundo pedaço. Rotacione a sala para ir para a terceira sala.
+
+Onde Conseguir o primeiro pedaço?
+Entrar na primeira sala, quebrar usando a magia de modificação corporal com mais peso. Usar o salto, ativar a switch na parede. Uma escada de pedra surge (por dentro dela tem uma parte para rotacionar as grades da sala). Usar a magia de gelo (que você só consegue após a magia de fogo), para poder passar pelo lado com agua e conseguir o primeiro pedaço
+
+Todas as salas possuem um lugar inalcançável com um outro tipo de botão, quando os quatro forem ativados, uma plataforma sera ativada na sala 4 onde será possivel usar 
+
+

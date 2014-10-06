@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 7dba85c613528e84e973e6cacdf02093
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - _Impacto: {fileID: 19800008, guid: 01603b7302bd34f379cc7d1ef6b55a15, type: 2}
+  - _BoladeFogo: {fileID: 19800010, guid: db76c8bb5f6ac401f9922a0618d60004, type: 2}
+  - _Acido: {fileID: 19800000, guid: 3fb495b668c2f4949ae90bc73fc4add0, type: 2}
+  - _Raiodovazio: {fileID: 19800008, guid: 656289dc576d94aef8ea0bf441ffb2f9, type: 2}
+  - _Agua: {fileID: 19800000, guid: 7f0d6f95be4f84fe5bf3cfd3ffb7dd12, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
