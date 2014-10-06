@@ -1,0 +1,50 @@
+História
+- Ideias e Conclusão
+- Roteiro
+- Criação ou em parte da mitologia do jogo
+- Inserir dentro do jogo
+
+Personagens
+- Ideias e Conclusão
+- Concepts
+- Parametrização
+- Modelagem
+- Abertura de Malha
+- Texturização
+- Rigging
+- Animações
+- Inserção na Engine
+- Dublagem
+
+
+Programação
+- Mecânica Geral
+- Eventos Geral
+- Inteligência
+
+Música
+- Ideias e Conclusão
+- Composição
+- Inserção na Engine
+- Sons
+
+Cenários
+- Ideias e Conclusão
+- Concepts
+- Modelagem de Elementos
+- Inserção na Engine
+- Animações
+
+Testes
+- Programação
+- Animações
+- Músicas
+- Eventos
+
+EXTRA:
+- Criação do código da mecanica do jogo feito em XNA
+- Estudo da Engine
+
+
+
+

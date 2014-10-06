@@ -1,0 +1,28 @@
+Implementar vida - Feito
+Implementar redução de vida na agua - Feito
+arrumar a esfera de ar - feito
+custo da vida das magias - feito
+implementar inventario novo e fragmentos de memoria - Feitos
+implementar unlock de magias - Feito
+//implementar inimigos
+implementar guias
+implementar sons
+
+Obs: Camera apresenta certos problemas
+Não é possivel fazer sidestep
+
+
+Hands of fate:
+o grupo
+Como tudo começou (mmo e tal)
+falar do jogo
+historia do jogo
+personagens
+concepts e logo
+influencias
+o jogo
+o que ja foi feito
+o que será feito
+conclusão
+
+

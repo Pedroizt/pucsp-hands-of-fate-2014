@@ -1,0 +1,71 @@
+Agosto:
+Criação e término do jogo: Puzzles em si, com personagem beta.
+Início do processo de criação de particulas.
+Início e término da personagem.
+Início e término da modelagem de Eras.
+Início do desenvolvimento da trilha sonora.
+
+Setembro:
+Término do processo de criação de partículas
+Texturização e Animação da Personagem
+Implementação da personagem na engine.
+Implementação das mecânicas restantes.
+Continuação no desenvolvimento da trilha sonora.
+Início e Término da modelagem das Iron Ruins e Dark Forest
+
+Outubro:
+Término no desenvolvimento da trilha sonora e implementação.
+Início e Término dos menus e abertura do jogo.
+Produção de artes, atualização do gdd.
+Finalização do jogo em si.
+CD/Poster/Flyer/Camisetas/Propagandas e etc.
+
+--------------------
+
+Visão Geral:
+
+Programação:
+Puzzles das fases (Eras, Iron Ruins, Dark Forest, Light Temple, Sky Mountain)
+Mecânica das magias.
+Implementação do personagem.
+Implementação da diminuição progressiva de força.
+Implementação dos menus
+Implmentação do audio
+Implementação das animações
+Implementação de alguma cutscene/continuação.
+Implementação do Nível de Sensibilidade de dor
+Save Point
+
+Modelagem:
+Modelar terrenos citados acima
+Texturizar terrenos citados acima
+Criação das particulas das magias
+Criação da personagem
+Animação da personagem
+Texturização da personagem
+
+Desenho:
+Criação de desenhos de interface/menus
+Parametrização dos personagens
+Artes do jogo
+Cutscenes
+Abertura
+
+Audio:
+Criação da trilha sonora
+Som ambiente
+Efeitos sonoros
+Vozes/Dublagens
+
+Outros:
+Roteiro
+GDD Conceitual
+PPT
+CD/Poster e etc.
+
+Ideia: No caso de Aurel, ele imitaria tudo que Sihir faz.
+
+
+
+
+
