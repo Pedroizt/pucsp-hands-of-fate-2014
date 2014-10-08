@@ -82,7 +82,7 @@ public class GameOverFade : MonoBehaviour
 		// If the screen is almost black...
 		if (guiTexture.color.a >= 0.95f)
 			// ... reload the level.
-			Application.LoadLevel (0);
+			Application.LoadLevel (1);
 		
 	}
 }

@@ -79,7 +79,7 @@ public class Fade : MonoBehaviour
 						// If the screen is almost black...
 						if (guiTexture.color.a >= 0.95f)
 			// ... reload the level.
-								Application.LoadLevel (1);
+								Application.LoadLevel (3);
 				
 	}
 }
