@@ -36,7 +36,7 @@ public class WaterTerrain : MonoBehaviour {
 			mb.blurAmount += 0.3f * Time.deltaTime;
 				}
 		if (InsideWater == false) {
-			Debug.Log("Teste");
+			//Debug.Log("Teste");
 						mb.blurAmount -= 0.1f * Time.deltaTime;
 				}
 	}

@@ -7,9 +7,15 @@ public class ScriptNovoJogo : MonoBehaviour {
 
 	public ParticleSystem particle;
 
-	public bool Fadeout = false;
+	public bool loading = false;
+	//public GameObject screenFader;
 
 
+
+
+	void Start()
+	{
+		}
 
 
 
@@ -30,11 +36,14 @@ public class ScriptNovoJogo : MonoBehaviour {
 
 	void OnMouseDown()
 	{
-		Fadeout = true;
-		AsyncOperation async1 = Application.LoadLevelAsync (2);
-
-
+		/*Fadeout = true;
+		AsyncOperation async1 = Application.LoadLevelAsync (2);*/
+		loading = true;
+		//screenFader.guiTexture.color = Color.Lerp(guiTexture.color, Color.black, Time.deltaTime);
 	}
+
+
+
 
 
 

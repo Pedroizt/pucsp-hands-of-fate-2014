@@ -1,9 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Imagens\Fade2.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Imagens\LoadingScreen\MenuFade.cs">
     <Files>
-      <File FileName="Assets\Imagens\ScriptNovoJogo.cs" Line="33" Column="18" />
-      <File FileName="Assets\Imagens\Fade2.cs" Line="23" Column="35" />
+      <File FileName="Assets\Imagens\ScriptNovoJogo.cs" Line="41" Column="3" />
+      <File FileName="Assets\Imagens\LoadingScreen\MenuFade.cs" Line="32" Column="4" />
+      <File FileName="Assets\Imagens\LoadingScreen\LoadScreen.cs" Line="11" Column="28" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

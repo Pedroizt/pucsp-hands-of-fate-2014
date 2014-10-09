@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Fade2 : MonoBehaviour {
 
-	public Color collor;
+	/*public Color collor;
 	private ScriptNovoJogo newgame;
 
 	// Use this for initialization
@@ -22,5 +22,5 @@ public class Fade2 : MonoBehaviour {
 		if (newgame.Fadeout == true)
 						gameObject.SetActive (true);
 	
-	}
+	}*/
 }

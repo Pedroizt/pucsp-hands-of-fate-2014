@@ -48,6 +48,8 @@
   <ItemGroup>
      <Compile Include="Assets\Imagens\CarregarJogo.cs" />
      <Compile Include="Assets\Imagens\Fade2.cs" />
+     <Compile Include="Assets\Imagens\LoadingScreen\LoadScreen.cs" />
+     <Compile Include="Assets\Imagens\LoadingScreen\MenuFade.cs" />
      <Compile Include="Assets\Imagens\Menu.cs" />
      <Compile Include="Assets\Imagens\Opening.cs" />
      <Compile Include="Assets\Imagens\Opções.cs" />
@@ -60,6 +62,7 @@
      <Compile Include="Assets\Scenes\PassSwitch.cs" />
      <Compile Include="Assets\Scenes\Rotate.cs" />
      <Compile Include="Assets\Scenes\RotateSwitch.cs" />
+     <Compile Include="Assets\Scripts\CheckLevel.cs" />
      <Compile Include="Assets\Scripts\Fragmentos\Fragmentos.cs" />
      <Compile Include="Assets\Scripts\HPThings\Enemy1.cs" />
      <Compile Include="Assets\Scripts\HPThings\Enemy2.cs" />
