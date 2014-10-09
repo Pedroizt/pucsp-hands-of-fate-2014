@@ -42,7 +42,7 @@ function LateUpdate () {
 				distance -=  hit.distance;
 		}
  
-        var position = rotation * Vector3(0.0, 0.0, -distance) + target.position;
+        var position = rotation * Vector3(0.0, 1.0, -distance) + target.position;
  
         transform.rotation = rotation;
         transform.position = position;

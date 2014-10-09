@@ -5,7 +5,7 @@ public class SpellCast : MonoBehaviour {
 
 
 
-
+	public Transform cameratarget;
 	public string espaço = "";
 	public string selo;
 
@@ -52,6 +52,8 @@ public class SpellCast : MonoBehaviour {
 			
 			
 				}
+
+	
 
 
 
@@ -135,6 +137,12 @@ public class SpellCast : MonoBehaviour {
 	Destroy (obj,1);
 	
 }*/
+
+	void FixedUpdate()
+	{
+		gameObject.transform.rotation = cameratarget.transform.rotation;
+		
+	}
 
 	
 }
