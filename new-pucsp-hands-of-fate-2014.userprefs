@@ -1,10 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Imagens\LoadingScreen\MenuFade.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Mecanicas\Criação de Magias\SpellCast.cs">
     <Files>
-      <File FileName="Assets\Imagens\ScriptNovoJogo.cs" Line="41" Column="3" />
-      <File FileName="Assets\Imagens\LoadingScreen\MenuFade.cs" Line="32" Column="4" />
-      <File FileName="Assets\Imagens\LoadingScreen\LoadScreen.cs" Line="11" Column="28" />
+      <File FileName="Assets\Scripts\Mecanicas\Criação de Magias\SpellCast.cs" Line="151" Column="1" />
+      <File FileName="Assets\Imagens\LoadingScreen\MenuFade.cs" Line="1" Column="1" />
+      <File FileName="Assets\Imagens\ScriptNovoJogo.cs" Line="1" Column="1" />
+      <File FileName="Assets\Imagens\LoadingScreen\LoadScreen.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Scripts\Camera Scripts\MouseOrbit.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Mecanicas\Criação de Magias\SpellCast.cs" Line="143" Column="66" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
