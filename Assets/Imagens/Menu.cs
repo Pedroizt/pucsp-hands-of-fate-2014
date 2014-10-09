@@ -17,7 +17,7 @@ public class Menu : MonoBehaviour {
 		collor1 = Logo.renderer.material.color;
 		collor1.a = 0.0f;
 
-		NewGame.SetActive (false);
+		NewGame.renderer.enabled = false;
 		LoadGame.SetActive (false);
 		Options.SetActive (false);
 		Exit.SetActive (false);
@@ -56,7 +56,7 @@ public class Menu : MonoBehaviour {
 
 	void AparecerMenu()
 	{
-		NewGame.SetActive (true);
+		NewGame.renderer.enabled = true;
 		LoadGame.SetActive (true);
 		Options.SetActive (true);
 		Exit.SetActive (true);
