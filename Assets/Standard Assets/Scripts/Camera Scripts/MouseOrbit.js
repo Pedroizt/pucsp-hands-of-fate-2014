@@ -9,6 +9,9 @@ var yMaxLimit = 80;
  
 var distanceMin = 3;
 var distanceMax = 15;
+
+public var controlx = 0;
+public var controly = 1;
  
 private var x = 0.0;
 private var y = 0.0;
@@ -24,6 +27,8 @@ function Start () {
 	// Make the rigid body not change rotation
    	if (rigidbody)
 		rigidbody.freezeRotation = true;
+		
+		Screen.showCursor = false;
 }
  
 function LateUpdate () {
@@ -42,7 +47,8 @@ function LateUpdate () {
 				distance -=  hit.distance;
 		}
  
-        var position = rotation * Vector3(0.0, 1.0, -distance) + target.position;
+        var position = rotation * Vector3(controlx, 
+        controly, -distance) + target.position;
  
         transform.rotation = rotation;
         transform.position = position;
