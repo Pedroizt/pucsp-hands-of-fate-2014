@@ -4,10 +4,25 @@ using System.Collections;
 public class SpellCast : MonoBehaviour {
 
 
-
+	public TextMesh spelltext;
 	public Transform cameratarget;
 	public string espaço = "";
 	public string selo;
+
+
+	/*Corrigir bug do inventário
+- Refinar as triggers de ajuda
+- Colocar feedback da magia
+- Camera
+- Cutscenes
+- Historia
+- Menu interno
+- Agua
+- (Talvez opções)
+- Bug do loadscreen
+-
+há 12 minutos
+corrigir bug de morrer no pause*/
 
 
 	// Use this for initialization
@@ -17,130 +32,76 @@ public class SpellCast : MonoBehaviour {
 	// Update is called once per frame
 	void Update() {
 
-				if (Input.GetKeyDown (KeyCode.Keypad0)) {
-						espaço += "0";
-				} else if (Input.GetKeyDown (KeyCode.Keypad1)) {
-						espaço += "1";
-				} else if (Input.GetKeyDown (KeyCode.Keypad2)) {
-						espaço += "2";
-				} else if (Input.GetKeyDown (KeyCode.Keypad3)) {
-						espaço += "3";
-				} else if (Input.GetKeyDown (KeyCode.Keypad4)) {
-						espaço += "4";
-				} else if (Input.GetKeyDown (KeyCode.Keypad5)) {
-						espaço += "5";
-				} else if (Input.GetKeyDown (KeyCode.Keypad6)) {
-						espaço += "6";
-				} else if (Input.GetKeyDown (KeyCode.Keypad7)) {
-						espaço += "7";
-				} else if (Input.GetKeyDown (KeyCode.Keypad8)) {
-						espaço += "8";
-				} else if (Input.GetKeyDown (KeyCode.Keypad9)) {
-						espaço += "9";
-				} else if (espaço.Length >= 6) {
-			
-						espaço = "";
-				} else if (Input.GetKeyDown (KeyCode.Backspace)) {
-			
-						espaço = "";
-				} 
-		
-				if (Input.GetKeyDown (KeyCode.KeypadEnter)) {
-			
-						selo = espaço;
-						espaço = "";
-			
-			
-				}
+		spellnumbers ();
+		showtext ();
 
-	
-
-
-
-				/*if (selo == "83") {
-						Object obj = Instantiate (Impacto, transform.position, transform.rotation);
-						selo = "";
-						
-
-				} */
-
-		}/*else if (selo == "01") {
-			Object obj = Instantiate (_desoxig, transform.position, transform.rotation);
-			selo = "";
-			Destroy (obj, 1);
-				}*/
-
-
-
-
-
-
-
-		/*
-		  else if (selo == "980") {
-			Object obj = Instantiate (_Acido, transform.position, transform.rotation);
-			selo = "";
-			Destroy (obj, 1);
-			
-		}
-
-		else if (selo == "17935") {
-			Object obj = Instantiate (_Raiodovazio, transform.position, transform.rotation);
-			selo = "";
-			Destroy (obj, 1);
-			
-		}
-
-		else if (selo == "7777") {
-			Object obj = Instantiate (_Agua, transform.position, transform.rotation);
-			selo = "";
-			Destroy (obj, 1);
-			
-		}
-		
-
-		
 				
 
+	
+
+
 		}
 
-	void OnGUI (){
-		GUI.Box(new Rect (250, 470, 300, 20), espaço);
-		
-		
-		
-		
-	}*/
-
-	/*void OnCollisionEnter(Collision col)
+	void spellnumbers()
 	{
-		if (col.gameObject.tag == "Rocha")
-						Destroy (col.gameObject);
-	}*/
+		if (Input.GetKeyDown (KeyCode.Keypad0) || (Input.GetKeyDown(KeyCode.Alpha0))) {
+			espaço += "0";
+		} else if (Input.GetKeyDown (KeyCode.Keypad1)|| (Input.GetKeyDown(KeyCode.Alpha1))) {
+			espaço += "1";
+		} else if (Input.GetKeyDown (KeyCode.Keypad2)|| (Input.GetKeyDown(KeyCode.Alpha2))) {
+			espaço += "2";
+		} else if (Input.GetKeyDown (KeyCode.Keypad3)|| (Input.GetKeyDown(KeyCode.Alpha3))) {
+			espaço += "3";
+		} else if (Input.GetKeyDown (KeyCode.Keypad4)|| (Input.GetKeyDown(KeyCode.Alpha4))) {
+			espaço += "4";
+		} else if (Input.GetKeyDown (KeyCode.Keypad5)|| (Input.GetKeyDown(KeyCode.Alpha5))) {
+			espaço += "5";
+		} else if (Input.GetKeyDown (KeyCode.Keypad6)|| (Input.GetKeyDown(KeyCode.Alpha6))) {
+			espaço += "6";
+		} else if (Input.GetKeyDown (KeyCode.Keypad7)|| (Input.GetKeyDown(KeyCode.Alpha7))) {
+			espaço += "7";
+		} else if (Input.GetKeyDown (KeyCode.Keypad8)|| (Input.GetKeyDown(KeyCode.Alpha8))) {
+			espaço += "8";
+		} else if (Input.GetKeyDown (KeyCode.Keypad9)|| (Input.GetKeyDown(KeyCode.Alpha9))) {
+			espaço += "9";
+		} else if (espaço.Length >= 6) {
+			
+			espaço = "";
+		} else if (Input.GetKeyDown (KeyCode.Backspace)) {
+			
+			espaço = "";
+		} 
+		
+		if (Input.GetKeyDown (KeyCode.KeypadEnter) || (Input.GetMouseButtonDown(0))) {
+			
+			selo = espaço;
+			espaço = "";
 
-/*} else if (selo == "141") {
-	
-	
-	
-} else if (selo == "2300") {
-	Object obj = Instantiate (sacredblast, transform.position, transform.rotation);
-	AudioSource.PlayClipAtPoint(scsound, transform.position);
-	AudioSource.PlayClipAtPoint(_s, transform.position);
-	selo = "";
-	Destroy (obj, 1);
-} else if (selo == "400") {
-	
-	Object obj = Instantiate (eruption, transform.position, transform.rotation);
-	AudioSource.PlayClipAtPoint(erupsound, transform.position);
-	AudioSource.PlayClipAtPoint(_e, transform.position);
-	selo = "";
-	Destroy (obj,1);
-	
-}*/
 
+			
+			
+		}
+		}
+
+	void showtext()
+	{
+		if (spelltext == null)
+						Debug.Log ("Esqueceu de colocar o SpellText");
+
+		spelltext.text = espaço;
+
+
+	}
+
+
+	
 	void FixedUpdate()
 	{
-		gameObject.transform.rotation = cameratarget.transform.rotation;
+
+
+		gameObject.transform.rotation = cameratarget.transform.rotation; 
+
+						
 		
 	}
 

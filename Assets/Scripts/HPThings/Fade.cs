@@ -3,21 +3,25 @@ using System.Collections;
 
 public class Fade : MonoBehaviour
 {
-	public float fadeSpeed = 1.5f;          // Speed that the screen fades to and from black.
-	bool sceneStarting = true;
+	public float fadeSpeed = 5f;          // Speed that the screen fades to and from black.
+	public bool sceneStarting = true;
 	public bool gameOver = false;
 	private Hpsih hp;
+	private CutsceneControl cc;
 	
 	//private bool sceneStarting = true;      // Whether or not the scene is still fading in.
 	
 	
-	void Awake ()
+	public void Awake ()
 	{
 		// Set the texture so that it is the the size of the screen and covers it.
-		guiTexture.pixelInset = new Rect(-404, -308, 820, 726);
+		guiTexture.pixelInset = new Rect(-1000, -1000, 5000, 5000);
 
 		GameObject g = GameObject.Find ("Senpai Notice Me");
 		hp = g.GetComponent<Hpsih> ();
+
+		GameObject c = GameObject.Find ("Opening Cutscene");
+		cc = c.GetComponent<CutsceneControl> ();
 	}
 	
 	
@@ -74,12 +78,32 @@ public class Fade : MonoBehaviour
 						guiTexture.enabled = true;
 		
 						// Start fading towards black.
+						
+						
 						FadeToBlack ();
+						
+				
+
+		if (guiTexture.color.a >= 0.35f)
+		{
+
+			sceneStarting = true;
+
+
+
+			
+			//Color color = guiTexture.color;
+			//color.a -= 0.10f;
+		}
+
+						
 		
 						// If the screen is almost black...
-						if (guiTexture.color.a >= 0.95f)
+						if (gameOver == true && guiTexture.color.a >= 0.95f)
 			// ... reload the level.
 								Application.LoadLevel (3);
+
+			
 				
 	}
 }
