@@ -8,6 +8,7 @@ public class SpellCast : MonoBehaviour {
 	public Transform cameratarget;
 	public string espaço = "";
 	public string selo;
+	private Inventario pause;
 
 
 	/*Corrigir bug do inventário
@@ -27,13 +28,18 @@ corrigir bug de morrer no pause*/
 
 	// Use this for initialization
 	void Start(){
+		GameObject i = GameObject.Find ("Camera/inventario 2");
+		pause = i.GetComponent<Inventario> ();
 		}
 	
 	// Update is called once per frame
 	void Update() {
 
-		spellnumbers ();
-		showtext ();
+		if (pause.isPause == false) {
+						spellnumbers ();
+						showtext ();
+						spellcolors();
+				}
 
 				
 
@@ -92,6 +98,14 @@ corrigir bug de morrer no pause*/
 
 
 	}
+
+	void spellcolors()
+	{
+		if (espaço == "01" || espaço == "83" || espaço == "10")
+						spelltext.color = Color.blue;
+				else
+						spelltext.color = Color.red;
+		}
 
 
 	

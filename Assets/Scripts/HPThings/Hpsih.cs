@@ -12,6 +12,7 @@ public class Hpsih : MonoBehaviour {
 	public GameObject AlmostEmptyH;
 	public GameObject Empty;
 	private Fade fd;
+	private Inventario pause;
 	public bool paused = false;
 
 
@@ -20,6 +21,9 @@ public class Hpsih : MonoBehaviour {
 
 		GameObject f = GameObject.Find ("screenFader");
 		fd = f.GetComponent<Fade> ();
+
+		GameObject i = GameObject.Find ("Camera/inventario 2");
+		pause = i.GetComponent<Inventario> ();
 
 		maxH.SetActive (true);
 		AlmostMaxH.SetActive (false);
@@ -54,7 +58,7 @@ public class Hpsih : MonoBehaviour {
 
 	void ReducaoHp(){
 	
-		if (!paused) {
+		if (pause.isPause == false) {
 						if (curHealth >= maxHealth || curHealth > maxHealth / 1.25f)
 			{
 				maxH.SetActive (true);
@@ -106,7 +110,20 @@ public class Hpsih : MonoBehaviour {
 			}
 								//GUI.DrawTexture (new Rect (Screen.width - 790, Screen.height - 580, 80, 100), Empty);
 				}
+
+		else
+		{
+			maxH.SetActive (false);
+			AlmostMaxH.SetActive (false);
+			HalfH.SetActive (false);
+			AlmostEmptyH.SetActive (false);
+			Empty.SetActive (false);
+		}
+
+
 	}
+
+
 
 	/*IEnumerator HealthRegeneration()
 	{

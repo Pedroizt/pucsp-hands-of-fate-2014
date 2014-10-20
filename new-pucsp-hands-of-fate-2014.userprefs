@@ -1,9 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\HPThings\Fade.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Mecanicas\Fragmentos\FragsOnInventory.cs">
     <Files>
-      <File FileName="Assets\Scripts\Cutscenes\Eras\CutsceneControl.cs" Line="19" Column="2" />
-      <File FileName="Assets\Scripts\HPThings\Fade.cs" Line="85" Column="5" />
+      <File FileName="Assets\Scripts\Mecanicas\Fragmentos\FragsOnInventory.cs" Line="16" Column="40" />
+      <File FileName="Assets\Scripts\Mecanicas\SwitchScripts\CrystalSwitch.cs" Line="68" Column="4" />
+      <File FileName="Assets\Scripts\Mecanicas\Criação de Magias\SpellCast.cs" Line="107" Column="35" />
+      <File FileName="Assets\Scripts\HPThings\Fade.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\HPThings\Inventario.cs" Line="23" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
