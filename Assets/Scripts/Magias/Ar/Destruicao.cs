@@ -38,6 +38,9 @@ public class Destruicao : MonoBehaviour {
 
 	void Update()
 	{
+
+
+
 		if (castspell.selo == "83") {
 						Debug.Log ("Funciona");
 			   			 Object obj = Instantiate(impacto, target.position, target.rotation);
@@ -46,6 +49,8 @@ public class Destruicao : MonoBehaviour {
 				Destroy((obj as Transform).gameObject, 1);
 
 				}
+
+
 	}
 
 	void OnCollisionEnter(Collision col)

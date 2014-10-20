@@ -6,15 +6,19 @@ public class CrystalSwitch : MonoBehaviour {
 	bool EstaSwitch = false;
 	bool naofucionamais = false;
 	public float vel = 2.0f;
+	public ParticleSystem glow;
 	private CristalGrande cgrande;
-
+	public GameObject F;
 
 	// Use this for initialization
 	void Awake () {
 
 		gameObject.renderer.material.color = Color.red;
+		glow.renderer.enabled = true;;
 
 		Debug.Log ("bool e falsa");
+
+		F.SetActive (false);
 
 		GameObject c = GameObject.Find ("CristalGrande");
 		cgrande = c.GetComponent<CristalGrande> ();
@@ -36,17 +40,33 @@ public class CrystalSwitch : MonoBehaviour {
 	 void OnTriggerStay(Collider col){
 		EstaSwitch = true;
 
+
+
 		if(col.gameObject.tag == "Player" && EstaSwitch == true)
 		{
+
+
 		if (Input.GetKeyDown (KeyCode.F) && naofucionamais == false) {
 			Debug.Log ("Teste");
 			gameObject.renderer.material.color = Color.blue;
 			gameObject.tag = "On";
 			cgrande.Start ();
+				glow.renderer.enabled = false;
 			Debug.Log ("bool e verdadeira");
 			naofucionamais = true;
 			vel = 0;
+				F.SetActive(false);
+
+
+
+
+
+
 		}
+			if (naofucionamais == false)
+				F.SetActive(true);
+
+
 
 
 
@@ -56,6 +76,7 @@ public class CrystalSwitch : MonoBehaviour {
 
 	void OnTriggerExit(){
 		EstaSwitch = false;
+		F.SetActive (false);
 		print (EstaSwitch);
 	}
 

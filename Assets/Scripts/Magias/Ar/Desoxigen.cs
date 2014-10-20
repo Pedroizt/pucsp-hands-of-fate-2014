@@ -51,6 +51,8 @@ public class Desoxigen : MonoBehaviour {
 			Destroy(obj, 3);
 
 		}
+
+
 		
 	}
 

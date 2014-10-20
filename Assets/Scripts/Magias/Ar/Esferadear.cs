@@ -26,15 +26,18 @@ public class Esferadear : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (castspell.selo == "10") {
-			GameObject obj = Instantiate (esferar, target.position, target.rotation) as GameObject;
-			obj.rigidbody.AddForce(target.forward * 100 * Time.deltaTime);
-			castspell.selo = "";
-			Destroy(obj, 2);
-			hp.curHealth -= hp.maxHealth/16;
 
-			//Confiugar velocidade da esfera para deixar igual a da particula
-				}
+
+		if (castspell.selo == "10") {
+						GameObject obj = Instantiate (esferar, target.position, target.rotation) as GameObject;
+						obj.rigidbody.AddForce (target.forward * 100 * Time.deltaTime);
+						castspell.selo = "";
+						Destroy (obj, 2);
+						hp.curHealth -= hp.maxHealth / 16;
+
+
+						//Confiugar velocidade da esfera para deixar igual a da particula
+				} 
 	
 	}
 

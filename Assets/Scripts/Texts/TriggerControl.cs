@@ -3,18 +3,29 @@ using System.Collections;
 
 public class TriggerControl : MonoBehaviour {
 
-	private TextControl text;
+
 	bool Once1 = true;
 	bool Once2 = true;
 	bool Once3 = true;
 	bool Once4 = true;
 	bool Once5 = true;
 	bool Once6 = true;
-	bool Once7 = true;
-	bool Once8 = true;
-	bool Once9 = true;
-	bool Once10 = true;
-	bool Once11 = true;
+
+	bool check1 = false;
+	bool check2 = false;
+	bool check3 = false;
+	bool check4 = false;
+	bool check5 = false;
+	bool check6 = false;
+
+
+
+	public ParticleSystem torre1;
+	public ParticleSystem torre2;
+	public ParticleSystem torre3;
+	public ParticleSystem torre4;
+	public ParticleSystem torre5;
+	public ParticleSystem torre6;
 
 
 
@@ -25,8 +36,15 @@ public class TriggerControl : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		GameObject t = GameObject.Find ("Texbox/TEXTBOX");
-		text = t.GetComponent<TextControl> ();
+
+
+		torre1.renderer.enabled = true;
+		torre2.renderer.enabled = false;
+		torre3.renderer.enabled = false;
+		torre4.renderer.enabled = false;
+		torre5.renderer.enabled = false;
+		torre6.renderer.enabled = false;
+
 
 
 	
@@ -37,150 +55,56 @@ public class TriggerControl : MonoBehaviour {
 
 			if (gameObject.tag == "1" && Once1) {
 
+			torre1.renderer.enabled = false;
+			//Once1 = false;
+			check1 = true;
+			torre2.renderer.enabled = true;
 
-						text.um.gameObject.renderer.enabled = true;
-			text.textbox.gameObject.renderer.enabled = true;
 				}
 
-			if (gameObject.tag == "2" && Once2) {
-
-
-						text.dois.gameObject.renderer.enabled = true;
-			text.textbox.gameObject.renderer.enabled = true;
+		if (gameObject.tag == "2" && Once2) {
+			torre2.renderer.enabled = false;
+			//Once2 = false;
+			check2 = true;
+			torre3.renderer.enabled = true;
 				}
 
-			if (gameObject.tag == "3" && Once3) {
+		if (gameObject.tag == "3" && Once3 ) {
 
-
-						text.tres.gameObject.renderer.enabled = true;
-			text.textbox.gameObject.renderer.enabled = true;
-			Debug.Log("Funfa");
+			torre3.renderer.enabled = false;
+			//Once3 = false;
+			check3 = true;
+			torre4.renderer.enabled = true;
 				}
 
-			if (gameObject.tag == "4" && Once4) {
-
-
-						text.quatr.gameObject.renderer.enabled = true;
-			text.textbox.gameObject.renderer.enabled = true;
+		if (gameObject.tag == "4" && Once4) {
+			torre4.renderer.enabled = false;
+			//Once4 = false;
+			check4 = true;
+			torre5.renderer.enabled = true;
 				}
 
 			if (gameObject.tag == "5" && Once5) {
 
+			torre5.renderer.enabled = false;
+			//Once5 = false;
+			check5 = true;
+			torre6.renderer.enabled = true;
 
-						text.cin.gameObject.renderer.enabled = true;
-			text.textbox.gameObject.renderer.enabled = true;
-			Debug.Log("Funfa");
 				}
 
-			if (gameObject.tag == "6" && Once6) {
-
-						text.sei.gameObject.renderer.enabled = true;
-			text.textbox.gameObject.renderer.enabled = true;
-			Debug.Log("Funfa");
+		if (gameObject.tag == "6" && Once6 && check5 == true) {
+			torre6.renderer.enabled = false;
+			check6 = true;
+			Once6 = false;
 				}
 
-			if (gameObject.tag == "7" && Once7) {
-
-
-						text.sete.gameObject.renderer.enabled = true;
-			text.textbox.gameObject.renderer.enabled = true;
-				}
-
-			if (gameObject.tag == "8" && Once8) {
-
-
-						text.oito.gameObject.renderer.enabled = true;
-			text.textbox.gameObject.renderer.enabled = true;
-				}
-
-			if (gameObject.tag == "9" && Once9) {
-
-
-						text.nov.gameObject.renderer.enabled = true;
-			text.textbox.gameObject.renderer.enabled = true;
-				}
-
-			if (gameObject.tag == "10" && Once10) {
-
-
-						text.dez.gameObject.renderer.enabled = true;
-			text.textbox.gameObject.renderer.enabled = true;
-				}
-
-			if (gameObject.tag == "11" && Once11) {
-		
-
-						text.onze.gameObject.renderer.enabled = true;
-			text.textbox.gameObject.renderer.enabled = true;
-				}
+			
 
 	
 	}
 
-	void OnTriggerExit()
-	{
 
-		text.textbox.gameObject.renderer.enabled = false;
-
-				if (gameObject.tag == "1" && Once1) {
-						text.um.gameObject.renderer.enabled = false;
-
-			Once1 = false;
-				}
-				
-				if (gameObject.tag == "2" && Once2) {
-			Once2 = false;
-			text.dois.gameObject.renderer.enabled = false;
-				}
-				
-				if (gameObject.tag == "3" && Once3) {
-			Once3 = false;
-			text.tres.gameObject.renderer.enabled = false;
-				}
-				
-				if (gameObject.tag == "4" && Once4) {
-			Once4 = false;
-			text.quatr.gameObject.renderer.enabled = false;
-				}
-				
-				if (gameObject.tag == "5" && Once5) {
-			Once5 = false;
-			text.cin.gameObject.renderer.enabled = false;
-				}
-
-				
-				if (gameObject.tag == "6" && Once6) {
-
-			text.sei.gameObject.renderer.enabled = false;
-						Once6 = false;
-				}
-				
-				if (gameObject.tag == "7" && Once7) {
-			Once7 = false;
-			text.sete.gameObject.renderer.enabled = false;
-				}
-				
-				if (gameObject.tag == "8" && Once8) {
-			Once8 = false;
-			text.oito.gameObject.renderer.enabled = false;
-				}
-				
-				if (gameObject.tag == "9" && Once9) {
-			Once9 = false;
-			text.nov.gameObject.renderer.enabled = false;
-				}
-				
-				if (gameObject.tag == "10" && Once10) {
-			Once10 = false;
-			text.dez.gameObject.renderer.enabled = false;
-				}
-				
-				if (gameObject.tag == "11" && Once11) {
-			Once11 = false;
-			text.onze.gameObject.renderer.enabled = false;
-				}
-
-	}
 
 
 }

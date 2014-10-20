@@ -84,17 +84,6 @@ public class Fade : MonoBehaviour
 						
 				
 
-		if (guiTexture.color.a >= 0.35f)
-		{
-
-			sceneStarting = true;
-
-
-
-			
-			//Color color = guiTexture.color;
-			//color.a -= 0.10f;
-		}
 
 						
 		

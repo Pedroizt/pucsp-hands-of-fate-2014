@@ -10,6 +10,8 @@ public class CristalGrande : MonoBehaviour {
 	float vel = 0.5f;
 
 
+
+
 	// Use this for initialization
 	public void Start () {
 

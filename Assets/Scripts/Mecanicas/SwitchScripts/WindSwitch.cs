@@ -5,14 +5,16 @@ public class WindSwitch : MonoBehaviour {
 
 
 	//private Hovering winds;
+	public GameObject cameracutscene;
 	public bool switchon = false;
 	public GameObject target;
-	public AudioSource audio1;
+	bool once = false;
+
 
 
 	void Start()
 	{
-
+		cameracutscene.SetActive (false);
 		target.gameObject.SetActive (false);
 	}
 
@@ -21,16 +23,30 @@ public class WindSwitch : MonoBehaviour {
 
 
 
-			if (col.gameObject.tag == "esferar") {
+			if (col.gameObject.tag == "esferar" && once == false) {
 						target.gameObject.SetActive (true);
-						audio1.Play();
+						switchon = true;
+						once = true;
+						
 				}
 				
 	}
 
 	void Update()
 	{
+
 		if (switchon)
-			target.gameObject.SetActive (true);
+						StartCoroutine (cutscene ());
+
+	}
+
+	IEnumerator cutscene()
+	{
+		cameracutscene.SetActive (true);
+		yield return new WaitForSeconds(2);
+		{
+			cameracutscene.SetActive (false);
+			switchon = false;
+		}
 	}
 }
