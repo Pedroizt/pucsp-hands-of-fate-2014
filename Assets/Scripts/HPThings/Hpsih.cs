@@ -27,7 +27,7 @@ public class Hpsih : MonoBehaviour {
 		GameObject h = GameObject.Find ("OpeningHistory");
 		history = h.GetComponent<HistoriaControl> ();
 
-		GameObject i = GameObject.Find ("Camera/inventario 2");
+		GameObject i = GameObject.Find ("inventario 2");
 		pause = i.GetComponent<Inventario> ();
 
 		GameObject c = GameObject.Find ("Opening Cutscene");

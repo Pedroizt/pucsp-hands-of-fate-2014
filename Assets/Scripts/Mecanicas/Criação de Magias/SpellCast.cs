@@ -28,7 +28,7 @@ corrigir bug de morrer no pause*/
 
 	// Use this for initialization
 	void Start(){
-		GameObject i = GameObject.Find ("Camera/inventario 2");
+		GameObject i = GameObject.Find ("inventario 2");
 		pause = i.GetComponent<Inventario> ();
 		}
 	

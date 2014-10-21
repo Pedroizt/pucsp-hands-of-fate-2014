@@ -16,7 +16,7 @@ public class FragsOnInventory : MonoBehaviour {
 		GameObject f = GameObject.Find ("Frags");
 		fragmentos = f.GetComponent<SeusFragmentos> ();
 
-		GameObject i = GameObject.Find ("Camera/inventario 2");
+		GameObject i = GameObject.Find ("inventario 2");
 		invent = i.GetComponent<Inventario> ();
 
 		GameObject t = GameObject.Find ("TextMeshes");
