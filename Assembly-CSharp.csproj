@@ -74,6 +74,7 @@
      <Compile Include="Assets\Scripts\HPThings\MasterEnemyClass.cs" />
      <Compile Include="Assets\Scripts\HPThings\SpawnRespawn.cs" />
      <Compile Include="Assets\Scripts\HPThings\Unlockeds.cs" />
+     <Compile Include="Assets\Scripts\Historia\HistoriaControl.cs" />
      <Compile Include="Assets\Scripts\IronRuins\CriarEscada.cs" />
      <Compile Include="Assets\Scripts\IronRuins\InstanciarEscada.cs" />
      <Compile Include="Assets\Scripts\IronRuins\ManequimLogic.cs" />

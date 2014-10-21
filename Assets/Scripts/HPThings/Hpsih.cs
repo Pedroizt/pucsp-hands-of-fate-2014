@@ -14,6 +14,8 @@ public class Hpsih : MonoBehaviour {
 	private Fade fd;
 	private Inventario pause;
 	public bool paused = false;
+	private HistoriaControl history;
+	private CutsceneControl cutsc;
 
 
 	// Use this for initialization
@@ -22,8 +24,15 @@ public class Hpsih : MonoBehaviour {
 		GameObject f = GameObject.Find ("screenFader");
 		fd = f.GetComponent<Fade> ();
 
+		GameObject h = GameObject.Find ("OpeningHistory");
+		history = h.GetComponent<HistoriaControl> ();
+
 		GameObject i = GameObject.Find ("Camera/inventario 2");
 		pause = i.GetComponent<Inventario> ();
+
+		GameObject c = GameObject.Find ("Opening Cutscene");
+		cutsc = c.GetComponent<CutsceneControl> ();
+
 
 		maxH.SetActive (true);
 		AlmostMaxH.SetActive (false);
@@ -58,7 +67,7 @@ public class Hpsih : MonoBehaviour {
 
 	void ReducaoHp(){
 	
-		if (pause.isPause == false) {
+		if (pause.isPause == false && history.começacutscene == true && cutsc.jogoinicia == true) {
 						if (curHealth >= maxHealth || curHealth > maxHealth / 1.25f)
 			{
 				maxH.SetActive (true);
