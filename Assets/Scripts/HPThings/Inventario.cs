@@ -7,7 +7,7 @@ public class Inventario : MonoBehaviour {
 	public LayerMask Invent;
 	public LayerMask Everything;
 	//public Camera MainCamera;
-
+	public GameObject camerainvent;
 	//private MagicTextures mt;
 	public float width1;
 	public float heigth1;
@@ -25,6 +25,7 @@ public class Inventario : MonoBehaviour {
 	public GameObject Water;
 	public GameObject Void;
 	public GameObject TimeSpace;
+	float cm;
 	/*public GameObject armor;
 	public GameObject luva;
 	public GameObject legs;
@@ -81,17 +82,28 @@ public class Inventario : MonoBehaviour {
 
 				if (Input.GetKeyDown (KeyCode.I)) {
 
+
+
 						isPause = !isPause;
 						if (isPause) {
 				Air.SetActive(true);
+
+
+
 								Time.timeScale = 0;
+								
 								//DrawInventario();
 								DrawSkills ();
 								//DrawItems();
 								gameObject.renderer.enabled = true;
 								//hp.paused = true;
+								
 
-						} else {
+						}
+						
+						
+
+								else {
 								Time.timeScale = 1;
 								//MainCamera.cullingMask = Everything;
 								//guiTexture.enabled = false;
@@ -100,8 +112,24 @@ public class Inventario : MonoBehaviour {
 								DontDraw ();
 
 						}
+
+
+
+
+
 	
 				}
+
+
+		if (Input.GetKeyDown (KeyCode.RightArrow) && isPause) {
+			camerainvent.transform.Rotate(0,90,0);
+
+				}
+		if (Input.GetKeyDown (KeyCode.LeftArrow) && isPause) {
+			camerainvent.transform.Rotate(0,-90,0);
+				}
+		
+
 		}
 
 	/*void DrawInventario()
