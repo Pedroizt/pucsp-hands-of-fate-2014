@@ -15,6 +15,8 @@ public var controly = 1;
  
 private var x = 0.0;
 private var y = 0.0;
+
+
  
  
 @script AddComponentMenu("Camera-Control/Mouse Orbit")
@@ -28,7 +30,7 @@ function Start () {
    	if (rigidbody)
 		rigidbody.freezeRotation = true;
 		
-		Screen.showCursor = false;
+		
 }
  
 function LateUpdate () {

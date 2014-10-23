@@ -18,7 +18,7 @@ public class CristalGrande : MonoBehaviour {
 
 
 		cutscene.SetActive (false);
-		Debug.Log ("estafuncionando");
+
 		Count = GameObject.FindGameObjectsWithTag ("On");
 		if (Count.Length == 4) {
 			Destroy (gameObject,1);
