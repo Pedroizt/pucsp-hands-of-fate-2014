@@ -16,7 +16,7 @@ public class CrystalSwitch : MonoBehaviour {
 		gameObject.renderer.material.color = Color.red;
 		glow.renderer.enabled = true;;
 
-		Debug.Log ("bool e falsa");
+
 
 		F.SetActive (false);
 
@@ -52,7 +52,7 @@ public class CrystalSwitch : MonoBehaviour {
 			gameObject.tag = "On";
 			cgrande.Start ();
 				glow.renderer.enabled = false;
-			Debug.Log ("bool e verdadeira");
+			
 			naofucionamais = true;
 			vel = 0;
 				F.SetActive(false);

@@ -57,6 +57,8 @@
      <Compile Include="Assets\Imagens\ScriptNovoJogo.cs" />
      <Compile Include="Assets\Imagens\fading.cs" />
      <Compile Include="Assets\Inimigos\AI\FollowEnemy.cs" />
+     <Compile Include="Assets\Inventario\ChangeCamera.cs" />
+     <Compile Include="Assets\Inventario\Opcoes.cs" />
      <Compile Include="Assets\Scenes\GirarObjeto.cs" />
      <Compile Include="Assets\Scenes\Item.cs" />
      <Compile Include="Assets\Scenes\PassSwitch.cs" />

@@ -1,11 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\HPThings\Inventario.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Inventario\Opcoes.cs">
     <Files>
-      <File FileName="Assets\Scripts\Historia\HistoriaControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Imagens\fading.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Cutscenes\Eras\CutsceneControl.cs" Line="1" Column="1" />
+      <File FileName="Assets\Inventario\Opcoes.cs" Line="38" Column="1" />
+      <File FileName="Assets\Inventario\ChangeCamera.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\HPThings\Inventario.cs" Line="1" Column="1" />
+      <File FileName="Assets\Inventario\Opcoes.cs" Line="33" Column="56" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

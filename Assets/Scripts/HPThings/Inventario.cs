@@ -26,6 +26,14 @@ public class Inventario : MonoBehaviour {
 	public GameObject Void;
 	public GameObject TimeSpace;
 	float cm;
+	public Texture2D cursorTexture;
+	CursorMode cursormode = CursorMode.Auto;
+	Vector2 hotspot = Vector2.zero;
+	public GameObject menuhistoria;
+	public GameObject menuopcoes;
+	public GameObject menusalvar;
+
+	
 	/*public GameObject armor;
 	public GameObject luva;
 	public GameObject legs;
@@ -40,8 +48,11 @@ public class Inventario : MonoBehaviour {
 		//guiTexture.enabled = false;
 		//guiTexture.pixelInset = new Rect (-410, -283, 824, 568);
 
-		Debug.Log ("FuncionaChan");
+		Screen.showCursor = false;
 		gameObject.renderer.enabled = false;
+		menuhistoria.renderer.enabled = false;
+		menuopcoes.renderer.enabled = false;
+		menusalvar.renderer.enabled = false;
 
 		//GameObject g = GameObject.Find ("Senpai Notice Me");
 		//hp = g.GetComponent<Hpsih> ();
@@ -95,7 +106,15 @@ public class Inventario : MonoBehaviour {
 								//DrawInventario();
 								DrawSkills ();
 								//DrawItems();
-								gameObject.renderer.enabled = true;
+				gameObject.renderer.enabled = true;
+				menuhistoria.renderer.enabled = true;
+				menuhistoria.SetActive(true);
+				menuopcoes.renderer.enabled = true;
+				menuopcoes.SetActive(true);
+				menusalvar.renderer.enabled = true;
+				menusalvar.SetActive(true);
+
+
 								//hp.paused = true;
 								
 
@@ -107,7 +126,13 @@ public class Inventario : MonoBehaviour {
 								Time.timeScale = 1;
 								//MainCamera.cullingMask = Everything;
 								//guiTexture.enabled = false;
-								gameObject.renderer.enabled = false;
+				gameObject.renderer.enabled = false;
+				menuhistoria.SetActive(false);
+				menuopcoes.SetActive(false);
+				menusalvar.SetActive(false);
+				menuhistoria.renderer.enabled = false;
+				menuopcoes.renderer.enabled = false;
+				menusalvar.renderer.enabled = false;
 								//hp.paused = false;
 								DontDraw ();
 
@@ -121,12 +146,25 @@ public class Inventario : MonoBehaviour {
 				}
 
 
+
+
+
 		if (Input.GetKeyDown (KeyCode.RightArrow) && isPause) {
 			camerainvent.transform.Rotate(0,90,0);
 
 				}
 		if (Input.GetKeyDown (KeyCode.LeftArrow) && isPause) {
 			camerainvent.transform.Rotate(0,-90,0);
+				}
+
+		if (isPause) {
+						Screen.showCursor = true;
+			Cursor.SetCursor(cursorTexture, hotspot, cursormode);
+				}
+
+		if (!isPause) {
+			Screen.showCursor = false;
+			Cursor.SetCursor(cursorTexture, hotspot, cursormode);
 				}
 		
 
