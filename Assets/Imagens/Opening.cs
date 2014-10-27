@@ -3,7 +3,9 @@ using System.Collections;
 
 public class Opening : MonoBehaviour {
 
-	public MovieTexture opening;
+
+
+	/*public MovieTexture opening;
 	// Use this for initialization
 	void Start () {
 
@@ -18,5 +20,5 @@ public class Opening : MonoBehaviour {
 
 
 	
-	}
+	}*/
 }
