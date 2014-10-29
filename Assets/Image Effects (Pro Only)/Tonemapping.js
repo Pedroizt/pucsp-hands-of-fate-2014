@@ -27,6 +27,8 @@ class Tonemapping extends PostEffectsBase {
 		Square1024 = 1024,
 	};
 	
+	
+	
 	public var type : TonemapperType = TonemapperType.Photographic;
 	public var adaptiveTextureSize = AdaptiveTexSize.Square256;
 	
@@ -48,6 +50,13 @@ class Tonemapping extends PostEffectsBase {
 	private var tonemapMaterial : Material = null;	
 	private var rt : RenderTexture = null;
 	private var rtFormat : RenderTextureFormat =  RenderTextureFormat.ARGBHalf;
+	
+	function DesligaScriptToneMapping(){
+		this.enabled=false;
+	}
+	function LigaScriptToneMapping(){
+		this.enabled=true;
+	}
 	
 	function CheckResources () : boolean {	
 		CheckSupport (false, true);	

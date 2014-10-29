@@ -41,6 +41,13 @@ class EdgeDetectEffectNormals extends PostEffectsBase {
 			ReportAutoDisable ();
 		return isSupported;				
 	}
+	
+	function DesligaScriptEdgeDetect(){
+		this.enabled=false;
+	}
+	function LigaScriptEdgeDetect(){
+		this.enabled=true;
+	}
 
 	function Start () {
 		oldMode	= mode;
