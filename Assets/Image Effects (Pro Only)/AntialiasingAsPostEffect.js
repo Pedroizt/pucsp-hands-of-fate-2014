@@ -42,6 +42,14 @@ class AntialiasingAsPostEffect extends PostEffectsBase  {
 	private var materialFXAAII : Material;
 	public var shaderFXAAIII : Shader;
 	private var materialFXAAIII : Material;
+	
+	
+	function DesligaScriptAntialiasing(){
+		this.enabled=false;
+	}
+	function LigaScriptAntialiasing(){
+		this.enabled=true;
+	}
 		
 	function CurrentAAMaterial () : Material
 	{

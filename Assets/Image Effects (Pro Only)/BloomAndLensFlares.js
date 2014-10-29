@@ -73,6 +73,13 @@ class BloomAndLensFlares extends PostEffectsBase {
 
 	public var brightPassFilterShader : Shader;
 	private var brightPassFilterMaterial : Material;
+	
+	function DesligaScriptBloomAndLensFlare(){
+		this.enabled=false;
+	}
+	function LigaScriptBloomAndLensFlare(){
+		this.enabled=true;
+	}
 
 	function CheckResources () : boolean {
 		CheckSupport (false);

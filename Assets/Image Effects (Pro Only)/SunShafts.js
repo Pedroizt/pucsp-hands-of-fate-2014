@@ -36,6 +36,13 @@ class SunShafts extends PostEffectsBase
 	
 	public var simpleClearShader : Shader;
 	private var simpleClearMaterial : Material;
+	
+	function DesligaScriptSunShafts(){
+		this.enabled=false;
+	}
+	function LigaScriptSunShafts(){
+		this.enabled=true;
+	}
 		
 	function CheckResources () : boolean {	
 		CheckSupport (useDepthTexture);

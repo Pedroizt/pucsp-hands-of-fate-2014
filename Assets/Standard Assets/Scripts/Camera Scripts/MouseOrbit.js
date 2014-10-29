@@ -32,6 +32,16 @@ function Start () {
 		
 		
 }
+
+function MouseDisabled(){
+
+	this.enabled = false;
+}
+
+function MouseEnabled()
+{
+	this.enabled = true;
+}
  
 function LateUpdate () {
     if (target) {

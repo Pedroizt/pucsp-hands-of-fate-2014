@@ -45,6 +45,13 @@ class ColorCorrectionCurves extends PostEffectsBase
 	public var colorCorrectionSelectiveShader : Shader = null;
 			
 	private var updateTexturesOnStartup : boolean = true;
+	
+	function DesligaScriptColorCorrectionCurves(){
+		this.enabled=false;
+	}
+	function LigaScriptColorCorrectionCurves(){
+		this.enabled=true;
+	}
 		
 	function Start () {
 		super ();

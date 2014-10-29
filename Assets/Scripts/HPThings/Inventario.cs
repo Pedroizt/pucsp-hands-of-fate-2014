@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Inventario : MonoBehaviour {
 
+	GameObject RealCamera;
 	public bool isPause = false;
 	public LayerMask Invent;
 	public LayerMask Everything;
@@ -68,6 +69,8 @@ public class Inventario : MonoBehaviour {
 		GameObject u2 = GameObject.Find ("UnObj");
 		un2 = u2.GetComponent<Unlockeds> ();
 
+		RealCamera = GameObject.Find ("RealCamera");
+
 		Air.SetActive (false);
 		BC.SetActive (false);
 		Ice.SetActive (false);
@@ -98,7 +101,7 @@ public class Inventario : MonoBehaviour {
 						isPause = !isPause;
 						if (isPause) {
 				Air.SetActive(true);
-
+				RealCamera.SendMessage("MouseDisabled");
 
 
 								Time.timeScale = 0;
@@ -135,6 +138,7 @@ public class Inventario : MonoBehaviour {
 				menusalvar.renderer.enabled = false;
 								//hp.paused = false;
 								DontDraw ();
+				RealCamera.SendMessage("MouseEnabled");
 
 						}
 
