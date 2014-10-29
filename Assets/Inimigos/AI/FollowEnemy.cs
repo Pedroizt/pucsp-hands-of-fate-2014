@@ -21,16 +21,19 @@ public class FollowEnemy : MonoBehaviour {
 		Distancia = Vector3.Distance (Target.position, transform.position);
 
 		if (Distancia < VistaDistancia) {
-			renderer.material.color = Color.yellow;
+
+			//renderer.material.color = Color.yellow;
 			lookAt();
 				}
 
 		if (Distancia > VistaDistancia) {
-			renderer.material.color = Color.grey;
+
+			//renderer.material.color = Color.grey;
 				}
 
 		if (Distancia < AttackRange) {
-			renderer.material.color = Color.red;
+			//renderer.material.color = Color.red;
+
 			attack();
 				}
 
@@ -39,7 +42,8 @@ public class FollowEnemy : MonoBehaviour {
 
 	void lookAt()
 	{
-		Quaternion rotation = Quaternion.LookRotation (Target.position - transform.position);
+
+		Quaternion rotation = Quaternion.LookRotation (transform.position - Target.position);
 		transform.rotation = Quaternion.Slerp(transform.rotation, rotation,Time.deltaTime * smoothing);
 
 	}
@@ -47,7 +51,7 @@ public class FollowEnemy : MonoBehaviour {
 
 	void attack()
 	{
-		transform.Translate(Vector3.forward * MoveSpeed * Time.deltaTime);
+		transform.Translate(-Vector3.forward * MoveSpeed * Time.deltaTime);
 	}
 
 
