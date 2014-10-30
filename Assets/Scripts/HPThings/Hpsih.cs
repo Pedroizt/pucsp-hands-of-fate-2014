@@ -16,6 +16,8 @@ public class Hpsih : MonoBehaviour {
 	public bool paused = false;
 	private HistoriaControl history;
 	private CutsceneControl cutsc;
+	public bool Damaged = false;
+
 
 
 	// Use this for initialization
@@ -58,6 +60,10 @@ public class Hpsih : MonoBehaviour {
 		if (curHealth <= 0) {
 						curHealth = 0;
 			fd.gameOver = true;
+				}
+
+		if (Damaged == true) {
+			Invencibilidade();
 				}
 
 		ReducaoHp ();
@@ -130,6 +136,17 @@ public class Hpsih : MonoBehaviour {
 		}
 
 
+	}
+
+	void Invencibilidade()
+	{
+		StartCoroutine (Fimdainv ());
+	}
+
+	IEnumerator Fimdainv()
+	{
+		yield return new WaitForSeconds(1);
+		Damaged = false;
 	}
 
 
