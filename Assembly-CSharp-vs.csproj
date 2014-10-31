@@ -68,6 +68,7 @@
      <Compile Include="Assets\Imagens\fading.cs" />
      <Compile Include="Assets\Inimigos\AI\FollowEnemy.cs" />
      <Compile Include="Assets\Inimigos\AI\HedgehogBehaviour.cs" />
+     <Compile Include="Assets\Inimigos\AI\HedgehogHitbox.cs" />
      <Compile Include="Assets\Inventario\ChangeCamera.cs" />
      <Compile Include="Assets\Inventario\Voltarpromenu.cs" />
      <Compile Include="Assets\Night&amp;DayCycle\GameTime.cs" />

@@ -6,6 +6,7 @@ public class Destruicao : MonoBehaviour {
 	//MAGIA DE IMPACTO
 	//SELO: 83
 
+	public float damage= 5.0f;
 	private Hpsih hp;
 	private SpellCast castspell;
 	Transform impacto;
@@ -60,5 +61,15 @@ public class Destruicao : MonoBehaviour {
 			Destroy(col.gameObject);
 			//Destroy(gameObject);
 				}
+
+
+	}
+
+	void OnTriggerEnter(Collider cols)
+	{
+		if (cols.gameObject.tag == "Enemy") {
+			Debug.Log ("Colliding");
+			cols.gameObject.SendMessageUpwards("ApplyDamage", damage, SendMessageOptions.DontRequireReceiver);
+		}
 	}
 }
