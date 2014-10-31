@@ -3,6 +3,7 @@ using System.Collections;
 
 public class FollowEnemy : MonoBehaviour {
 
+	private SpawnRespawn respawn;
 	public float HP;
 	public float Damage;
 	private Hpsih HPSihir;
@@ -14,7 +15,9 @@ public class FollowEnemy : MonoBehaviour {
 	float MoveSpeed = 1.0f;
 	float smoothing = 6.0f;
 	private Animator hedgehog;
-	bool attacktime = false;
+	public bool attacktime = false;
+	GameObject childcol;
+
 
 	void Start ()
 	{
@@ -25,7 +28,13 @@ public class FollowEnemy : MonoBehaviour {
 
 		hedgehog = gameObject.GetComponent<Animator> ();
 
-		gameObject.collider.enabled = false;
+		childcol = GameObject.Find ("bigcrush 1(Clone)/idle/Bip001");
+
+
+		childcol.collider.enabled = true;
+
+
+
 
 		}
 	
@@ -34,41 +43,43 @@ public class FollowEnemy : MonoBehaviour {
 
 		Distancia = Vector3.Distance (Target.position, transform.position);
 
-		if (Distancia < VistaDistancia) {
+		if (HP >= 0) {
+						if (Distancia < VistaDistancia) {
 
-			hedgehog.SetBool("walkin", false);
-			hedgehog.SetBool("idle", true);
-			//renderer.material.color = Color.yellow;
-			lookAt();
-				}
+								hedgehog.SetBool ("walkin", false);
+								hedgehog.SetBool ("idle", true);
+								//renderer.material.color = Color.yellow;
+								lookAt ();
+						}
 
-		if (Distancia > VistaDistancia) {
-			hedgehog.SetBool("idle", true);
-			//renderer.material.color = Color.grey;
-				}
+						if (Distancia > VistaDistancia) {
+								hedgehog.SetBool ("idle", true);
+								//renderer.material.color = Color.grey;
+						}
 
-		if (Distancia < AttackRange) {
-			hedgehog.SetTrigger("attack");
-			gameObject.collider.enabled = false;
-			if(attacktime == false)
-			{
-			attacktime = true;
-			gameObject.collider.enabled = true;
-			StartCoroutine(Back());
-				Debug.Log ("AttackTime se tornou true");
-			}
+						if (Distancia < AttackRange) {
+	
+								hedgehog.SetTrigger ("attack");
 			
 			
+						} else if (Distancia < ChaseRange) {
+
+								//renderer.material.color = Color.red;
+								hedgehog.SetBool ("idle", false);
+								hedgehog.SetBool ("walkin", true);
+
+
+								chase ();
+						}
 				}
 
-
-		else if (Distancia < ChaseRange) {
-			//renderer.material.color = Color.red;
+		else {
 			hedgehog.SetBool("idle", false);
-			hedgehog.SetBool("walkin", true);
-			gameObject.collider.enabled = false;
-			chase();
+			hedgehog.SetBool("walkin", false);
+			hedgehog.SetBool("death", true);
 				}
+
+
 
 	 
 	}
@@ -87,21 +98,21 @@ public class FollowEnemy : MonoBehaviour {
 		transform.Translate(-Vector3.forward * MoveSpeed * Time.deltaTime);
 	}
 
-	IEnumerator Back()
+
+	void ApplyDamage(float dano)
 	{
-		yield return new WaitForSeconds (2);
-		attacktime = false;
-		Debug.Log ("Voltou a ficar false");
+		Debug.Log ("ApplyDamage");
+		HP -= dano;
+		hedgehog.SetTrigger ("damage2");
+
 	}
 
-	void OnTriggerEnter()
-	{
-		Debug.Log ("Damaged");
-				
-					HPSihir.Damaged = true;
-					HPSihir.curHealth -= Damage;
-				
-	}
+
+
+
+
+
+
 
 
 

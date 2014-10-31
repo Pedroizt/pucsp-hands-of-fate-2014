@@ -2,8 +2,11 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Inimigos\AI\FollowEnemy.cs">
     <Files>
-      <File FileName="Assets\Inimigos\AI\FollowEnemy.cs" Line="52" Column="40" />
-      <File FileName="Assets\Scripts\HPThings\Hpsih.cs" Line="141" Column="24" />
+      <File FileName="Assets\Inimigos\AI\HedgehogHitbox.cs" Line="32" Column="31" />
+      <File FileName="Assets\Inimigos\AI\FollowEnemy.cs" Line="6" Column="31" />
+      <File FileName="Assets\Scripts\HPThings\Hpsih.cs" Line="13" Column="18" />
+      <File FileName="Assets\Scripts\Magias\Ar\Destruicao.cs" Line="72" Column="38" />
+      <File FileName="Assets\Scripts\HPThings\SpawnRespawn.cs" Line="16" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

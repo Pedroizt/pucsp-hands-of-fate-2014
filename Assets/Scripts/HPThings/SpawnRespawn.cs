@@ -10,6 +10,11 @@ public class SpawnRespawn : MonoBehaviour {
 	Object ini;
 
 
+	void Respawn()
+	{
+
+		}
+
 	// Use this for initialization
 	void Start () {
 
