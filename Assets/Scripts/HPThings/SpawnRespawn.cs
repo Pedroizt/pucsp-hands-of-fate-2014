@@ -7,42 +7,42 @@ public class SpawnRespawn : MonoBehaviour {
 
 	public bool EnemyDead = false;
 	public bool canRespawn = false;
-	Object ini;
+	GameObject ini;
 
 
-	void Respawn()
-	{
 
-		}
+
 
 	// Use this for initialization
 	void Start () {
 
 
 
-		if (EnemyDead == false) {
 
-			ini = Instantiate (Inimigo, transform.position, transform.rotation);
-		
 
-				}
+			ini = Instantiate (Inimigo, transform.position, transform.rotation) as GameObject;
+
+
+				
 
 	
 	}
+
+
+
+
+
 	
 	// Update is called once per frame
 	void Update () {
 
 		if (EnemyDead == true) {
 			
+			StartCoroutine(EnemyDefeated());
+				
+			}
 
-				canRespawn = true;
-				Destroy(ini);
-
-			
-		}
-
-		bool once = false;
+		/*bool once = false;
 		if (canRespawn == true)
 		{
 			if (once == false)
@@ -53,9 +53,23 @@ public class SpawnRespawn : MonoBehaviour {
 				once = true;
 
 			}
-		}
+		}*/
 						//StartCoroutine (Respawn ());
 	
+	}
+
+	IEnumerator EnemyDefeated()
+	{
+		bool once = false;
+		yield return new WaitForSeconds (2);
+		{
+			if (once == false)
+			{
+			ini.SetActive(false);
+				once = true;
+			}
+
+		}
 	}
 
 	/*IEnumerator Respawn()

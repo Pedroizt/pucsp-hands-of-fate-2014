@@ -3,8 +3,10 @@ using System.Collections;
 
 public class FollowEnemy : MonoBehaviour {
 
-	private SpawnRespawn respawn;
+	bool once = false;
+	bool reset = false;
 	public float HP;
+    float health;
 	public float Damage;
 	private Hpsih HPSihir;
 	float Distancia;
@@ -17,6 +19,7 @@ public class FollowEnemy : MonoBehaviour {
 	private Animator hedgehog;
 	public bool attacktime = false;
 	GameObject childcol;
+	Vector3 inipos;
 
 
 	void Start ()
@@ -32,7 +35,8 @@ public class FollowEnemy : MonoBehaviour {
 
 
 		childcol.collider.enabled = true;
-
+		health = HP;
+		inipos = gameObject.transform.position;
 
 
 
@@ -43,7 +47,7 @@ public class FollowEnemy : MonoBehaviour {
 
 		Distancia = Vector3.Distance (Target.position, transform.position);
 
-		if (HP >= 0) {
+		if (health >= 0) {
 						if (Distancia < VistaDistancia) {
 
 								hedgehog.SetBool ("walkin", false);
@@ -77,6 +81,27 @@ public class FollowEnemy : MonoBehaviour {
 			hedgehog.SetBool("idle", false);
 			hedgehog.SetBool("walkin", false);
 			hedgehog.SetBool("death", true);
+			if (once == false)
+			{
+			StartCoroutine(respawns());
+				once = true;
+			}
+
+				}
+
+		if (reset == true) {
+			reset = false;
+			foreach(Transform child in this.transform)
+			{
+				child.gameObject.SetActive (true);
+			}
+			health = HP;
+			print(health);
+			once = false;
+			hedgehog.SetBool("death", false);
+			hedgehog.SetTrigger("attack");
+			gameObject.transform.position = inipos;
+
 				}
 
 
@@ -93,6 +118,8 @@ public class FollowEnemy : MonoBehaviour {
 	}
 
 
+
+
 	void chase()
 	{
 		transform.Translate(-Vector3.forward * MoveSpeed * Time.deltaTime);
@@ -102,10 +129,29 @@ public class FollowEnemy : MonoBehaviour {
 	void ApplyDamage(float dano)
 	{
 		Debug.Log ("ApplyDamage");
-		HP -= dano;
+		health -= dano;
 		hedgehog.SetTrigger ("damage2");
+						
+						//gameObject.SetActive (false);
 
 	}
+
+	IEnumerator respawns()
+	{
+		yield return new WaitForSeconds (2);
+		{
+			foreach(Transform child in this.transform)
+			{
+						child.gameObject.SetActive (false);
+			}
+			yield return new WaitForSeconds(3);
+			reset = true;
+
+				}
+	}
+
+
+
 
 
 
