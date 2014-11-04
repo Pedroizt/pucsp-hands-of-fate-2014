@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Esferadear : MonoBehaviour {
 
+	public float damage = 2.0f;
 	private SpellCast castspell;
 	Transform target;
 	GameObject esferar;
@@ -30,7 +31,7 @@ public class Esferadear : MonoBehaviour {
 
 		if (castspell.selo == "10") {
 						GameObject obj = Instantiate (esferar, target.position, target.rotation) as GameObject;
-						obj.rigidbody.AddForce (target.forward * 100 * Time.deltaTime);
+						obj.rigidbody.AddForce (target.forward * 200 * Time.deltaTime);
 						castspell.selo = "";
 						Destroy (obj, 2);
 						hp.curHealth -= hp.maxHealth / 16;
@@ -39,6 +40,14 @@ public class Esferadear : MonoBehaviour {
 						//Confiugar velocidade da esfera para deixar igual a da particula
 				} 
 	
+	}
+
+	void OnTriggerEnter(Collider cols)
+	{
+		if (cols.gameObject.tag == "Enemy") {
+			Debug.Log ("Colliding");
+			cols.gameObject.SendMessageUpwards("ApplyDamage", damage, SendMessageOptions.DontRequireReceiver);
+		}
 	}
 
 

@@ -22,6 +22,8 @@ public class FollowEnemy : MonoBehaviour {
 	Vector3 inipos;
 
 
+
+
 	void Start ()
 	{
 		Target = GameObject.Find ("Senpai Notice Me").transform ;
@@ -50,6 +52,7 @@ public class FollowEnemy : MonoBehaviour {
 		if (health >= 0) {
 						if (Distancia < VistaDistancia) {
 
+
 								hedgehog.SetBool ("walkin", false);
 								hedgehog.SetBool ("idle", true);
 								//renderer.material.color = Color.yellow;
@@ -57,20 +60,23 @@ public class FollowEnemy : MonoBehaviour {
 						}
 
 						if (Distancia > VistaDistancia) {
+			
 								hedgehog.SetBool ("idle", true);
 								//renderer.material.color = Color.grey;
 						}
 
 						if (Distancia < AttackRange) {
-	
+
 								hedgehog.SetTrigger ("attack");
-			
+								
 			
 						} else if (Distancia < ChaseRange) {
+
 
 								//renderer.material.color = Color.red;
 								hedgehog.SetBool ("idle", false);
 								hedgehog.SetBool ("walkin", true);
+
 
 
 								chase ();
@@ -81,6 +87,8 @@ public class FollowEnemy : MonoBehaviour {
 			hedgehog.SetBool("idle", false);
 			hedgehog.SetBool("walkin", false);
 			hedgehog.SetBool("death", true);
+
+
 			if (once == false)
 			{
 			StartCoroutine(respawns());
@@ -131,6 +139,8 @@ public class FollowEnemy : MonoBehaviour {
 		Debug.Log ("ApplyDamage");
 		health -= dano;
 		hedgehog.SetTrigger ("damage2");
+
+
 						
 						//gameObject.SetActive (false);
 
