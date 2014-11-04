@@ -11,6 +11,7 @@ public class Desoxigen : MonoBehaviour {
 	bool alive = false;
 	GameObject teste;
 	int scalerate;
+	public float damage = 0.5f;
 
 
 
@@ -63,7 +64,14 @@ public class Desoxigen : MonoBehaviour {
 			//Debug.Log("Esta Colidindo");
 			Destroy(Col.gameObject);
 				}
+
+		if (Col.gameObject.tag == "Enemy") {
+			Debug.Log ("Colliding");
+			Col.gameObject.SendMessageUpwards("ApplyDamage", damage, SendMessageOptions.DontRequireReceiver);
+		}
 	}
+
+
 
 
 
