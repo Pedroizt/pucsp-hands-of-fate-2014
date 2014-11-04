@@ -147,6 +147,7 @@
      <Compile Include="Assets\Scripts\Mecanicas\UnlockScripts\UnlockToInventary.cs" />
      <Compile Include="Assets\Scripts\Mecanicas\WaterTerrain.cs" />
      <Compile Include="Assets\Scripts\Mira.cs" />
+     <Compile Include="Assets\Scripts\Sihir\Sihir.cs" />
      <Compile Include="Assets\Scripts\Texts\TextControl.cs" />
      <Compile Include="Assets\Scripts\Texts\TriggerControl.cs" />
      <Compile Include="Assets\Sonsemusicas\audioplay.cs" />
