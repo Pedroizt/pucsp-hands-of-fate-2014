@@ -154,6 +154,8 @@ ModelImporter:
     7400000: Default Take
     7400002: andar
     7400004: ArmatureAction
+    7400006: andar0
+    7400008: ArmatureAction0
     9500000: //RootNode
     13700000: Sphere
   materials:
@@ -165,17 +167,521 @@ ModelImporter:
     bakeSimulation: 0
     optimizeGameObjects: 0
     motionNodeName: 
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: andar0
+      takeName: andar
+      firstFrame: 0
+      lastFrame: 7
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/bacia_L_005
+        weight: 0
+      - path: Armature/bacia_L_005/CTRLPE_L_011
+        weight: 0
+      - path: Armature/bacia_L_005/CTRLPE_L_011/CTRLpeitodope_L_012
+        weight: 0
+      - path: Armature/bacia_L_005/CTRLPE_L_011/CTRLpeitodope_L_012/CTRLcalcanhar_L_005
+        weight: 0
+      - path: Armature/bacia_R_005
+        weight: 0
+      - path: Armature/bacia_R_005/CTRLPE_R_011
+        weight: 0
+      - path: Armature/bacia_R_005/CTRLPE_R_011/CTRLpeitodope_R_012
+        weight: 0
+      - path: Armature/bacia_R_005/CTRLPE_R_011/CTRLpeitodope_R_012/CTRLcalcanhar_R_005
+        weight: 0
+      - path: Armature/COG_004
+        weight: 1
+      - path: Armature/COG_004/A_braco_L_001
+        weight: 0
+      - path: Armature/COG_004/A_braco_R_001
+        weight: 0
+      - path: Armature/COG_004/COG
+        weight: 1
+      - path: Armature/COG_004/COG/bacia
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_001
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_001/bacia_L_002
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_001/bacia_L_002/bacia_L_003
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_001/bacia_L_002/bacia_L_003/bacia_L_004
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_006
+        weight: 0
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007
+        weight: 0
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007/bacia_L_008
+        weight: 0
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007/bacia_L_008/bacia_L_009
+        weight: 0
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007/bacia_L_010
+        weight: 0
+      - path: Armature/COG_004/COG/bacia/bacia_R
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_001
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_001/bacia_R_002
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_001/bacia_R_002/bacia_R_003
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_001/bacia_R_002/bacia_R_003/bacia_R_004
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_006
+        weight: 0
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007
+        weight: 0
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007/bacia_R_008
+        weight: 0
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007/bacia_R_008/bacia_R_009
+        weight: 0
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007/bacia_R_010
+        weight: 0
+      - path: Armature/COG_004/COG/COG_001
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/Bone
+        weight: 0
+      - path: Armature/COG_004/COG/COG_001/Bone_001
+        weight: 0
+      - path: Armature/COG_004/COG/COG_001/COG_002
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_L
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_L/braco_L
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L/dedao_L_001
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L/dedao_L_001/dedao_L_002
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L/dedao_L_001/dedao_L_002/dedao_L_003
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/mao_L
+        weight: 0
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/mao_L/dedo_L
+        weight: 0
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/mao_L/dedo_L/mao_L_002
+        weight: 0
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_R
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_R/braco_R_
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R/dedao_R_001
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R/dedao_R_001/dedao_R_002
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R/dedao_R_001/dedao_R_002/dedao_R_003
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/mao_R
+        weight: 0
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/mao_R/dedo_R
+        weight: 0
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/mao_R/dedo_R/mao_R_002
+        weight: 0
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/pescoco
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/pescoco/cabeca
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/pescoco/cabeca/cabe_a_001
+        weight: 1
+      - path: Camera
+        weight: 0
+      - path: Cube
+        weight: 0
+      - path: Lamp
+        weight: 0
+      - path: Lamp_001
+        weight: 0
+      - path: Lamp_002
+        weight: 0
+      - path: Lamp_003
+        weight: 0
+      - path: Plane
+        weight: 0
+      - path: Sphere
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: andar
+      takeName: andar
+      firstFrame: 0
+      lastFrame: 7
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/bacia_L_005
+        weight: 0
+      - path: Armature/bacia_L_005/CTRLPE_L_011
+        weight: 0
+      - path: Armature/bacia_L_005/CTRLPE_L_011/CTRLpeitodope_L_012
+        weight: 0
+      - path: Armature/bacia_L_005/CTRLPE_L_011/CTRLpeitodope_L_012/CTRLcalcanhar_L_005
+        weight: 0
+      - path: Armature/bacia_R_005
+        weight: 0
+      - path: Armature/bacia_R_005/CTRLPE_R_011
+        weight: 0
+      - path: Armature/bacia_R_005/CTRLPE_R_011/CTRLpeitodope_R_012
+        weight: 0
+      - path: Armature/bacia_R_005/CTRLPE_R_011/CTRLpeitodope_R_012/CTRLcalcanhar_R_005
+        weight: 0
+      - path: Armature/COG_004
+        weight: 1
+      - path: Armature/COG_004/A_braco_L_001
+        weight: 0
+      - path: Armature/COG_004/A_braco_R_001
+        weight: 0
+      - path: Armature/COG_004/COG
+        weight: 1
+      - path: Armature/COG_004/COG/bacia
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_001
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_001/bacia_L_002
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_001/bacia_L_002/bacia_L_003
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_001/bacia_L_002/bacia_L_003/bacia_L_004
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_006
+        weight: 0
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007
+        weight: 0
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007/bacia_L_008
+        weight: 0
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007/bacia_L_008/bacia_L_009
+        weight: 0
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007/bacia_L_010
+        weight: 0
+      - path: Armature/COG_004/COG/bacia/bacia_R
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_001
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_001/bacia_R_002
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_001/bacia_R_002/bacia_R_003
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_001/bacia_R_002/bacia_R_003/bacia_R_004
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_006
+        weight: 0
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007
+        weight: 0
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007/bacia_R_008
+        weight: 0
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007/bacia_R_008/bacia_R_009
+        weight: 0
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007/bacia_R_010
+        weight: 0
+      - path: Armature/COG_004/COG/COG_001
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/Bone
+        weight: 0
+      - path: Armature/COG_004/COG/COG_001/Bone_001
+        weight: 0
+      - path: Armature/COG_004/COG/COG_001/COG_002
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_L
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_L/braco_L
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L/dedao_L_001
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L/dedao_L_001/dedao_L_002
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L/dedao_L_001/dedao_L_002/dedao_L_003
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/mao_L
+        weight: 0
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/mao_L/dedo_L
+        weight: 0
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/mao_L/dedo_L/mao_L_002
+        weight: 0
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_R
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_R/braco_R_
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R/dedao_R_001
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R/dedao_R_001/dedao_R_002
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R/dedao_R_001/dedao_R_002/dedao_R_003
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/mao_R
+        weight: 0
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/mao_R/dedo_R
+        weight: 0
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/mao_R/dedo_R/mao_R_002
+        weight: 0
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/pescoco
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/pescoco/cabeca
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/pescoco/cabeca/cabe_a_001
+        weight: 1
+      - path: Camera
+        weight: 0
+      - path: Cube
+        weight: 0
+      - path: Lamp
+        weight: 0
+      - path: Lamp_001
+        weight: 0
+      - path: Lamp_002
+        weight: 0
+      - path: Lamp_003
+        weight: 0
+      - path: Plane
+        weight: 0
+      - path: Sphere
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: ArmatureAction
+      takeName: ArmatureAction
+      firstFrame: 0
+      lastFrame: 26.6000004
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/bacia_L_005
+        weight: 0
+      - path: Armature/bacia_L_005/CTRLPE_L_011
+        weight: 0
+      - path: Armature/bacia_L_005/CTRLPE_L_011/CTRLpeitodope_L_012
+        weight: 0
+      - path: Armature/bacia_L_005/CTRLPE_L_011/CTRLpeitodope_L_012/CTRLcalcanhar_L_005
+        weight: 0
+      - path: Armature/bacia_R_005
+        weight: 0
+      - path: Armature/bacia_R_005/CTRLPE_R_011
+        weight: 0
+      - path: Armature/bacia_R_005/CTRLPE_R_011/CTRLpeitodope_R_012
+        weight: 0
+      - path: Armature/bacia_R_005/CTRLPE_R_011/CTRLpeitodope_R_012/CTRLcalcanhar_R_005
+        weight: 0
+      - path: Armature/COG_004
+        weight: 1
+      - path: Armature/COG_004/A_braco_L_001
+        weight: 0
+      - path: Armature/COG_004/A_braco_R_001
+        weight: 0
+      - path: Armature/COG_004/COG
+        weight: 1
+      - path: Armature/COG_004/COG/bacia
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_001
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_001/bacia_L_002
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_001/bacia_L_002/bacia_L_003
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_001/bacia_L_002/bacia_L_003/bacia_L_004
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_006
+        weight: 0
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007
+        weight: 0
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007/bacia_L_008
+        weight: 0
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007/bacia_L_008/bacia_L_009
+        weight: 0
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007/bacia_L_010
+        weight: 0
+      - path: Armature/COG_004/COG/bacia/bacia_R
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_001
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_001/bacia_R_002
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_001/bacia_R_002/bacia_R_003
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_001/bacia_R_002/bacia_R_003/bacia_R_004
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_006
+        weight: 0
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007
+        weight: 0
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007/bacia_R_008
+        weight: 0
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007/bacia_R_008/bacia_R_009
+        weight: 0
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007/bacia_R_010
+        weight: 0
+      - path: Armature/COG_004/COG/COG_001
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/Bone
+        weight: 0
+      - path: Armature/COG_004/COG/COG_001/Bone_001
+        weight: 0
+      - path: Armature/COG_004/COG/COG_001/COG_002
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_L
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_L/braco_L
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L/dedao_L_001
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L/dedao_L_001/dedao_L_002
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L/dedao_L_001/dedao_L_002/dedao_L_003
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/mao_L
+        weight: 0
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/mao_L/dedo_L
+        weight: 0
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/mao_L/dedo_L/mao_L_002
+        weight: 0
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_R
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_R/braco_R_
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R/dedao_R_001
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R/dedao_R_001/dedao_R_002
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R/dedao_R_001/dedao_R_002/dedao_R_003
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/mao_R
+        weight: 0
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/mao_R/dedo_R
+        weight: 0
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/mao_R/dedo_R/mao_R_002
+        weight: 0
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/pescoco
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/pescoco/cabeca
+        weight: 1
+      - path: Armature/COG_004/COG/COG_001/COG_002/COG_003/pescoco/cabeca/cabe_a_001
+        weight: 1
+      - path: Camera
+        weight: 0
+      - path: Cube
+        weight: 0
+      - path: Lamp
+        weight: 0
+      - path: Lamp_001
+        weight: 0
+      - path: Lamp_002
+        weight: 0
+      - path: Lamp_003
+        weight: 0
+      - path: Plane
+        weight: 0
+      - path: Sphere
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: .5
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -196,8 +702,587 @@ ModelImporter:
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    human: []
-    skeleton: []
+    human:
+    - boneName: COG
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bacia_L
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bacia_R
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bacia_L_002
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bacia_R_002
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bacia_L_003
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bacia_R_003
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: COG_001
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: COG_002
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pescoco
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cabeca
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ombro_L
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ombro_R
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: braco_L
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: braco_R_
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: A_braco_L
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: A_braco_R
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedao_L
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedao_R_001
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bacia_L_004
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bacia_R_004
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cabe_a_001
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedao_L_001
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedao_L_002
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedao_L_003
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedao_R_001
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedao_R_002
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: dedao_R_003
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Sihir(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Armature
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: -.707106888, y: 0, z: -0, w: .707106769}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: COG_004
+      position: {x: -0, y: -.0342623964, z: 0}
+      rotation: {x: .705442309, y: .705442369, z: .0484881625, w: -.0484883413}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: A_braco_R_001
+      position: {x: .127177224, y: 2.24950671, z: -1.19958246}
+      rotation: {x: 8.34179232e-08, y: .997646153, z: -1.1781021e-07, w: .0685727522}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: COG
+      position: {x: .963663518, y: .000556637591, z: -3.70635438}
+      rotation: {x: .922600627, y: -.0255149454, z: .0636520237, w: .379612267}
+      scale: {x: .99999994, y: 1.00000012, z: .99999994}
+      transformModified: 1
+    - name: COG_001
+      position: {x: -.447489172, y: 3.38075985e-08, z: 2.01315006e-11}
+      rotation: {x: .691723347, y: .25303036, z: -.613809764, w: -.284133822}
+      scale: {x: .999999821, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Bone
+      position: {x: -1.32833767, y: -1.53592181, z: -.664164364}
+      rotation: {x: -1.52787052e-07, y: -.0593176782, z: -8.81284379e-09, w: .99823916}
+      scale: {x: 1, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: Bone_001
+      position: {x: -1.32833743, y: 1.50115836, z: -.664165556}
+      rotation: {x: -1.52787052e-07, y: -.0593176782, z: -8.81284379e-09, w: .99823916}
+      scale: {x: 1, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: COG_002
+      position: {x: -.5214504, y: 3.9368409e-08, z: -5.19516741e-09}
+      rotation: {x: 2.21894538e-06, y: -.0571534298, z: 1.65003101e-07, w: .998365402}
+      scale: {x: 1, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: COG_003
+      position: {x: -.468015105, y: 3.5334125e-08, z: -1.25116795e-09}
+      rotation: {x: -2.15331715e-06, y: -.0419708453, z: 9.41850331e-08, w: .999118865}
+      scale: {x: 1, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: ombro_L
+      position: {x: -.426963806, y: 3.22348797e-08, z: -1.06589741e-08}
+      rotation: {x: -.400954574, y: -.549079955, z: .597451508, w: .425204039}
+      scale: {x: 1, y: 1, z: .999999881}
+      transformModified: 1
+    - name: braco_L
+      position: {x: -.617892146, y: 4.3529969e-08, z: 3.72572053e-08}
+      rotation: {x: -.000703852682, y: .150351748, z: -.0413967855, w: .987765253}
+      scale: {x: .99999994, y: .999999821, z: .999999821}
+      transformModified: 1
+    - name: A_braco_L
+      position: {x: -.936852336, y: 6.96378564e-08, z: 5.43798429e-08}
+      rotation: {x: -2.58422369e-05, y: .0137685416, z: .0429480597, w: .99898243}
+      scale: {x: 1, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: mao_L
+      position: {x: -.728422582, y: 5.2235908e-08, z: -3.39010278e-08}
+      rotation: {x: -.000348089001, y: -.0175079871, z: -.0197405405, w: .99965179}
+      scale: {x: .99999994, y: 1, z: .999999881}
+      transformModified: 1
+    - name: dedo_L
+      position: {x: -.32733053, y: 2.44863951e-08, z: 1.40337306e-07}
+      rotation: {x: -2.60693001e-09, y: .0107179349, z: -8.1422705e-08, w: .999942601}
+      scale: {x: .99999994, y: 1, z: .99999994}
+      transformModified: 1
+    - name: mao_L_002
+      position: {x: -.129736304, y: 9.13721543e-09, z: -1.8282611e-08}
+      rotation: {x: -1.99390906e-05, y: .00533327926, z: -.00294108875, w: .999981463}
+      scale: {x: .999999881, y: 1, z: .999999881}
+      transformModified: 1
+    - name: dedao_L
+      position: {x: -.728422582, y: 5.2235908e-08, z: -3.39010278e-08}
+      rotation: {x: -.00513560418, y: -.0115916859, z: .290769994, w: .956708968}
+      scale: {x: .999999821, y: .999999821, z: .999999821}
+      transformModified: 1
+    - name: dedao_L_001
+      position: {x: -.109307095, y: 1.61874325e-07, z: 2.39218192e-08}
+      rotation: {x: .00326597923, y: -.0106557496, z: -.0816672295, w: .996597409}
+      scale: {x: 1, y: 1.00000012, z: .999999881}
+      transformModified: 1
+    - name: dedao_L_002
+      position: {x: -.0948243588, y: -5.98810868e-09, z: -2.58880046e-08}
+      rotation: {x: -.0003481452, y: .0257711764, z: -.0279731154, w: .99927634}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: dedao_L_003
+      position: {x: -.088630572, y: 4.91551759e-08, z: 3.72851652e-08}
+      rotation: {x: .00126801804, y: -.0725146085, z: .0213739872, w: .997137487}
+      scale: {x: .99999994, y: 1, z: .99999994}
+      transformModified: 1
+    - name: ombro_R
+      position: {x: -.426963806, y: 3.22348797e-08, z: -1.06589741e-08}
+      rotation: {x: -.400954217, y: .549080193, z: .59745127, w: -.425204247}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: braco_R_
+      position: {x: -.617892206, y: 4.65775507e-08, z: -3.16814237e-08}
+      rotation: {x: .00109113916, y: .15036796, z: .0413378328, w: .987764895}
+      scale: {x: .99999994, y: 1, z: .99999994}
+      transformModified: 1
+    - name: A_braco_R
+      position: {x: -.936852336, y: 6.71296618e-08, z: 3.9620538e-08}
+      rotation: {x: -.000289263116, y: .0128783565, z: -.0268923286, w: .999555349}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: mao_R
+      position: {x: -.728422701, y: 5.45517587e-08, z: -3.6542346e-08}
+      rotation: {x: .000348089612, y: -.0175079852, z: .0197405424, w: .99965179}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: dedo_R
+      position: {x: -.327330291, y: 1.80974187e-08, z: 3.18526681e-08}
+      rotation: {x: 3.72377817e-09, y: .0107179349, z: 8.14280909e-08, w: .999942601}
+      scale: {x: .999999881, y: 1, z: .999999881}
+      transformModified: 1
+    - name: mao_R_002
+      position: {x: -.129736081, y: 1.14846248e-08, z: -5.35334514e-08}
+      rotation: {x: 1.99399401e-05, y: .00533327879, z: .00294108875, w: .999981463}
+      scale: {x: .999999821, y: 1, z: .999999821}
+      transformModified: 1
+    - name: dedao_R
+      position: {x: -.728422701, y: 5.45517587e-08, z: -3.6542346e-08}
+      rotation: {x: .00513557205, y: -.0115916785, z: -.290770024, w: .956708968}
+      scale: {x: 1, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: dedao_R_001
+      position: {x: -.109306812, y: -2.68766733e-08, z: 2.35059999e-10}
+      rotation: {x: -.00326183788, y: -.0124698998, z: .0955677032, w: .995339513}
+      scale: {x: .99999994, y: 1, z: .99999994}
+      transformModified: 1
+    - name: dedao_R_002
+      position: {x: -.0948246643, y: 1.96713632e-08, z: 8.25277908e-08}
+      rotation: {x: .000348148751, y: .0257711764, z: .0279730931, w: .99927634}
+      scale: {x: .99999994, y: .99999994, z: 1}
+      transformModified: 1
+    - name: dedao_R_003
+      position: {x: -.0886304155, y: 2.14511395e-08, z: 7.39200834e-09}
+      rotation: {x: -.00126802339, y: -.0725146085, z: -.0213739574, w: .997137487}
+      scale: {x: .999999881, y: 1, z: .999999881}
+      transformModified: 1
+    - name: pescoco
+      position: {x: -.426963806, y: 3.22348797e-08, z: -1.06589741e-08}
+      rotation: {x: -8.18141473e-07, y: .0456812866, z: 1.69482792e-08, w: .998956084}
+      scale: {x: .999999821, y: 1, z: .999999821}
+      transformModified: 1
+    - name: cabeca
+      position: {x: -.157529488, y: 1.18931434e-08, z: 2.30660402e-09}
+      rotation: {x: 1.20800826e-06, y: -.0368501917, z: 7.19348081e-10, w: .999320805}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: cabe_a_001
+      position: {x: -1.03026748, y: 7.7783028e-08, z: 5.16105203e-09}
+      rotation: {x: -6.86362753e-08, y: .983617961, z: -4.30165102e-07, w: .18026562}
+      scale: {x: .999999821, y: 1.00000012, z: .99999994}
+      transformModified: 1
+    - name: bacia
+      position: {x: -.447489172, y: 3.38075985e-08, z: 2.01315006e-11}
+      rotation: {x: .592193544, y: -.291799247, z: .710317075, w: -.244150877}
+      scale: {x: 1.00000012, y: 1, z: 1}
+      transformModified: 1
+    - name: bacia_L
+      position: {x: -.553286612, y: 4.17719725e-08, z: -4.4582058e-09}
+      rotation: {x: .564779937, y: .317248017, z: .425468802, w: .631944299}
+      scale: {x: 1, y: .999999881, z: 1}
+      transformModified: 1
+    - name: bacia_L_006
+      position: {x: -1.01426101, y: -1.21255946, z: -1.19850075}
+      rotation: {x: -.582970321, y: -.343803078, z: -.400091082, w: .617958069}
+      scale: {x: .999999881, y: .999999881, z: 1.00000012}
+      transformModified: 1
+    - name: bacia_L_001
+      position: {x: -.382320195, y: 2.32469173e-08, z: 6.52620513e-10}
+      rotation: {x: -.622361481, y: -.391803801, z: -.337234825, w: .587731779}
+      scale: {x: .999999881, y: .999999881, z: .99999994}
+      transformModified: 1
+    - name: bacia_L_002
+      position: {x: -1.26442444, y: 8.96947938e-08, z: -8.05226019e-09}
+      rotation: {x: .00114844984, y: .0924579129, z: -.0123091331, w: .995639861}
+      scale: {x: .99999994, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: bacia_L_003
+      position: {x: -1.5282234, y: 9.88599638e-08, z: 4.17293435e-08}
+      rotation: {x: .873161972, y: -.00370957167, z: .487414569, w: -.00119621411}
+      scale: {x: .999999881, y: 1, z: 1}
+      transformModified: 1
+    - name: bacia_L_004
+      position: {x: -.355691642, y: 2.10367315e-08, z: -7.35314387e-08}
+      rotation: {x: .979905725, y: -.00755308382, z: -.199318111, w: -.000190282415}
+      scale: {x: .999999821, y: 1, z: .99999994}
+      transformModified: 1
+    - name: bacia_L_007
+      position: {x: -.382320195, y: 2.32469173e-08, z: 6.52620513e-10}
+      rotation: {x: -.272245914, y: .0457034484, z: -.652596474, w: .705628276}
+      scale: {x: 1, y: 1, z: .999999881}
+      transformModified: 1
+    - name: bacia_L_008
+      position: {x: -.454079837, y: 3.71984221e-08, z: 1.01328022e-08}
+      rotation: {x: 1.02064426e-07, y: -.561133444, z: 2.17389214e-07, w: .827725351}
+      scale: {x: .99999994, y: 1, z: .999999821}
+      transformModified: 1
+    - name: bacia_L_009
+      position: {x: -.840398192, y: 6.95251217e-08, z: 6.13701978e-09}
+      rotation: {x: -7.70644615e-09, y: -.0105821546, z: -2.99757019e-08, w: .999944031}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: bacia_L_010
+      position: {x: -1.2039417, y: -2.44925417e-07, z: -1.93285775}
+      rotation: {x: -3.17394466e-08, y: .142412797, z: -1.33359004e-08, w: .989807367}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: bacia_R
+      position: {x: -.553286612, y: 4.17719725e-08, z: -4.4582058e-09}
+      rotation: {x: -.564779758, y: .317248076, z: -.425468832, w: .631944418}
+      scale: {x: .999999821, y: .99999994, z: .999999821}
+      transformModified: 1
+    - name: bacia_R_006
+      position: {x: -1.01426089, y: 1.21255946, z: -1.19850087}
+      rotation: {x: .582970202, y: -.343803167, z: .400091082, w: .617958128}
+      scale: {x: 1, y: 1, z: .99999994}
+      transformModified: 1
+    - name: bacia_R_001
+      position: {x: -.382320195, y: 2.91492857e-08, z: 2.65399756e-08}
+      rotation: {x: .622361481, y: -.39180389, z: .337234885, w: .587731719}
+      scale: {x: .999999821, y: .999999821, z: .999999881}
+      transformModified: 1
+    - name: bacia_R_002
+      position: {x: -1.26442432, y: 1.01509862e-07, z: -4.39883596e-09}
+      rotation: {x: -.00114847301, y: .0924579203, z: .0123091368, w: .995639861}
+      scale: {x: .99999994, y: 1, z: .999999881}
+      transformModified: 1
+    - name: bacia_R_003
+      position: {x: -1.52822351, y: 9.48007965e-08, z: 3.02879783e-08}
+      rotation: {x: .873161912, y: .00368540618, z: .487414896, w: .00122037635}
+      scale: {x: .999999821, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: bacia_R_004
+      position: {x: -.35569188, y: 3.75758269e-08, z: 2.75114786e-07}
+      rotation: {x: .979905725, y: .00755290408, z: -.199318141, w: .000190358071}
+      scale: {x: .999999762, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: bacia_R_007
+      position: {x: -.382320195, y: 2.91492857e-08, z: 2.65399756e-08}
+      rotation: {x: .272245854, y: .0457033142, z: .652596474, w: .705628276}
+      scale: {x: .999999762, y: .99999994, z: 1}
+      transformModified: 1
+    - name: bacia_R_008
+      position: {x: -.454079866, y: 5.60015252e-08, z: -2.12997247e-08}
+      rotation: {x: -1.01361607e-07, y: -.561133444, z: -1.59473188e-07, w: .827725351}
+      scale: {x: 1, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: bacia_R_009
+      position: {x: -.840398252, y: 5.73322829e-08, z: 7.82475418e-09}
+      rotation: {x: 5.71604186e-09, y: -.0105821555, z: 2.99715488e-08, w: .999944031}
+      scale: {x: 1, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: bacia_R_010
+      position: {x: -1.20394158, y: 4.42795567e-07, z: -1.93285787}
+      rotation: {x: 8.10604419e-08, y: .142412812, z: 9.33356503e-09, w: .989807367}
+      scale: {x: 1, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: A_braco_L_001
+      position: {x: .127176881, y: -2.24950719, z: -1.19958138}
+      rotation: {x: 8.34179232e-08, y: .997646153, z: -1.1781021e-07, w: .0685727522}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: bacia_L_005
+      position: {x: -.376227587, y: .206598938, z: -3.70842528}
+      rotation: {x: .704841673, y: .698762894, z: .0860218704, w: -.0867697522}
+      scale: {x: 1, y: .999999881, z: 1}
+      transformModified: 1
+    - name: CTRLPE_L_011
+      position: {x: -.663346171, y: .00334347808, z: -.0965020731}
+      rotation: {x: 7.57093943e-08, y: .999999881, z: -.000531629601, w: 7.54599156e-08}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CTRLpeitodope_L_012
+      position: {x: -.277351618, y: 2.27982948e-08, z: -9.93809408e-08}
+      rotation: {x: -.00181934051, y: .199313477, z: .00767242583, w: .979904056}
+      scale: {x: .99999994, y: 1, z: .99999994}
+      transformModified: 1
+    - name: CTRLcalcanhar_L_005
+      position: {x: -.35569185, y: 3.44676572e-08, z: -1.89721163e-08}
+      rotation: {x: 2.67456035e-05, y: -.310412556, z: -.00356115727, w: .950595319}
+      scale: {x: 1, y: .999999821, z: .99999994}
+      transformModified: 1
+    - name: bacia_R_005
+      position: {x: .376227587, y: .206598938, z: -3.70842528}
+      rotation: {x: .698762894, y: .704841614, z: .0867700428, w: -.0860215649}
+      scale: {x: 1, y: .999999881, z: 1}
+      transformModified: 1
+    - name: CTRLPE_R_011
+      position: {x: -.663346171, y: -.00334339193, z: -.0965020731}
+      rotation: {x: 7.55395888e-08, y: .999999881, z: .000531629659, w: 7.55403278e-08}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CTRLpeitodope_R_012
+      position: {x: -.277351677, y: 2.21105356e-08, z: 1.39125234e-07}
+      rotation: {x: .0018193709, y: .199313477, z: -.00767242722, w: .979904056}
+      scale: {x: .99999994, y: 1, z: .99999994}
+      transformModified: 1
+    - name: CTRLcalcanhar_R_005
+      position: {x: -.355691791, y: 1.62329119e-08, z: -1.90602734e-08}
+      rotation: {x: -2.67926425e-05, y: -.310412556, z: .00356115727, w: .950595319}
+      scale: {x: 1, y: .999999821, z: .99999994}
+      transformModified: 1
+    - name: Camera
+      position: {x: -3.74056578, y: 3.27161074, z: 3.25381994}
+      rotation: {x: .210611343, y: .905240178, z: -.089281708, w: -.358066887}
+      scale: {x: 1, y: .999999881, z: .99999994}
+      transformModified: 1
+    - name: Cube
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: -.707106888, y: 0, z: -0, w: .707106769}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Lamp
+      position: {x: -4.48748589, y: 2.951931, z: -2.82023263}
+      rotation: {x: .169075772, y: -.755880296, z: .272171319, w: .570947587}
+      scale: {x: .99999994, y: 1, z: .999999881}
+      transformModified: 1
+    - name: Lamp_001
+      position: {x: 6.07603645, y: 2.951931, z: -2.82023263}
+      rotation: {x: .169075772, y: -.755880296, z: .272171319, w: .570947587}
+      scale: {x: .99999994, y: 1, z: .999999881}
+      transformModified: 1
+    - name: Lamp_002
+      position: {x: 6.16367817, y: 3.38209844, z: 5.54616165}
+      rotation: {x: .169075772, y: -.755880296, z: .272171319, w: .570947587}
+      scale: {x: .99999994, y: 1, z: .999999881}
+      transformModified: 1
+    - name: Lamp_003
+      position: {x: -7.43204212, y: 3.38209844, z: 5.54616165}
+      rotation: {x: .169075772, y: -.755880296, z: .272171319, w: .570947587}
+      scale: {x: .99999994, y: 1, z: .999999881}
+      transformModified: 1
+    - name: Plane
+      position: {x: 1.06138945, y: -3.99198699, z: .46760428}
+      rotation: {x: -.707106888, y: 0, z: -0, w: .707106769}
+      scale: {x: 5.23336172, y: 5.23336172, z: 5.23336172}
+      transformModified: 1
+    - name: Sphere
+      position: {x: -.5147928, y: -.546395957, z: 1.74045694}
+      rotation: {x: 0, y: -0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
     armTwist: .5
     foreArmTwist: .5
     upperLegTwist: .5
@@ -207,6 +1292,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 3
   additionalBone: 0
   userData: 
