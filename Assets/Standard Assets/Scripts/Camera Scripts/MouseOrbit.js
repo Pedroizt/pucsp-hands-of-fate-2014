@@ -7,8 +7,8 @@ var ySpeed = 120.0;
 var yMinLimit = -20;
 var yMaxLimit = 80;
 
-private var x = 0.0;
-private var y = 0.0;
+var x = 0.0;
+var y = 0.0;
 
 @script AddComponentMenu("Camera-Control/Mouse Orbit")
 
@@ -22,6 +22,18 @@ function Start () {
 		rigidbody.freezeRotation = true;
 }
 
+function MouseDisabled()
+{
+Screen.showCursor = false;
+this.enabled = false;
+}
+
+function MouseEnabled()
+{
+Screen.showCursor = true;
+this.enabled = true;
+}
+
 function LateUpdate () {
     if (target) {
         x += Input.GetAxis("Mouse X") * xSpeed * 0.02;
@@ -30,7 +42,7 @@ function LateUpdate () {
  		y = ClampAngle(y, yMinLimit, yMaxLimit);
  		       
         var rotation = Quaternion.Euler(y, x, 0);
-        var position = rotation * Vector3(0.0, 0.0, -distance) + target.position;
+        var position = rotation * Vector3(0.0, 1.0, -distance) + target.position;
         
         transform.rotation = rotation;
         transform.position = position;
