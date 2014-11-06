@@ -60,6 +60,8 @@
      <Compile Include="Assets\Imagens\Fade2.cs" />
      <Compile Include="Assets\Imagens\LoadingScreen\LoadScreen.cs" />
      <Compile Include="Assets\Imagens\LoadingScreen\MenuFade.cs" />
+     <Compile Include="Assets\Imagens\Mapa\TriggerSendMessage.cs" />
+     <Compile Include="Assets\Imagens\Mapa\mapa.cs" />
      <Compile Include="Assets\Imagens\Menu.cs" />
      <Compile Include="Assets\Imagens\Opening.cs" />
      <Compile Include="Assets\Imagens\Opções.cs" />

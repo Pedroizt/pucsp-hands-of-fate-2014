@@ -33,7 +33,7 @@ public class Inventario : MonoBehaviour {
 	public GameObject menuhistoria;
 	public GameObject menuopcoes;
 	public GameObject menusalvar;
-
+	public bool isinvent = false;
 	
 	/*public GameObject armor;
 	public GameObject luva;
@@ -96,10 +96,10 @@ public class Inventario : MonoBehaviour {
 
 				if (Input.GetKeyDown (KeyCode.I)) {
 
+			isinvent = true;
 
-
-						isPause = !isPause;
-						if (isPause) {
+			pause();
+						if (isPause && isinvent) {
 				Air.SetActive(true);
 				RealCamera.SendMessage("MouseDisabled");
 
@@ -139,7 +139,7 @@ public class Inventario : MonoBehaviour {
 								//hp.paused = false;
 								DontDraw ();
 				RealCamera.SendMessage("MouseEnabled");
-
+				isinvent = false;
 						}
 
 
@@ -200,6 +200,11 @@ public class Inventario : MonoBehaviour {
 			helmet.SetActive (false);*/
 		
 	}
+
+	void pause()
+	{
+		isPause = !isPause;
+		}
 
 	void DrawItems()
 	{
