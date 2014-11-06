@@ -1,13 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Mask.shader">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\HPThings\Inventario.cs">
     <Files>
-      <File FileName="Assets\Standard Assets\Scripts\Camera Scripts\MouseOrbit.js" Line="45" Column="51" />
-      <File FileName="Assets\Scripts\Minimapafollow.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Sihir\Sihir.cs" Line="1" Column="1" />
-      <File FileName="Assets\UnityChan\Scripts\UnityChanControlScriptWithRgidBody.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\HPThings\Inventario.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Mask.shader" Line="5" Column="28" />
+      <File FileName="Assets\Imagens\Mapa\mapa.cs" Line="1" Column="1" />
+      <File FileName="Assets\Imagens\Mapa\mapa.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\HPThings\Inventario.cs" Line="55" Column="16" />
+      <File FileName="Assets\Imagens\Mapa\TriggerSendMessage.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
