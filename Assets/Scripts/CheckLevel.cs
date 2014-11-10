@@ -13,9 +13,9 @@ public class CheckLevel : MonoBehaviour {
 	
 	}
 
-	void OnLevelWasLoaded(int level)
+	/*void OnLevelWasLoaded(int level)
 	{
-				if (level == 2)
+				//if (level == 2)
 						Debug.Log ("Loaded");
-		}
+		}*/
 }

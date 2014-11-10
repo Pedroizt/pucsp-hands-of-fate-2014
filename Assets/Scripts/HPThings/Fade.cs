@@ -12,7 +12,7 @@ public class Fade : MonoBehaviour
 	//private bool sceneStarting = true;      // Whether or not the scene is still fading in.
 	
 	
-	public void Awake ()
+	public void Start ()
 	{
 		// Set the texture so that it is the the size of the screen and covers it.
 		guiTexture.pixelInset = new Rect(-1000, -1000, 5000, 5000);
