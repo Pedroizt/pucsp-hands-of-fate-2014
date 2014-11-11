@@ -7,7 +7,6 @@ public class LoadScreen : MonoBehaviour {
 	//public string LeveltoLoad;
 	AsyncOperation async;
 	bool test2;
-	public TextMesh presstart;
 	public GameObject background;
 	public TextMesh text1;
 	public bool clear = false;
@@ -30,7 +29,7 @@ public class LoadScreen : MonoBehaviour {
 		GameObject f = GameObject.Find ("screenfader");
 		Fade = f.GetComponent<MenuFade> ();
 
-		presstart.renderer.enabled = false;
+
 		background.SetActive (false);
 		text1.renderer.enabled = false;
 		progressbar.SetActive (false);

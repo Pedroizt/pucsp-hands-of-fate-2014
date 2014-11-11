@@ -1,6 +1,8 @@
 fileFormatVersion: 2
 guid: db9be6f609b5a4f48863b1d17f9f48c2
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: Sair
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

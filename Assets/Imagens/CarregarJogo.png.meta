@@ -1,6 +1,8 @@
 fileFormatVersion: 2
 guid: 15fc14a7538ac7041ba97929268da6e4
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: CarregarJogo
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

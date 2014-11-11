@@ -4,12 +4,21 @@ using System.Collections;
 public class Sihir : MonoBehaviour {
 
 	public Animator anim;
+
 	public GameObject camera;
+
+	public audioplay SihirSounds;
+
 	Vector3 sihir;
 
-	// Use this for initialization
+
 	void Start () {
 	
+		#region Audio
+		GameObject a = GameObject.Find ("SihirSounds");
+		SihirSounds = a.GetComponent <audioplay> ();
+		#endregion
+
 	}
 	
 	// Update is called once per frame
@@ -18,6 +27,9 @@ public class Sihir : MonoBehaviour {
 		if (Input.GetKey (KeyCode.W)) {
 						anim.SetBool ("Andar", true);
 						gameObject.transform.position += transform.forward;
+						
+
+						SihirSounds.SihirFootsteps (); //Footsteps Sound
 
 				} else
 						anim.SetBool ("Andar", false);

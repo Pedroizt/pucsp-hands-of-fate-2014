@@ -1,6 +1,8 @@
 fileFormatVersion: 2
 guid: 31d15fcc689d61a409cc0974ca7cbfc6
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: star_burst_png_by_dbszabo1-d516e7w
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

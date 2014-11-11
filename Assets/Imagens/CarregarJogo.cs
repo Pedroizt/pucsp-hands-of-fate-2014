@@ -4,10 +4,22 @@ using System.Collections;
 public class CarregarJogo : MonoBehaviour {
 
 	public ParticleSystem particle;
+
+	public audioplay MouseSounds;
+	
+	void Start(){
+		
+		GameObject a = GameObject.Find ("MouseSounds");
+		MouseSounds = a.GetComponent <audioplay> ();
+		
+	}
+
 	void OnMouseEnter()
 	{
 		gameObject.renderer.material.color = Color.yellow;
 		particle.Play ();
+		
+		MouseSounds.OnMouse ();
 	}
 	
 	
@@ -17,4 +29,13 @@ public class CarregarJogo : MonoBehaviour {
 		renderer.material.color = Color.white;
 		particle.Stop ();
 	}
+
+	void OnMouseDown()
+	{
+			
+		MouseSounds.MouseClick ();
+
+	}
+
+
 }
