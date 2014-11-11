@@ -1,6 +1,8 @@
 fileFormatVersion: 2
 guid: 1d2ef5341c381a744ba1292aff055945
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: HandsFate
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

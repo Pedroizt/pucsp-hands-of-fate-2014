@@ -1,6 +1,8 @@
 fileFormatVersion: 2
 guid: e220f76ee23f57944a8a0287effe3722
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: NovoJogo
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

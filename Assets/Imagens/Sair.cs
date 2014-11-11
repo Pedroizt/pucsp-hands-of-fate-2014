@@ -4,10 +4,22 @@ using System.Collections;
 public class Sair : MonoBehaviour {
 
 	public ParticleSystem particle;
+
+	public audioplay MouseSounds;
+	
+	void Start(){
+		
+		GameObject a = GameObject.Find ("MouseSounds");
+		MouseSounds = a.GetComponent <audioplay> ();
+		
+	}
+
 	void OnMouseEnter()
 	{
 		gameObject.renderer.material.color = Color.yellow;
 		particle.Play ();
+		
+		MouseSounds.OnMouse ();
 	}
 	
 	
@@ -20,6 +32,7 @@ public class Sair : MonoBehaviour {
 
 	void OnMouseDown()
 	{
+		MouseSounds.MouseClick ();
 		Application.Quit ();
 	}
 }

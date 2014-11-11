@@ -3,27 +3,27 @@ using System.Collections;
 
 public class ScriptNovoJogo : MonoBehaviour {
 	
-
-
 	public ParticleSystem particle;
 
 	public bool loading = false;
-	//public GameObject screenFader;
 
+	public audioplay MouseSounds;
 
+	void Start(){
 
+		GameObject a = GameObject.Find ("MouseSounds");
+		MouseSounds = a.GetComponent <audioplay> ();
 
-	void Start()
-	{
-		}
-
+	}
 
 
 	void OnMouseEnter()
 	{
 		gameObject.renderer.material.color = Color.yellow;
 		particle.Play ();
-	
+
+		MouseSounds.OnMouse ();
+
 	}
 	
 
@@ -40,6 +40,11 @@ public class ScriptNovoJogo : MonoBehaviour {
 		AsyncOperation async1 = Application.LoadLevelAsync (2);*/
 		loading = true;
 		//screenFader.guiTexture.color = Color.Lerp(guiTexture.color, Color.black, Time.deltaTime);
+
+		MouseSounds.MouseClick ();
+
+
+
 	}
 
 
