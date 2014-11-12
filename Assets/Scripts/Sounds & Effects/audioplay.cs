@@ -37,7 +37,7 @@ public class audioplay : MonoBehaviour {
 		//Sihir Footsteps
 		audioclip = (AudioClip)Resources.Load ("SFX/Footsteps");
 		audiosource.clip = audioclip;
-		audiosource.loop = true;
+		//audiosource.loop = true;
 		audiosource.Play ();
 
 		}
