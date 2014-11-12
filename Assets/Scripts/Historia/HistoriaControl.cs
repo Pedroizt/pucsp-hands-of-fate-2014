@@ -3,9 +3,11 @@ using System.Collections;
 
 public class HistoriaControl : MonoBehaviour {
 
+	public Camera camera;
 	public GameObject Imagem1;
 	public GameObject Imagem2;
 	public GameObject Imagem3;
+	public GameObject AperteF;
 	public GameObject[] Partes = new GameObject[22];
 	public int i = 0;
 	public bool começacutscene = false;
@@ -19,6 +21,7 @@ public class HistoriaControl : MonoBehaviour {
 	void Start () {
 
 		Partes [i].renderer.enabled = true;
+
 		collor2 = Imagem3.renderer.material.color;
 		collor2.a = 1.0f;
 
@@ -58,7 +61,8 @@ public class HistoriaControl : MonoBehaviour {
 			if (fimdoarray == true)
 			{
 				Partes[i].renderer.enabled = false;
-				
+				AperteF.renderer.enabled = false;
+
 
 					disable = true;
 			}
@@ -69,7 +73,7 @@ public class HistoriaControl : MonoBehaviour {
 			if (collor2.a <= 0.05f)
 			{
 				Imagem3.renderer.enabled = false;
-
+				camera.enabled = false;
 						
 						começacutscene = true;
 			}

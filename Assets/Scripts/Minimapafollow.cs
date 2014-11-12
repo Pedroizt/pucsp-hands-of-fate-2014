@@ -10,7 +10,7 @@ public class Minimapafollow : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-
+		gameObject.camera.pixelRect = new Rect(Screen.width - 170, Screen.height - 170, 140, 140);
 	
 	}
 	
