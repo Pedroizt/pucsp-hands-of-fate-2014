@@ -1,12 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Modelos3D\TrueSihir\TrueSihir.cs">
     <Files>
-      <File FileName="Assets\Modelos3D\TrueSihir\TrueSihir.cs" Line="94" Column="9" />
-      <File FileName="Assets\UnityChan\Scripts\IdleChanger.cs" Line="1" Column="1" />
-      <File FileName="Assets\UnityChan\Scripts\ThirdPersonCamera.cs" Line="1" Column="1" />
-      <File FileName="Assets\UnityChan\Scripts\UnityChanControlScriptWithRgidBody.cs" Line="176" Column="5" />
-      <File FileName="Assets\Standard Assets\Scripts\Camera Scripts\MouseOrbit.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Sounds &amp; Effects\audioplay.cs" Line="40" Column="5" />
+      <File FileName="Assets\Modelos3D\TrueSihir\TrueSihir.cs" Line="122" Column="38" />
+      <File FileName="Assets\Scripts\Sihir\Sihir.cs" Line="19" Column="47" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

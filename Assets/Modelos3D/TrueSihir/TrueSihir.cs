@@ -4,7 +4,7 @@ using System.Collections;
 public class TrueSihir : MonoBehaviour
 {
 
-
+	public bool attacking;
 		public bool nojump;
 		public Animator anim;
 		public float jumpforce = 5;
@@ -15,48 +15,57 @@ public class TrueSihir : MonoBehaviour
 		float resetprogressivespeed = 0.2f;
 		public GameObject camera;
 		private Rigidbody rb;
+		public audioplay SihirSounds;
 
 		// Use this for initialization
 		void Start ()
 		{
+
+		GameObject a = GameObject.Find ("SihirSounds");
+		SihirSounds = a.GetComponent <audioplay> ();
 
 				rb = GetComponent<Rigidbody> ();
 	
 		}
 	
 		// Update is called once per frame
-		void LateUpdate ()
+		void Update ()
 		{
 
 		
-				if (Input.GetKey (KeyCode.W)) {
-						anim.SetBool ("_run", true);
-						gameObject.transform.position += transform.forward * speed * Time.deltaTime;
-						speed += progressivespeed * Time.deltaTime;
+				if (Input.GetKey (KeyCode.W) && attacking == false) {
+
+								anim.SetBool ("_run", true);
+								
+								
+								gameObject.transform.position += transform.forward * speed * Time.deltaTime;
+								//SihirSounds.SihirFootsteps(); footstepssounds
+								speed += progressivespeed * Time.deltaTime;
 
 
 						
-						anim.speed = speed / 6.5f;
+								anim.speed = speed / 6.5f;
 						
 
 						
 						
 
-						if (speed > 11)
-								progressivespeed = 0;
+								if (speed > 11)
+										progressivespeed = 0;
 						  
 			
-						//SihirSounds.SihirFootsteps (); //Footsteps Sound
-			
-				} else {
-						anim.SetBool ("_run", false);
-						speed = resetspeed;
-
-
-				anim.speed = speed / 10f;
-						progressivespeed = 0.1f;
 						
-				}
+			
+						} else {
+								anim.SetBool ("_run", false);
+								speed = resetspeed;
+
+
+								anim.speed = speed / 10f;
+								progressivespeed = 0.1f;
+						
+						}
+				
 		
 				transform.localEulerAngles = 
 			new Vector3 (transform.localEulerAngles.x, 
@@ -76,6 +85,11 @@ public class TrueSihir : MonoBehaviour
 				} else
 						
 						rb.useGravity = true;
+
+
+		if (Input.GetKeyDown (KeyCode.F)) {
+			Attack();
+				}
 				
 
 						
@@ -95,6 +109,23 @@ public class TrueSihir : MonoBehaviour
 
 				}
 		}
+
+	void Attack()
+	{
+		anim.SetTrigger ("_attack");
+		attacking = true;
+		StartCoroutine(boolback ());
+
+	}
+	IEnumerator boolback()
+	{
+		yield return new WaitForSeconds(2.5f);
+		attacking = false;
+	}
+
+
+
+
 
 
 
