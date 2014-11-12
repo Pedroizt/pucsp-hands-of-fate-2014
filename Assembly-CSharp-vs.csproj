@@ -73,6 +73,7 @@
      <Compile Include="Assets\Inimigos\AI\HedgehogHitbox.cs" />
      <Compile Include="Assets\Inventario\ChangeCamera.cs" />
      <Compile Include="Assets\Inventario\Voltarpromenu.cs" />
+     <Compile Include="Assets\Modelos3D\TrueSihir\TrueSihir.cs" />
      <Compile Include="Assets\Night&amp;DayCycle\GameTime.cs" />
      <Compile Include="Assets\Night&amp;DayCycle\Sun.cs" />
      <Compile Include="Assets\NoCollision.cs" />
