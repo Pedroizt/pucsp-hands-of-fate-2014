@@ -151,9 +151,9 @@
      <Compile Include="Assets\Scripts\Minimapafollow.cs" />
      <Compile Include="Assets\Scripts\Mira.cs" />
      <Compile Include="Assets\Scripts\Sihir\Sihir.cs" />
+     <Compile Include="Assets\Scripts\Sounds &amp; Effects\audioplay.cs" />
      <Compile Include="Assets\Scripts\Texts\TextControl.cs" />
      <Compile Include="Assets\Scripts\Texts\TriggerControl.cs" />
-     <Compile Include="Assets\Sonsemusicas\audioplay.cs" />
      <Compile Include="Assets\UnityChan\Scripts\CameraController.cs" />
      <Compile Include="Assets\UnityChan\Scripts\FaceUpdate.cs" />
      <Compile Include="Assets\UnityChan\Scripts\IdleChanger.cs" />
