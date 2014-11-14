@@ -1,6 +1,8 @@
 fileFormatVersion: 2
 guid: 5e9023e94806db84cb244e23b77fbc7f
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: triangulo
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
