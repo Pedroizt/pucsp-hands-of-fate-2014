@@ -157,6 +157,7 @@ ModelImporter:
     7400006: idle
     7400008: jump
     7400010: Run
+    7400012: ataque0
     9500000: //RootNode
     13700000: Sphere
   materials:
@@ -174,7 +175,1015 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: ataque0
+      takeName: ataque
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/bacia_L_005
+        weight: 1
+      - path: Armature/bacia_L_005/CTRLPE_L_011
+        weight: 1
+      - path: Armature/bacia_L_005/CTRLPE_L_011/CTRLpeitodope_L_012
+        weight: 1
+      - path: Armature/bacia_L_005/CTRLPE_L_011/CTRLpeitodope_L_012/CTRLcalcanhar_L_005
+        weight: 1
+      - path: Armature/bacia_R_005
+        weight: 1
+      - path: Armature/bacia_R_005/CTRLPE_R_011
+        weight: 1
+      - path: Armature/bacia_R_005/CTRLPE_R_011/CTRLpeitodope_R_012
+        weight: 1
+      - path: Armature/bacia_R_005/CTRLPE_R_011/CTRLpeitodope_R_012/CTRLcalcanhar_R_005
+        weight: 1
+      - path: Armature/COG_004
+        weight: 1
+      - path: Armature/COG_004/A_braco_L_001
+        weight: 1
+      - path: Armature/COG_004/A_braco_R_001
+        weight: 1
+      - path: Armature/COG_004/COG
+        weight: 1
+      - path: Armature/COG_004/COG/bacia
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_006
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007/bacia_L_010
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007/capa_L_008
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007/capa_L_008/capa_L_009
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/perna_L_001
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/perna_L_001/canela_L_002
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/perna_L_001/canela_L_002/pe_L_003
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/perna_L_001/canela_L_002/pe_L_003/dedope_L_004
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_006
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007/bacia_R_010
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007/capa_R_008
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007/capa_R_008/capa_R_009
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/perna_R_001
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/perna_R_001/canela_R_002
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/perna_R_001/canela_R_002/pe_R_003
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/perna_R_001/canela_R_002/pe_R_003/dedope_R_004
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/Bone
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/Bone_001
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L/dedao_L_001
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L/dedao_L_001/dedao_L_002
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L/dedao_L_001/dedao_L_002/dedao_L_003
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/mao_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/mao_L/dedo_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/mao_L/dedo_L/mao_L_002
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R/dedao_R_001
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R/dedao_R_001/dedao_R_002
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R/dedao_R_001/dedao_R_002/dedao_R_003
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/mao_R
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/mao_R/dedo_R
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/mao_R/dedo_R/mao_R_002
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/pescoco
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/pescoco/cabeca
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/pescoco/cabeca/cabe_a_001
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Lamp_001
+        weight: 1
+      - path: Lamp_002
+        weight: 1
+      - path: Lamp_003
+        weight: 1
+      - path: Plane
+        weight: 1
+      - path: Sphere
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: ArmatureAction_002
+      takeName: ArmatureAction_002
+      firstFrame: -1
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/bacia_L_005
+        weight: 1
+      - path: Armature/bacia_L_005/CTRLPE_L_011
+        weight: 1
+      - path: Armature/bacia_L_005/CTRLPE_L_011/CTRLpeitodope_L_012
+        weight: 1
+      - path: Armature/bacia_L_005/CTRLPE_L_011/CTRLpeitodope_L_012/CTRLcalcanhar_L_005
+        weight: 1
+      - path: Armature/bacia_R_005
+        weight: 1
+      - path: Armature/bacia_R_005/CTRLPE_R_011
+        weight: 1
+      - path: Armature/bacia_R_005/CTRLPE_R_011/CTRLpeitodope_R_012
+        weight: 1
+      - path: Armature/bacia_R_005/CTRLPE_R_011/CTRLpeitodope_R_012/CTRLcalcanhar_R_005
+        weight: 1
+      - path: Armature/COG_004
+        weight: 1
+      - path: Armature/COG_004/A_braco_L_001
+        weight: 1
+      - path: Armature/COG_004/A_braco_R_001
+        weight: 1
+      - path: Armature/COG_004/COG
+        weight: 1
+      - path: Armature/COG_004/COG/bacia
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_006
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007/bacia_L_010
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007/capa_L_008
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007/capa_L_008/capa_L_009
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/perna_L_001
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/perna_L_001/canela_L_002
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/perna_L_001/canela_L_002/pe_L_003
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/perna_L_001/canela_L_002/pe_L_003/dedope_L_004
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_006
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007/bacia_R_010
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007/capa_R_008
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007/capa_R_008/capa_R_009
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/perna_R_001
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/perna_R_001/canela_R_002
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/perna_R_001/canela_R_002/pe_R_003
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/perna_R_001/canela_R_002/pe_R_003/dedope_R_004
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/Bone
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/Bone_001
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L/dedao_L_001
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L/dedao_L_001/dedao_L_002
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L/dedao_L_001/dedao_L_002/dedao_L_003
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/mao_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/mao_L/dedo_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/mao_L/dedo_L/mao_L_002
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R/dedao_R_001
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R/dedao_R_001/dedao_R_002
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R/dedao_R_001/dedao_R_002/dedao_R_003
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/mao_R
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/mao_R/dedo_R
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/mao_R/dedo_R/mao_R_002
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/pescoco
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/pescoco/cabeca
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/pescoco/cabeca/cabe_a_001
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Lamp_001
+        weight: 1
+      - path: Lamp_002
+        weight: 1
+      - path: Lamp_003
+        weight: 1
+      - path: Plane
+        weight: 1
+      - path: Sphere
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: ataque
+      takeName: ataque
+      firstFrame: -1
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/bacia_L_005
+        weight: 1
+      - path: Armature/bacia_L_005/CTRLPE_L_011
+        weight: 1
+      - path: Armature/bacia_L_005/CTRLPE_L_011/CTRLpeitodope_L_012
+        weight: 1
+      - path: Armature/bacia_L_005/CTRLPE_L_011/CTRLpeitodope_L_012/CTRLcalcanhar_L_005
+        weight: 1
+      - path: Armature/bacia_R_005
+        weight: 1
+      - path: Armature/bacia_R_005/CTRLPE_R_011
+        weight: 1
+      - path: Armature/bacia_R_005/CTRLPE_R_011/CTRLpeitodope_R_012
+        weight: 1
+      - path: Armature/bacia_R_005/CTRLPE_R_011/CTRLpeitodope_R_012/CTRLcalcanhar_R_005
+        weight: 1
+      - path: Armature/COG_004
+        weight: 1
+      - path: Armature/COG_004/A_braco_L_001
+        weight: 1
+      - path: Armature/COG_004/A_braco_R_001
+        weight: 1
+      - path: Armature/COG_004/COG
+        weight: 1
+      - path: Armature/COG_004/COG/bacia
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_006
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007/bacia_L_010
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007/capa_L_008
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007/capa_L_008/capa_L_009
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/perna_L_001
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/perna_L_001/canela_L_002
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/perna_L_001/canela_L_002/pe_L_003
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/perna_L_001/canela_L_002/pe_L_003/dedope_L_004
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_006
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007/bacia_R_010
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007/capa_R_008
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007/capa_R_008/capa_R_009
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/perna_R_001
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/perna_R_001/canela_R_002
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/perna_R_001/canela_R_002/pe_R_003
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/perna_R_001/canela_R_002/pe_R_003/dedope_R_004
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/Bone
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/Bone_001
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L/dedao_L_001
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L/dedao_L_001/dedao_L_002
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L/dedao_L_001/dedao_L_002/dedao_L_003
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/mao_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/mao_L/dedo_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/mao_L/dedo_L/mao_L_002
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R/dedao_R_001
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R/dedao_R_001/dedao_R_002
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R/dedao_R_001/dedao_R_002/dedao_R_003
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/mao_R
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/mao_R/dedo_R
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/mao_R/dedo_R/mao_R_002
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/pescoco
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/pescoco/cabeca
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/pescoco/cabeca/cabe_a_001
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Lamp_001
+        weight: 1
+      - path: Lamp_002
+        weight: 1
+      - path: Lamp_003
+        weight: 1
+      - path: Plane
+        weight: 1
+      - path: Sphere
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: idle
+      takeName: idle
+      firstFrame: -1
+      lastFrame: 79
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/bacia_L_005
+        weight: 1
+      - path: Armature/bacia_L_005/CTRLPE_L_011
+        weight: 1
+      - path: Armature/bacia_L_005/CTRLPE_L_011/CTRLpeitodope_L_012
+        weight: 1
+      - path: Armature/bacia_L_005/CTRLPE_L_011/CTRLpeitodope_L_012/CTRLcalcanhar_L_005
+        weight: 1
+      - path: Armature/bacia_R_005
+        weight: 1
+      - path: Armature/bacia_R_005/CTRLPE_R_011
+        weight: 1
+      - path: Armature/bacia_R_005/CTRLPE_R_011/CTRLpeitodope_R_012
+        weight: 1
+      - path: Armature/bacia_R_005/CTRLPE_R_011/CTRLpeitodope_R_012/CTRLcalcanhar_R_005
+        weight: 1
+      - path: Armature/COG_004
+        weight: 1
+      - path: Armature/COG_004/A_braco_L_001
+        weight: 1
+      - path: Armature/COG_004/A_braco_R_001
+        weight: 1
+      - path: Armature/COG_004/COG
+        weight: 1
+      - path: Armature/COG_004/COG/bacia
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_006
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007/bacia_L_010
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007/capa_L_008
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007/capa_L_008/capa_L_009
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/perna_L_001
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/perna_L_001/canela_L_002
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/perna_L_001/canela_L_002/pe_L_003
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/perna_L_001/canela_L_002/pe_L_003/dedope_L_004
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_006
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007/bacia_R_010
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007/capa_R_008
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007/capa_R_008/capa_R_009
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/perna_R_001
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/perna_R_001/canela_R_002
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/perna_R_001/canela_R_002/pe_R_003
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/perna_R_001/canela_R_002/pe_R_003/dedope_R_004
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/Bone
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/Bone_001
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L/dedao_L_001
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L/dedao_L_001/dedao_L_002
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L/dedao_L_001/dedao_L_002/dedao_L_003
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/mao_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/mao_L/dedo_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/mao_L/dedo_L/mao_L_002
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R/dedao_R_001
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R/dedao_R_001/dedao_R_002
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R/dedao_R_001/dedao_R_002/dedao_R_003
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/mao_R
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/mao_R/dedo_R
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/mao_R/dedo_R/mao_R_002
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/pescoco
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/pescoco/cabeca
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/pescoco/cabeca/cabe_a_001
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Lamp_001
+        weight: 1
+      - path: Lamp_002
+        weight: 1
+      - path: Lamp_003
+        weight: 1
+      - path: Plane
+        weight: 1
+      - path: Sphere
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: jump
+      takeName: jump
+      firstFrame: -1
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/bacia_L_005
+        weight: 1
+      - path: Armature/bacia_L_005/CTRLPE_L_011
+        weight: 1
+      - path: Armature/bacia_L_005/CTRLPE_L_011/CTRLpeitodope_L_012
+        weight: 1
+      - path: Armature/bacia_L_005/CTRLPE_L_011/CTRLpeitodope_L_012/CTRLcalcanhar_L_005
+        weight: 1
+      - path: Armature/bacia_R_005
+        weight: 1
+      - path: Armature/bacia_R_005/CTRLPE_R_011
+        weight: 1
+      - path: Armature/bacia_R_005/CTRLPE_R_011/CTRLpeitodope_R_012
+        weight: 1
+      - path: Armature/bacia_R_005/CTRLPE_R_011/CTRLpeitodope_R_012/CTRLcalcanhar_R_005
+        weight: 1
+      - path: Armature/COG_004
+        weight: 1
+      - path: Armature/COG_004/A_braco_L_001
+        weight: 1
+      - path: Armature/COG_004/A_braco_R_001
+        weight: 1
+      - path: Armature/COG_004/COG
+        weight: 1
+      - path: Armature/COG_004/COG/bacia
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_006
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007/bacia_L_010
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007/capa_L_008
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007/capa_L_008/capa_L_009
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/perna_L_001
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/perna_L_001/canela_L_002
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/perna_L_001/canela_L_002/pe_L_003
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/perna_L_001/canela_L_002/pe_L_003/dedope_L_004
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_006
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007/bacia_R_010
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007/capa_R_008
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007/capa_R_008/capa_R_009
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/perna_R_001
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/perna_R_001/canela_R_002
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/perna_R_001/canela_R_002/pe_R_003
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/perna_R_001/canela_R_002/pe_R_003/dedope_R_004
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/Bone
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/Bone_001
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L/dedao_L_001
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L/dedao_L_001/dedao_L_002
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L/dedao_L_001/dedao_L_002/dedao_L_003
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/mao_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/mao_L/dedo_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/mao_L/dedo_L/mao_L_002
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R/dedao_R_001
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R/dedao_R_001/dedao_R_002
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R/dedao_R_001/dedao_R_002/dedao_R_003
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/mao_R
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/mao_R/dedo_R
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/mao_R/dedo_R/mao_R_002
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/pescoco
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/pescoco/cabeca
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/pescoco/cabeca/cabe_a_001
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Lamp_001
+        weight: 1
+      - path: Lamp_002
+        weight: 1
+      - path: Lamp_003
+        weight: 1
+      - path: Plane
+        weight: 1
+      - path: Sphere
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Run
+      takeName: Run
+      firstFrame: -1
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/bacia_L_005
+        weight: 1
+      - path: Armature/bacia_L_005/CTRLPE_L_011
+        weight: 1
+      - path: Armature/bacia_L_005/CTRLPE_L_011/CTRLpeitodope_L_012
+        weight: 1
+      - path: Armature/bacia_L_005/CTRLPE_L_011/CTRLpeitodope_L_012/CTRLcalcanhar_L_005
+        weight: 1
+      - path: Armature/bacia_R_005
+        weight: 1
+      - path: Armature/bacia_R_005/CTRLPE_R_011
+        weight: 1
+      - path: Armature/bacia_R_005/CTRLPE_R_011/CTRLpeitodope_R_012
+        weight: 1
+      - path: Armature/bacia_R_005/CTRLPE_R_011/CTRLpeitodope_R_012/CTRLcalcanhar_R_005
+        weight: 1
+      - path: Armature/COG_004
+        weight: 1
+      - path: Armature/COG_004/A_braco_L_001
+        weight: 1
+      - path: Armature/COG_004/A_braco_R_001
+        weight: 1
+      - path: Armature/COG_004/COG
+        weight: 1
+      - path: Armature/COG_004/COG/bacia
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_006
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007/bacia_L_010
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007/capa_L_008
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/bacia_L_007/capa_L_008/capa_L_009
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/perna_L_001
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/perna_L_001/canela_L_002
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/perna_L_001/canela_L_002/pe_L_003
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_L/perna_L_001/canela_L_002/pe_L_003/dedope_L_004
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_006
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007/bacia_R_010
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007/capa_R_008
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/bacia_R_007/capa_R_008/capa_R_009
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/perna_R_001
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/perna_R_001/canela_R_002
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/perna_R_001/canela_R_002/pe_R_003
+        weight: 1
+      - path: Armature/COG_004/COG/bacia/bacia_R/perna_R_001/canela_R_002/pe_R_003/dedope_R_004
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/Bone
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/Bone_001
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L/dedao_L_001
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L/dedao_L_001/dedao_L_002
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/dedao_L/dedao_L_001/dedao_L_002/dedao_L_003
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/mao_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/mao_L/dedo_L
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_L/braco_L/A_braco_L/mao_L/dedo_L/mao_L_002
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R/dedao_R_001
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R/dedao_R_001/dedao_R_002
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/dedao_R/dedao_R_001/dedao_R_002/dedao_R_003
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/mao_R
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/mao_R/dedo_R
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/ombro_R/braco_R_/A_braco_R/mao_R/dedo_R/mao_R_002
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/pescoco
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/pescoco/cabeca
+        weight: 1
+      - path: Armature/COG_004/COG/coluna_001/COG_002/COG_003/pescoco/cabeca/cabe_a_001
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Lamp_001
+        weight: 1
+      - path: Lamp_002
+        weight: 1
+      - path: Lamp_003
+        weight: 1
+      - path: Plane
+        weight: 1
+      - path: Sphere
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
