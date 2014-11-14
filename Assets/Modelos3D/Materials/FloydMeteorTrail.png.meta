@@ -1,8 +1,6 @@
 fileFormatVersion: 2
 guid: 61a62de785ee0274d8be1833d52323d0
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: FloydMeteorTrail
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

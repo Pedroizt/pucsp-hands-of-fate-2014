@@ -4,9 +4,9 @@ using System.Collections;
 public class TrueSihir : MonoBehaviour
 {
 
-	public float vel;
-	public bool damaged = false;
-	public bool attacking;
+		public float vel;
+		public bool damaged = false;
+		public bool attacking;
 		public bool nojump;
 		public Animator anim;
 		public float jumpforce = 5;
@@ -18,19 +18,20 @@ public class TrueSihir : MonoBehaviour
 		public GameObject camera;
 		private Rigidbody rb;
 		public audioplay SihirSounds;
-	float pos;
-	bool walking;
-	bool lateral;
+		float pos;
+		bool walking;
+		bool sidewalk;
+		bool lateral;
 
 		// Use this for initialization
 		void Start ()
 		{
 
-		GameObject a = GameObject.Find ("SihirSounds");
-		SihirSounds = a.GetComponent <audioplay> ();
+				GameObject a = GameObject.Find ("SihirSounds");
+				SihirSounds = a.GetComponent <audioplay> ();
 
 				rb = GetComponent<Rigidbody> ();
-		pos = transform.localEulerAngles.y;
+				pos = transform.localEulerAngles.y;
 	
 		}
 	
@@ -45,8 +46,8 @@ public class TrueSihir : MonoBehaviour
 				if (Input.GetKey (KeyCode.W) && attacking == false) {
 
 						
-
-			anim.SetBool ("_run", true);
+		
+						anim.SetBool ("_run", true);
 								
 								
 						gameObject.transform.position += transform.forward * speed * Time.deltaTime;
@@ -78,31 +79,62 @@ public class TrueSihir : MonoBehaviour
 				}
 
 
-		if (Input.GetKey (KeyCode.D)) {
-			walking = true;
-			if(pos < 45f)
+				if (Input.GetKey (KeyCode.D) && Input.GetKey (KeyCode.W)) {
+						walking = true;
+						if (pos < 45f)
 
-				pos += 5f * Time.deltaTime * vel ;
+								pos += 5f * Time.deltaTime * vel;
 				}
 
-		if (Input.GetKey (KeyCode.A)) {
-			walking = true;
-			if(pos >= -45f)
+				if (Input.GetKey (KeyCode.D)) {
 
-				pos -= 5f * Time.deltaTime * vel ;
+						if (walking == false) {
+								anim.SetBool ("_run", true);
+								pos = 90f;
+								gameObject.transform.position += transform.forward 
+										* speed * Time.deltaTime;
+
+						}
+
+
+
+
+
+
+
+
+		
 				}
 
-		/*if (pos != 0 && Input.GetKey (KeyCode.W) && walking == false) {
+				if (Input.GetKey (KeyCode.A) && Input.GetKey (KeyCode.W)) {
+						walking = true;
+						if (pos >= -45f)
+
+								pos -= 5f * Time.deltaTime * vel;
+				}
+
+				if (Input.GetKey (KeyCode.A)) {
+			
+						if (walking == false) {
+								anim.SetBool ("_run", true);
+								pos = -90f;
+								gameObject.transform.position += transform.forward 
+										* speed * Time.deltaTime;
+				
+						}
+				}
+
+				/*if (pos != 0 && Input.GetKey (KeyCode.W) && walking == false) {
 			pos = 0;
 				}*/
 
-		if (Input.GetKey (KeyCode.W)) {
-			if (pos >= 0f && walking == false)
-				pos -= 1f * Time.deltaTime * vel * 2;
+				if (Input.GetKey (KeyCode.W)) {
+						if (pos >= 0f && walking == false)
+								pos -= 1f * Time.deltaTime * vel * 2;
 
 
-			if (pos <= 0f && walking == false)
-				pos += 1f * Time.deltaTime * vel * 2;
+						if (pos <= 0f && walking == false)
+								pos += 1f * Time.deltaTime * vel * 2;
 		
 				}
 
@@ -112,7 +144,7 @@ public class TrueSihir : MonoBehaviour
 		
 		 		
 
-						transform.localEulerAngles = 
+				transform.localEulerAngles = 
 			new Vector3 (transform.localEulerAngles.x, 
 		                                         
 			     camera.transform.localEulerAngles.y + pos
@@ -121,8 +153,8 @@ public class TrueSihir : MonoBehaviour
 				
 
 				if (Input.GetKeyDown (KeyCode.Space)) {
-						if (nojump == false) {
-								nojump = true;
+						if (nojump == true) {
+								nojump = false;
 								rb.AddForce (Vector3.up * jumpforce, ForceMode.VelocityChange);
 								anim.SetTrigger ("_jump");
 								rb.useGravity = false;
@@ -134,12 +166,12 @@ public class TrueSihir : MonoBehaviour
 						rb.useGravity = true;
 
 
-		if (Input.GetKeyDown (KeyCode.F)) {
-			Attack();
+				if (Input.GetKeyDown (KeyCode.F)) {
+						Attack ();
 				}
 
-		if (Input.GetKeyDown (KeyCode.V)) {
-			damaged = true;
+				if (Input.GetKeyDown (KeyCode.V)) {
+						damaged = true;
 				}
 				
 
@@ -153,29 +185,31 @@ public class TrueSihir : MonoBehaviour
 						
 				
 
-				if (col.gameObject.tag == "Terrain")
+				if (col.gameObject.tag == "Terrain") {
 						nojump = true;
-				else {
+						anim.SetTrigger ("_grounded");
+						
+				} else {
 						nojump = false;
-
+						
 				}
+
+				
 		}
 
-	void Attack()
-	{
-		anim.SetTrigger ("_attack");
-		attacking = true;
-		StartCoroutine(boolback ());
+		void Attack ()
+		{
+				anim.SetTrigger ("_attack");
+				attacking = true;
+				StartCoroutine (boolback ());
 
-	}
+		}
 
-
-
-	IEnumerator boolback()
-	{
-		yield return new WaitForSeconds(2.5f);
-		attacking = false;
-	}
+		IEnumerator boolback ()
+		{
+				yield return new WaitForSeconds (2.5f);
+				attacking = false;
+		}
 
 
 
