@@ -4,6 +4,7 @@ using System.Collections;
 public class TrueSihir : MonoBehaviour
 {
 
+	public bool damaged = false;
 	public bool attacking;
 		public bool nojump;
 		public Animator anim;
@@ -90,6 +91,10 @@ public class TrueSihir : MonoBehaviour
 		if (Input.GetKeyDown (KeyCode.F)) {
 			Attack();
 				}
+
+		if (Input.GetKeyDown (KeyCode.D)) {
+			damaged = true;
+				}
 				
 
 						
@@ -117,6 +122,9 @@ public class TrueSihir : MonoBehaviour
 		StartCoroutine(boolback ());
 
 	}
+
+
+
 	IEnumerator boolback()
 	{
 		yield return new WaitForSeconds(2.5f);
