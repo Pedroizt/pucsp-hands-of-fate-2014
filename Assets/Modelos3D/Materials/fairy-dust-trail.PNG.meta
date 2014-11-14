@@ -1,6 +1,8 @@
 fileFormatVersion: 2
 guid: 8cd30efbafa223441b9c8efb000e6ca4
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: fairy-dust-trail
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

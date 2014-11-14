@@ -4,6 +4,7 @@ using System.Collections;
 public class TrueSihir : MonoBehaviour
 {
 
+	public float vel;
 	public bool damaged = false;
 	public bool attacking;
 		public bool nojump;
@@ -17,6 +18,9 @@ public class TrueSihir : MonoBehaviour
 		public GameObject camera;
 		private Rigidbody rb;
 		public audioplay SihirSounds;
+	float pos;
+	bool walking;
+	bool lateral;
 
 		// Use this for initialization
 		void Start ()
@@ -26,6 +30,7 @@ public class TrueSihir : MonoBehaviour
 		SihirSounds = a.GetComponent <audioplay> ();
 
 				rb = GetComponent<Rigidbody> ();
+		pos = transform.localEulerAngles.y;
 	
 		}
 	
@@ -33,46 +38,87 @@ public class TrueSihir : MonoBehaviour
 		void Update ()
 		{
 
+
 		
+				walking = false;
+
 				if (Input.GetKey (KeyCode.W) && attacking == false) {
 
-								anim.SetBool ("_run", true);
+						
+
+			anim.SetBool ("_run", true);
 								
 								
-								gameObject.transform.position += transform.forward * speed * Time.deltaTime;
-								//SihirSounds.SihirFootsteps(); footstepssounds
-								speed += progressivespeed * Time.deltaTime;
+						gameObject.transform.position += transform.forward * speed * Time.deltaTime;
+						//SihirSounds.SihirFootsteps(); footstepssounds
+						speed += progressivespeed * Time.deltaTime;
 
 
 						
-								anim.speed = speed / 6.5f;
+						anim.speed = speed / 6.5f;
 						
 
 						
 						
 
-								if (speed > 11)
-										progressivespeed = 0;
+						if (speed > 11)
+								progressivespeed = 0;
 						  
 			
 						
 			
-						} else {
-								anim.SetBool ("_run", false);
-								speed = resetspeed;
+				} else {
+						anim.SetBool ("_run", false);
+						speed = resetspeed;
 
 
-								anim.speed = speed / 10f;
-								progressivespeed = 0.1f;
+						anim.speed = speed / 10f;
+						progressivespeed = 0.1f;
 						
-						}
+				}
+
+
+		if (Input.GetKey (KeyCode.D)) {
+			walking = true;
+			if(pos < 45f)
+
+				pos += 5f * Time.deltaTime * vel ;
+				}
+
+		if (Input.GetKey (KeyCode.A)) {
+			walking = true;
+			if(pos >= -45f)
+
+				pos -= 5f * Time.deltaTime * vel ;
+				}
+
+		/*if (pos != 0 && Input.GetKey (KeyCode.W) && walking == false) {
+			pos = 0;
+				}*/
+
+		if (Input.GetKey (KeyCode.W)) {
+			if (pos >= 0f && walking == false)
+				pos -= 1f * Time.deltaTime * vel * 2;
+
+
+			if (pos <= 0f && walking == false)
+				pos += 1f * Time.deltaTime * vel * 2;
+		
+				}
+
+
+
 				
 		
-				transform.localEulerAngles = 
+		 		
+
+						transform.localEulerAngles = 
 			new Vector3 (transform.localEulerAngles.x, 
 		                                         
-			     camera.transform.localEulerAngles.y 
-		                                         , transform.localEulerAngles.z); 
+			     camera.transform.localEulerAngles.y + pos
+		                                         , transform.localEulerAngles.z);
+
+				
 
 				if (Input.GetKeyDown (KeyCode.Space)) {
 						if (nojump == false) {
@@ -92,7 +138,7 @@ public class TrueSihir : MonoBehaviour
 			Attack();
 				}
 
-		if (Input.GetKeyDown (KeyCode.D)) {
+		if (Input.GetKeyDown (KeyCode.V)) {
 			damaged = true;
 				}
 				
