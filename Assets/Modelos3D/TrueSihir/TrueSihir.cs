@@ -22,6 +22,7 @@ public class TrueSihir : MonoBehaviour
 		bool walking;
 		bool sidewalk;
 		bool lateral;
+		bool jumped = false;
 
 		// Use this for initialization
 		void Start ()
@@ -86,7 +87,7 @@ public class TrueSihir : MonoBehaviour
 								pos += 5f * Time.deltaTime * vel;
 				}
 
-				if (Input.GetKey (KeyCode.D)) {
+				if (Input.GetKey (KeyCode.D)&& attacking == false) {
 
 						if (walking == false) {
 								anim.SetBool ("_run", true);
@@ -113,7 +114,7 @@ public class TrueSihir : MonoBehaviour
 								pos -= 5f * Time.deltaTime * vel;
 				}
 
-				if (Input.GetKey (KeyCode.A)) {
+				if (Input.GetKey (KeyCode.A)&& attacking == false) {
 			
 						if (walking == false) {
 								anim.SetBool ("_run", true);
@@ -159,6 +160,7 @@ public class TrueSihir : MonoBehaviour
 								anim.SetTrigger ("_jump");
 								rb.useGravity = false;
 								
+								
 						}
 						
 				} else
@@ -187,15 +189,22 @@ public class TrueSihir : MonoBehaviour
 
 				if (col.gameObject.tag == "Terrain") {
 						nojump = true;
+						if (jumped == true)
 						anim.SetTrigger ("_grounded");
+						Debug.Log("Grounded");
 						
-				} else {
-						nojump = false;
 						
-				}
+				} 
+
 
 				
 		}
+
+	void OnCollisionExit(Collision col)
+	{
+		Debug.Log ("NotGrounded");
+		jumped = true;
+	}
 
 		void Attack ()
 		{
@@ -207,7 +216,7 @@ public class TrueSihir : MonoBehaviour
 
 		IEnumerator boolback ()
 		{
-				yield return new WaitForSeconds (2.5f);
+				yield return new WaitForSeconds (1.8f);
 				attacking = false;
 		}
 
