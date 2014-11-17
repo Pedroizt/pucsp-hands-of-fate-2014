@@ -168,6 +168,7 @@ public class TrueSihir : MonoBehaviour
 				if (Input.GetKeyDown (KeyCode.Space)) {
 						if (nojump == true) {
 								nojump = false;
+								jumped = true;
 								rb.AddForce (Vector3.up * jumpforce, ForceMode.VelocityChange);
 								anim.SetTrigger ("_jump");
 								rb.useGravity = false;
@@ -218,8 +219,10 @@ public class TrueSihir : MonoBehaviour
 				if (col.gameObject.tag == "Terrain") {
 						nojump = true;
 						if (jumped == true)
-								anim.SetTrigger ("_grounded");
+				anim.SetBool("_grounded", true);
+			//anim.SetBool("_grounded", false);
 						Debug.Log ("Grounded");
+						
 						
 						
 				} 
@@ -231,7 +234,7 @@ public class TrueSihir : MonoBehaviour
 		void OnCollisionExit (Collision col)
 		{
 				Debug.Log ("NotGrounded");
-				jumped = true;
+				//jumped = true;
 		}
 
 		void Attack ()
