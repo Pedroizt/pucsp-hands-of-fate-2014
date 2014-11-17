@@ -10,7 +10,7 @@ public class HedgehogBehaviour : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		GameObject h = GameObject.Find ("Senpai Notice Me");
+		GameObject h = GameObject.Find ("Sihir");
 		HPSihir = h.GetComponent<Hpsih> ();
 
 	

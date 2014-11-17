@@ -26,9 +26,9 @@ public class FollowEnemy : MonoBehaviour {
 
 	void Start ()
 	{
-		Target = GameObject.Find ("Senpai Notice Me").transform ;
+		Target = GameObject.Find ("Sihir").transform ;
 
-		GameObject h = GameObject.Find ("Senpai Notice Me");
+		GameObject h = GameObject.Find ("Sihir");
 		HPSihir = h.GetComponent<Hpsih> ();
 
 		hedgehog = gameObject.GetComponent<Animator> ();

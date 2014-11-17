@@ -24,9 +24,9 @@ public class Desoxigen : MonoBehaviour {
 	{
 		GameObject s = GameObject.Find ("SpellCast");
 		castspell = s.GetComponent<SpellCast> ();
-		target = GameObject.Find ("Senpai Notice Me/SpellCast").transform;
+		target = GameObject.Find ("Sihir/SpellCast").transform;
 		DesoxField = GameObject.Find ("desoxfield");
-		GameObject h = GameObject.Find ("Senpai Notice Me");
+		GameObject h = GameObject.Find ("Sihir");
 		hp = h.GetComponent<Hpsih> ();
 
 

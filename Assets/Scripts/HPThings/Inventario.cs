@@ -55,7 +55,7 @@ public class Inventario : MonoBehaviour {
 		menuopcoes.renderer.enabled = false;
 		menusalvar.renderer.enabled = false;
 
-		//GameObject g = GameObject.Find ("Senpai Notice Me");
+		//GameObject g = GameObject.Find ("Sihir");
 		//hp = g.GetComponent<Hpsih> ();
 
 

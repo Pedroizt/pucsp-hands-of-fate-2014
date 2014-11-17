@@ -4,6 +4,7 @@ using System.Collections;
 public class TrueSihir : MonoBehaviour
 {
 
+
 		public float vel;
 		public bool damaged = false;
 		public bool attacking;
@@ -17,19 +18,28 @@ public class TrueSihir : MonoBehaviour
 		float resetprogressivespeed = 0.2f;
 		public GameObject camera;
 		private Rigidbody rb;
-		public audioplay SihirSounds;
+		//public audioplay SihirSounds;
 		float pos;
 		bool walking;
 		bool sidewalk;
 		bool lateral;
 		bool jumped = false;
+		public Animator dado1;
+		public Animator dado2;
+		public Animator dado3;
+		public Animator dado4;
+		public ParticleSystem bursts;
+		float cd;
+		bool pressedS;
+		bool pressedW;
+
 
 		// Use this for initialization
 		void Start ()
 		{
 
-				GameObject a = GameObject.Find ("SihirSounds");
-				SihirSounds = a.GetComponent <audioplay> ();
+				/*GameObject a = GameObject.Find ("SihirSounds");
+				SihirSounds = a.GetComponent <audioplay> ();*/
 
 				rb = GetComponent<Rigidbody> ();
 				pos = transform.localEulerAngles.y;
@@ -44,12 +54,12 @@ public class TrueSihir : MonoBehaviour
 		
 				walking = false;
 
-				if (Input.GetKey (KeyCode.W) && attacking == false) {
+				if (Input.GetKey (KeyCode.W) && attacking == false && pressedS == false) {
 
 						
 		
 						anim.SetBool ("_run", true);
-								
+						pressedW = true;		
 								
 						gameObject.transform.position += transform.forward * speed * Time.deltaTime;
 						//SihirSounds.SihirFootsteps(); footstepssounds
@@ -87,13 +97,14 @@ public class TrueSihir : MonoBehaviour
 								pos += 5f * Time.deltaTime * vel;
 				}
 
-				if (Input.GetKey (KeyCode.D)&& attacking == false) {
+				if (Input.GetKey (KeyCode.D) && attacking == false && pressedS == false) {
 
 						if (walking == false) {
 								anim.SetBool ("_run", true);
 								pos = 90f;
 								gameObject.transform.position += transform.forward 
 										* speed * Time.deltaTime;
+				sidewalk = true;
 
 						}
 
@@ -114,13 +125,14 @@ public class TrueSihir : MonoBehaviour
 								pos -= 5f * Time.deltaTime * vel;
 				}
 
-				if (Input.GetKey (KeyCode.A)&& attacking == false) {
+				if (Input.GetKey (KeyCode.A) && attacking == false && pressedS == false) {
 			
 						if (walking == false) {
 								anim.SetBool ("_run", true);
 								pos = -90f;
 								gameObject.transform.position += transform.forward 
 										* speed * Time.deltaTime;
+
 				
 						}
 				}
@@ -169,12 +181,28 @@ public class TrueSihir : MonoBehaviour
 
 
 				if (Input.GetKeyDown (KeyCode.F)) {
-						Attack ();
+						if (attacking == false)
+								Attack ();
 				}
 
 				if (Input.GetKeyDown (KeyCode.V)) {
 						damaged = true;
 				}
+				
+				if (Input.GetKey (KeyCode.S) && pressedW == false) {
+
+						anim.SetBool ("_run", true);
+						gameObject.transform.position -= transform.forward * Time.deltaTime * speed / 2;
+						pressedS = true;
+
+				}
+
+				if (Input.GetKeyUp (KeyCode.S)) {
+						pressedS = false;
+				}
+
+				if (Input.GetKeyUp (KeyCode.W))
+						pressedW = false;
 				
 
 						
@@ -190,8 +218,8 @@ public class TrueSihir : MonoBehaviour
 				if (col.gameObject.tag == "Terrain") {
 						nojump = true;
 						if (jumped == true)
-						anim.SetTrigger ("_grounded");
-						Debug.Log("Grounded");
+								anim.SetTrigger ("_grounded");
+						Debug.Log ("Grounded");
 						
 						
 				} 
@@ -200,17 +228,23 @@ public class TrueSihir : MonoBehaviour
 				
 		}
 
-	void OnCollisionExit(Collision col)
-	{
-		Debug.Log ("NotGrounded");
-		jumped = true;
-	}
+		void OnCollisionExit (Collision col)
+		{
+				Debug.Log ("NotGrounded");
+				jumped = true;
+		}
 
 		void Attack ()
 		{
 				anim.SetTrigger ("_attack");
 				attacking = true;
 				StartCoroutine (boolback ());
+				dado1.SetTrigger ("attack");
+				dado2.SetTrigger ("attack2");
+				dado3.SetTrigger ("attack3");
+				dado4.SetTrigger ("attack4");
+				bursts.Play ();
+
 
 		}
 

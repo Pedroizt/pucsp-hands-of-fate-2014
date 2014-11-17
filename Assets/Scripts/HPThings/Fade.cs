@@ -17,7 +17,7 @@ public class Fade : MonoBehaviour
 		// Set the texture so that it is the the size of the screen and covers it.
 		guiTexture.pixelInset = new Rect(-1000, -1000, 5000, 5000);
 
-		GameObject g = GameObject.Find ("Senpai Notice Me");
+		GameObject g = GameObject.Find ("Sihir");
 		hp = g.GetComponent<Hpsih> ();
 
 		GameObject c = GameObject.Find ("Opening Cutscene");

@@ -12,7 +12,7 @@ public class HedgehogHitbox : MonoBehaviour {
 		GameObject f = GameObject.Find ("bigcrush 1(Clone)/idle");
 		fe = f.GetComponent<FollowEnemy> ();
 
-		GameObject h = GameObject.Find ("Senpai Notice Me");
+		GameObject h = GameObject.Find ("Sihir");
 		HPSihir = h.GetComponent<Hpsih> ();
 
 

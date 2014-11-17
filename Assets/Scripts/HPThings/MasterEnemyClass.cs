@@ -27,7 +27,7 @@ public class MasterEnemyClass : MonoBehaviour {
 
 	void Start()
 	{
-		GameObject g = GameObject.Find ("Senpai Notice Me");
+		GameObject g = GameObject.Find ("Sihir");
 		HPPlayer = g.GetComponent<Hpsih> ();
 	}
 

@@ -156,6 +156,7 @@
      <Compile Include="Assets\Scripts\Sounds &amp; Effects\audioplay.cs" />
      <Compile Include="Assets\Scripts\Texts\TextControl.cs" />
      <Compile Include="Assets\Scripts\Texts\TriggerControl.cs" />
+     <Compile Include="Assets\SimpleParticlePack\Scripts\ParticleTester.cs" />
      <Compile Include="Assets\UnityChan\Scripts\CameraController.cs" />
      <Compile Include="Assets\UnityChan\Scripts\FaceUpdate.cs" />
      <Compile Include="Assets\UnityChan\Scripts\IdleChanger.cs" />

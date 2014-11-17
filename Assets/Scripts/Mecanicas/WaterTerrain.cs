@@ -9,7 +9,7 @@ public class WaterTerrain : MonoBehaviour {
 
 	void Start()
 	{
-		GameObject h = GameObject.Find ("Senpai Notice Me");
+		GameObject h = GameObject.Find ("Sihir");
 		health = h.GetComponent<Hpsih> ();
 
 		GameObject m = GameObject.Find ("RealCamera");
