@@ -15,10 +15,10 @@ public class Esferadear : MonoBehaviour {
 		GameObject s = GameObject.Find ("SpellCast");
 		castspell = s.GetComponent<SpellCast> ();
 
-		target = GameObject.Find ("Senpai Notice Me/SpellCast").transform;
+		target = GameObject.Find ("Sihir/SpellCast").transform;
 		esferar = GameObject.Find ("boladear2");
 
-		GameObject h = GameObject.Find ("Senpai Notice Me");
+		GameObject h = GameObject.Find ("Sihir");
 		hp = h.GetComponent<Hpsih> ();
 
 	

@@ -18,10 +18,10 @@ public class Destruicao : MonoBehaviour {
 	{
 		GameObject s = GameObject.Find ("SpellCast");
 		castspell = s.GetComponent<SpellCast> ();
-		target = GameObject.Find ("Senpai Notice Me/SpellCast").transform;
+		target = GameObject.Find ("Sihir/SpellCast").transform;
 		impacto = GameObject.Find ("impacto").transform;
 
-		GameObject h = GameObject.Find ("Senpai Notice Me");
+		GameObject h = GameObject.Find ("Sihir");
 		hp = h.GetComponent<Hpsih> ();
 		}
 	
