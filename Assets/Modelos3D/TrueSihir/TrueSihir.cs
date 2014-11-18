@@ -10,10 +10,10 @@ public class TrueSihir : MonoBehaviour
 		public bool attacking;
 		public bool nojump;
 		public Animator anim;
-		public float jumpforce = 5;
+		public float jumpforce = 7;
 		public float speed = 10;
 		public float smooth = 2;
-		float resetspeed = 10;
+		public float resetspeed = 7;
 		float progressivespeed = 0.2f;
 		float resetprogressivespeed = 0.2f;
 		public GameObject camera;
@@ -28,6 +28,7 @@ public class TrueSihir : MonoBehaviour
 		public Animator dado2;
 		public Animator dado3;
 		public Animator dado4;
+		public bool collided;
 		public ParticleSystem bursts;
 		float cd;
 		bool pressedS;
@@ -42,19 +43,21 @@ public class TrueSihir : MonoBehaviour
 				SihirSounds = a.GetComponent <audioplay> ();*/
 
 				rb = GetComponent<Rigidbody> ();
+				pos = 0f;
 				pos = transform.localEulerAngles.y;
 	
 		}
 	
 		// Update is called once per frame
-		void Update ()
+		void FixedUpdate ()
 		{
 
 
 		
 				walking = false;
 
-				if (Input.GetKey (KeyCode.W) && attacking == false && pressedS == false) {
+				if (Input.GetKey (KeyCode.W) && 
+		    attacking == false && pressedS == false && collided == false) {
 
 						
 		
@@ -172,13 +175,15 @@ public class TrueSihir : MonoBehaviour
 								rb.AddForce (Vector3.up * jumpforce, ForceMode.VelocityChange);
 								anim.SetTrigger ("_jump");
 								rb.useGravity = false;
+				speed = speed/2;
 								
 								
 						}
 						
-				} else
+				} else {
 						
 						rb.useGravity = true;
+				}
 
 
 				if (Input.GetKeyDown (KeyCode.F)) {
@@ -219,21 +224,39 @@ public class TrueSihir : MonoBehaviour
 				if (col.gameObject.tag == "Terrain") {
 						nojump = true;
 						if (jumped == true)
-				anim.SetBool("_grounded", true);
-			//anim.SetBool("_grounded", false);
+				anim.SetTrigger("_grounded");
+			speed = resetspeed;
+			    //anim.SetBool("_grounded", false);
 						Debug.Log ("Grounded");
-						
-						
-						
-				} 
-
 
 				
+
+
+						
+						
+						
+				}
+
+		if (col.gameObject.tag == "Parede"){
+			
+			Debug.Log ("Collided");
+			gameObject.transform.position -= transform.forward * 0.5f;
+			collided = true;
+			StartCoroutine(colcd());
+
+
+		}
+
+
+		
+		
+		
 		}
 
 		void OnCollisionExit (Collision col)
 		{
 				Debug.Log ("NotGrounded");
+					;
 				//jumped = true;
 		}
 
@@ -257,10 +280,16 @@ public class TrueSihir : MonoBehaviour
 				attacking = false;
 		}
 
-
-
-
-
+		IEnumerator colcd()
+		{
+		yield return new WaitForSeconds(1);
+		collided = false;
+		}
+	
+	
+	
+	
+	
 
 
 		/*void progressivespeed()
