@@ -6,7 +6,8 @@ public class mapa : MonoBehaviour {
 	public GameObject map;
 	public GameObject[] nuvens;
 	public Inventario invent;
-	bool ismap = false;
+	public bool ismap = false;
+	public bool isinventario = false;
 
 	public GameObject[] triggers;
 
@@ -14,6 +15,8 @@ public class mapa : MonoBehaviour {
 	bool notcloud2 = false;
 	bool notcloud3 = false;
 	bool notcloud4 = false;
+
+	private CutsceneControl opening;
 
 
 	// Use this for initialization
@@ -25,6 +28,9 @@ public class mapa : MonoBehaviour {
 		nuvens[2].renderer.enabled = false;
 		nuvens[3].renderer.enabled = false;
 
+		GameObject c = GameObject.Find ("Opening Cutscene");
+		opening = c.GetComponent<CutsceneControl> ();
+
 
 
 	
@@ -34,19 +40,33 @@ public class mapa : MonoBehaviour {
 	void Update () {
 
 
-		if(Input.GetKeyDown(KeyCode.M))
+		if(Input.GetKeyDown(KeyCode.M) && isinventario == false && opening.jogoinicia == true)
 		{
-
-			Time.timeScale = 0;
 			ismap = !ismap;
+
+
 			if (ismap == true)
+			{
+				Time.timeScale = 0;
 				DrawMap();
+
+
+
+			}
+
+
+
+			else
+			{
+				DontDrawMap();
+				Time.timeScale = 1;
+			}
+
+
 		}
 
-		if (ismap == false) {
-						DontDrawMap ();
-			Time.timeScale = 1;
-				}
+
+
 
 	
 	}
@@ -65,7 +85,7 @@ public class mapa : MonoBehaviour {
 		nuvens[3].renderer.enabled = true;
 	}
 
-	void DontDrawMap()
+	public void DontDrawMap()
 	{
 		map.renderer.enabled = false;
 

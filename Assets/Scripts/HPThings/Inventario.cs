@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Inventario : MonoBehaviour {
 
+	GameObject Pause;
 	GameObject RealCamera;
 	public bool isPause = false;
 	public LayerMask Invent;
@@ -34,6 +35,9 @@ public class Inventario : MonoBehaviour {
 	public GameObject menuopcoes;
 	public GameObject menusalvar;
 	public bool isinvent = false;
+	private mapa map;
+	private CutsceneControl opening;
+
 	
 	/*public GameObject armor;
 	public GameObject luva;
@@ -70,6 +74,13 @@ public class Inventario : MonoBehaviour {
 		un2 = u2.GetComponent<Unlockeds> ();
 
 		RealCamera = GameObject.Find ("RealCamera");
+		Pause = GameObject.Find ("Pause");
+
+		GameObject m = GameObject.Find ("MapCamera");
+		map = m.GetComponent<mapa> ();
+
+		GameObject c = GameObject.Find ("Opening Cutscene");
+		opening = c.GetComponent<CutsceneControl> ();
 
 		Air.SetActive (false);
 		BC.SetActive (false);
@@ -94,17 +105,20 @@ public class Inventario : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-				if (Input.GetKeyDown (KeyCode.I)) {
+				if (Input.GetKeyDown (KeyCode.I) && map.ismap == false && opening.jogoinicia == true) {
 
-			isinvent = true;
+			pause ();
+		
+						if (isPause || map.ismap) {
+			
 
-			pause();
-						if (isPause && isinvent) {
+			
+				Time.timeScale=0;
 				Air.SetActive(true);
 				RealCamera.SendMessage("MouseDisabled");
 
 
-								Time.timeScale = 0;
+								
 								
 								//DrawInventario();
 								DrawSkills ();
@@ -116,6 +130,8 @@ public class Inventario : MonoBehaviour {
 				menuopcoes.SetActive(true);
 				menusalvar.renderer.enabled = true;
 				menusalvar.SetActive(true);
+				map.isinventario = true;
+
 
 
 								//hp.paused = true;
@@ -126,7 +142,7 @@ public class Inventario : MonoBehaviour {
 						
 
 								else {
-								Time.timeScale = 1;
+				Time.timeScale = 1;
 								//MainCamera.cullingMask = Everything;
 								//guiTexture.enabled = false;
 				gameObject.renderer.enabled = false;
@@ -139,7 +155,8 @@ public class Inventario : MonoBehaviour {
 								//hp.paused = false;
 								DontDraw ();
 				RealCamera.SendMessage("MouseEnabled");
-				isinvent = false;
+				map.isinventario = false;
+
 						}
 
 
@@ -204,7 +221,7 @@ public class Inventario : MonoBehaviour {
 	void pause()
 	{
 		isPause = !isPause;
-		}
+	}
 
 	void DrawItems()
 	{
