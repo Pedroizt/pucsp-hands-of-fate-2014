@@ -5,12 +5,12 @@ public class Sair : MonoBehaviour {
 
 	public ParticleSystem particle;
 
-	public audioplay MouseSounds;
+	public MouseSounds MouseSounds;
 	
 	void Start(){
 		
 		GameObject a = GameObject.Find ("MouseSounds");
-		MouseSounds = a.GetComponent <audioplay> ();
+		MouseSounds = a.GetComponent <MouseSounds> ();
 		
 	}
 

@@ -34,6 +34,8 @@ public class TrueSihir : MonoBehaviour
 		bool pressedS;
 		bool pressedW;
 
+		public SihirSounds SihirSounds;
+
 
 		// Use this for initialization
 		void Start ()
@@ -45,6 +47,11 @@ public class TrueSihir : MonoBehaviour
 				rb = GetComponent<Rigidbody> ();
 				pos = 0f;
 				pos = transform.localEulerAngles.y;
+
+				#region Audio
+				GameObject a = GameObject.Find ("SihirSounds");
+				SihirSounds = a.GetComponent <SihirSounds> ();
+				#endregion
 	
 		}
 	
@@ -65,7 +72,7 @@ public class TrueSihir : MonoBehaviour
 						pressedW = true;		
 								
 						gameObject.transform.position += transform.forward * speed * Time.deltaTime;
-						//SihirSounds.SihirFootsteps(); footstepssounds
+						SihirSounds.SihirFootsteps(); //Footsteps Sound
 						speed += progressivespeed * Time.deltaTime;
 
 

@@ -9,6 +9,7 @@ public class CrystalSwitch : MonoBehaviour {
 	public ParticleSystem glow;
 	private CristalGrande cgrande;
 	public GameObject F;
+	Xbox360_Controls XboxButton;
 
 	// Use this for initialization
 	void Awake () {
@@ -19,6 +20,9 @@ public class CrystalSwitch : MonoBehaviour {
 
 
 		F.SetActive (false);
+
+		GameObject x = GameObject.Find ("XboxControl");
+		XboxButton = x.GetComponent <Xbox360_Controls> ();
 
 		GameObject c = GameObject.Find ("CristalGrande");
 		cgrande = c.GetComponent<CristalGrande> ();
@@ -46,7 +50,9 @@ public class CrystalSwitch : MonoBehaviour {
 		{
 
 
-		if (Input.GetKeyDown (KeyCode.F) && naofucionamais == false) {
+		if ((Input.GetKeyDown (KeyCode.F) && naofucionamais == false)
+			    || (XboxButton.PressedButton == "B" && naofucionamais == false))
+			{
 			Debug.Log ("Teste");
 			gameObject.renderer.material.color = Color.blue;
 			gameObject.tag = "On";
@@ -58,7 +64,7 @@ public class CrystalSwitch : MonoBehaviour {
 				F.SetActive(false);
 
 
-
+				XboxButton.NullButton ();
 
 
 

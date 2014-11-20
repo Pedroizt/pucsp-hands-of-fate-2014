@@ -7,17 +7,13 @@ public class Sihir : MonoBehaviour {
 
 	public GameObject camera;
 
-	public audioplay SihirSounds;
 
 	Vector3 sihir;
 
 
 	void Start () {
 	
-		#region Audio
-		GameObject a = GameObject.Find ("SihirSounds");
-		SihirSounds = a.GetComponent <audioplay> ();
-		#endregion
+
 
 	}
 	
@@ -29,7 +25,6 @@ public class Sihir : MonoBehaviour {
 						gameObject.transform.position += transform.forward;
 						
 
-						SihirSounds.SihirFootsteps (); //Footsteps Sound
 
 				} else
 						anim.SetBool ("Andar", false);
