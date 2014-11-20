@@ -237,7 +237,7 @@ public class TrueSihir : MonoBehaviour
 						
 				}
 
-		if (col.gameObject.tag == "Parede"){
+		if (col.gameObject.tag == "Untagged"){
 			
 			Debug.Log ("Collided");
 			gameObject.transform.position -= transform.forward * 0.5f;
