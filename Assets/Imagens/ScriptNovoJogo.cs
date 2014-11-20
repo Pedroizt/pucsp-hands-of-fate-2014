@@ -7,12 +7,12 @@ public class ScriptNovoJogo : MonoBehaviour {
 
 	public bool loading = false;
 
-	public audioplay MouseSounds;
+	public MouseSounds MouseSounds;
 
 	void Start(){
 
 		GameObject a = GameObject.Find ("MouseSounds");
-		MouseSounds = a.GetComponent <audioplay> ();
+		MouseSounds = a.GetComponent <MouseSounds> ();
 
 	}
 

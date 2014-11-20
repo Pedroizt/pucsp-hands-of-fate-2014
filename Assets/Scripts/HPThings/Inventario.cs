@@ -37,6 +37,7 @@ public class Inventario : MonoBehaviour {
 	public bool isinvent = false;
 	private mapa map;
 	private CutsceneControl opening;
+	public Xbox360_Controls XboxButton;
 
 	
 	/*public GameObject armor;
@@ -66,6 +67,9 @@ public class Inventario : MonoBehaviour {
 
 		//GameObject t = GameObject.Find ("MagicTextures");
 		//mt = t.GetComponent<MagicTextures> ();
+
+		GameObject a = GameObject.Find ("XboxControl");
+		XboxButton = a.GetComponent <Xbox360_Controls> ();
 
 		GameObject p = GameObject.Find ("Magic");
 		unlc = p.GetComponent<UnlockToInventary> ();
@@ -105,90 +109,87 @@ public class Inventario : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-				if (Input.GetKeyDown (KeyCode.I) && map.ismap == false && opening.jogoinicia == true) {
-
-			pause ();
-		
+				
+				if ((Input.GetKeyDown (KeyCode.I) && map.ismap == false && opening.jogoinicia == true)
+		    	|| (XboxButton.PressedButton == "Y" && map.ismap == false && opening.jogoinicia == true)) {
+						pause ();
+			
 						if (isPause || map.ismap) {
-			
-
-			
-				Time.timeScale=0;
-				Air.SetActive(true);
-				RealCamera.SendMessage("MouseDisabled");
-
-
-								
-								
+				
+				
+				
+								Time.timeScale = 0;
+								Air.SetActive (true);
+								RealCamera.SendMessage ("MouseDisabled");
+				
+				
+				
+				
 								//DrawInventario();
 								DrawSkills ();
 								//DrawItems();
-				gameObject.renderer.enabled = true;
-				menuhistoria.renderer.enabled = true;
-				menuhistoria.SetActive(true);
-				menuopcoes.renderer.enabled = true;
-				menuopcoes.SetActive(true);
-				menusalvar.renderer.enabled = true;
-				menusalvar.SetActive(true);
-				map.isinventario = true;
-
-
-
-								//hp.paused = true;
-								
-
+								gameObject.renderer.enabled = true;
+								menuhistoria.renderer.enabled = true;
+								menuhistoria.SetActive (true);
+								menuopcoes.renderer.enabled = true;
+								menuopcoes.SetActive (true);
+								menusalvar.renderer.enabled = true;
+								menusalvar.SetActive (true);
+								map.isinventario = true;
+				
 						}
-						
-						
-
-								else {
-				Time.timeScale = 1;
+				
+								//hp.paused = true;
+				
+				
+						else {
+								Time.timeScale = 1;
 								//MainCamera.cullingMask = Everything;
 								//guiTexture.enabled = false;
-				gameObject.renderer.enabled = false;
-				menuhistoria.SetActive(false);
-				menuopcoes.SetActive(false);
-				menusalvar.SetActive(false);
-				menuhistoria.renderer.enabled = false;
-				menuopcoes.renderer.enabled = false;
-				menusalvar.renderer.enabled = false;
+								gameObject.renderer.enabled = false;
+								menuhistoria.SetActive (false);
+								menuopcoes.SetActive (false);
+								menusalvar.SetActive (false);
+								menuhistoria.renderer.enabled = false;
+								menuopcoes.renderer.enabled = false;
+								menusalvar.renderer.enabled = false;
 								//hp.paused = false;
 								DontDraw ();
-				RealCamera.SendMessage("MouseEnabled");
-				map.isinventario = false;
-
+								RealCamera.SendMessage ("MouseEnabled");
+								map.isinventario = false;
+				
 						}
-
-
-
-
-
-	
+			
+			
+					XboxButton.NullButton ();
+			
+			
 				}
-
-
-
-
-
-		if (Input.GetKeyDown (KeyCode.RightArrow) && isPause) {
-			camerainvent.transform.Rotate(0,90,0);
-
-				}
-		if (Input.GetKeyDown (KeyCode.LeftArrow) && isPause) {
-			camerainvent.transform.Rotate(0,-90,0);
-				}
-
-		if (isPause) {
-						Screen.showCursor = true;
-			Cursor.SetCursor(cursorTexture, hotspot, cursormode);
-				}
-
-		if (!isPause) {
-			Screen.showCursor = false;
-			Cursor.SetCursor(cursorTexture, hotspot, cursormode);
-				}
-		
-
+			
+			
+			
+			
+			
+			
+			
+						if (Input.GetKeyDown (KeyCode.RightArrow) && isPause) {
+								camerainvent.transform.Rotate (0, 90, 0);
+				
+						}
+						if (Input.GetKeyDown (KeyCode.LeftArrow) && isPause) {
+								camerainvent.transform.Rotate (0, -90, 0);
+						}
+			
+						if (isPause) {
+								Screen.showCursor = true;
+								Cursor.SetCursor (cursorTexture, hotspot, cursormode);
+						}
+			
+						if (!isPause) {
+								Screen.showCursor = false;
+								Cursor.SetCursor (cursorTexture, hotspot, cursormode);
+						}
+			
 		}
 
 	/*void DrawInventario()
@@ -327,4 +328,6 @@ public class Inventario : MonoBehaviour {
 	}
 
 
+
+			
 }

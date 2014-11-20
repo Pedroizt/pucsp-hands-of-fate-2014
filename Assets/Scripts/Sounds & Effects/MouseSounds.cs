@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class audioplay : MonoBehaviour {
+public class MouseSounds : MonoBehaviour {
 	
 	public AudioSource audiosource; 
 	
@@ -32,15 +32,6 @@ public class audioplay : MonoBehaviour {
 
 	}
 
-	public void SihirFootsteps () {
-
-		//Sihir Footsteps
-		audioclip = (AudioClip)Resources.Load ("SFX/Footsteps");
-		audiosource.clip = audioclip;
-		//audiosource.loop = true;
-		audiosource.Play ();
-
-		}
 
 
 

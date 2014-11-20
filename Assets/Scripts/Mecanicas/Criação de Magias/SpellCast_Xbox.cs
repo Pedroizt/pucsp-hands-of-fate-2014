@@ -1,60 +1,50 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SpellCast : MonoBehaviour {
-
+public class SpellCast_Xbox : MonoBehaviour {
 
 	public TextMesh spelltext;
 	public Transform cameratarget;
 	public string espaço = "";
 	public string selo;
 	private Inventario pause;
+	
+	
 
-
-	/*Corrigir bug do inventário
-- Refinar as triggers de ajuda
-- Colocar feedback da magia
-- Camera
-- Cutscenes
-- Historia
-- Menu interno
-- Agua
-- (Talvez opções)
-- Bug do loadscreen
--
-há 12 minutos
-corrigir bug de morrer no pause*/
-
-
+	
+	
 	// Use this for initialization
 	void Start(){
 		GameObject i = GameObject.Find ("inventario 2");
 		pause = i.GetComponent<Inventario> ();
-		}
+	}
 	
 	// Update is called once per frame
 	void Update() {
-
+		
 		if (pause.isPause == false) {
-						spellnumbers ();
-						showtext ();
-						spellcolors();
-				}
-
-				
-
-	
-
-
+			showtext ();
+			spellcolors();
 		}
-
-	void spellnumbers()
+		
+		
+		
+		
+		
+		
+	}
+	
+	public void DDpad ()
 	{
-		if (Input.GetKeyDown (KeyCode.Keypad0) || (Input.GetKeyDown(KeyCode.Alpha0))) {
 			espaço += "0";
-		} else if (Input.GetKeyDown (KeyCode.Keypad1)|| (Input.GetKeyDown(KeyCode.Alpha1))) {
+	} 
+
+
+	public void UDpad()
+	{
 			espaço += "1";
-		} else if (Input.GetKeyDown (KeyCode.Keypad2)|| (Input.GetKeyDown(KeyCode.Alpha2))) {
+	} 
+	/*else if (Input.GetKeyDown (KeyCode.Keypad2)|| (Input.GetKeyDown(KeyCode.Alpha2))) {
 			espaço += "2";
 		} else if (Input.GetKeyDown (KeyCode.Keypad3)|| (Input.GetKeyDown(KeyCode.Alpha3))) {
 			espaço += "3";
@@ -76,53 +66,41 @@ corrigir bug de morrer no pause*/
 		} else if (Input.GetKeyDown (KeyCode.Backspace)) {
 			
 			espaço = "";
-		} 
+		} */
 		
-		if (Input.GetKeyDown (KeyCode.KeypadEnter) || (Input.GetMouseButtonDown (0))) 
-			FinishMagic ();
-
-		}
 
 
-	public void FinishMagic()
-	{
 
-		selo = espaço;
-		espaço = "";
-		
-	}
-
+	
 	void showtext()
 	{
 		if (spelltext == null)
-						Debug.Log ("Esqueceu de colocar o SpellText");
-
+			Debug.Log ("Esqueceu de colocar o SpellText");
+		
 		spelltext.text = espaço;
-
-
+		
+		
 	}
-
+	
 	void spellcolors()
 	{
 		if (espaço == "01" || espaço == "83" || espaço == "10")
-						spelltext.color = Color.blue;
-				else
-						spelltext.color = Color.red;
-		}
-
-
+			spelltext.color = Color.blue;
+		else
+			spelltext.color = Color.red;
+	}
+	
+	
 	
 	void FixedUpdate()
 	{
-
-
+		
+		
 		gameObject.transform.rotation = cameratarget.transform.rotation; 
-
-						
+		
+		
 		
 	}
-
 	
+
 }
-
-

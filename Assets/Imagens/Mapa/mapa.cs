@@ -15,8 +15,10 @@ public class mapa : MonoBehaviour {
 	bool notcloud2 = false;
 	bool notcloud3 = false;
 	bool notcloud4 = false;
-
+	Xbox360_Controls XboxButton;
 	private CutsceneControl opening;
+
+
 
 
 	// Use this for initialization
@@ -31,6 +33,9 @@ public class mapa : MonoBehaviour {
 		GameObject c = GameObject.Find ("Opening Cutscene");
 		opening = c.GetComponent<CutsceneControl> ();
 
+		GameObject x = GameObject.Find ("XboxControl");
+		XboxButton = x.GetComponent <Xbox360_Controls> ();
+
 
 
 	
@@ -40,7 +45,8 @@ public class mapa : MonoBehaviour {
 	void Update () {
 
 
-		if(Input.GetKeyDown(KeyCode.M) && isinventario == false && opening.jogoinicia == true)
+		if((Input.GetKeyDown(KeyCode.M) && isinventario == false && opening.jogoinicia == true)
+		   || (XboxButton.PressedButton == "X" && isinventario == false && opening.jogoinicia == true))
 		{
 			ismap = !ismap;
 
@@ -62,7 +68,7 @@ public class mapa : MonoBehaviour {
 				Time.timeScale = 1;
 			}
 
-
+			XboxButton.NullButton();
 		}
 
 
