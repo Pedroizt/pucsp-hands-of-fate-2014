@@ -17,10 +17,14 @@ public class FollowEnemy : MonoBehaviour {
 	float MoveSpeed = 1.0f;
 	float smoothing = 6.0f;
 	private Animator hedgehog;
+	//private CharacterController character;
+	private Rigidbody character;
+	private BoxCollider cols;
 	public bool attacktime = false;
 	GameObject childcol;
 	Vector3 inipos;
 	float pos;
+	public ParticleSystem teste;
 
 
 
@@ -32,7 +36,19 @@ public class FollowEnemy : MonoBehaviour {
 		GameObject h = GameObject.Find ("Sihir");
 		HPSihir = h.GetComponent<Hpsih> ();
 
+
+
 		hedgehog = gameObject.GetComponent<Animator> ();
+		/*character = gameObject.AddComponent<CharacterController> ();
+		character.height = 0.01f;
+		character.radius = 0.01f;*/
+		/*character = gameObject.AddComponent<Rigidbody> ();
+		character.useGravity = true;
+		character.freezeRotation = true;
+		cols = gameObject.AddComponent<BoxCollider> ();*/
+
+
+
 
 		childcol = GameObject.Find ("bigcrush 1(Clone)/idle/Bip001");
 
@@ -90,6 +106,7 @@ public class FollowEnemy : MonoBehaviour {
 			hedgehog.SetBool("idle", false);
 			hedgehog.SetBool("walkin", false);
 			hedgehog.SetBool("death", true);
+			teste.Play();
 
 
 			if (once == false)
