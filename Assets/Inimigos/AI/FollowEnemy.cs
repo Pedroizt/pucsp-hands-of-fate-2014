@@ -20,13 +20,14 @@ public class FollowEnemy : MonoBehaviour {
 	public bool attacktime = false;
 	GameObject childcol;
 	Vector3 inipos;
+	float pos;
 
 
 
 
 	void Start ()
 	{
-		Target = GameObject.Find ("Sihir").transform ;
+		Target = GameObject.Find ("Sihir/Target").transform ;
 
 		GameObject h = GameObject.Find ("Sihir");
 		HPSihir = h.GetComponent<Hpsih> ();
@@ -42,12 +43,14 @@ public class FollowEnemy : MonoBehaviour {
 
 
 
+
 		}
 	
 	// Update is called once per frame
 	void Update () {
 
 		Distancia = Vector3.Distance (Target.position, transform.position);
+		//Distancia = new Vector3 (Target.position.x - transform.position.x);
 
 		if (health >= 0) {
 						if (Distancia < VistaDistancia) {
@@ -131,6 +134,9 @@ public class FollowEnemy : MonoBehaviour {
 	void chase()
 	{
 		transform.Translate(-Vector3.forward * MoveSpeed * Time.deltaTime);
+
+
+		//pos = -transform.forward.x * MoveSpeed * Time.deltaTime;
 	}
 
 
