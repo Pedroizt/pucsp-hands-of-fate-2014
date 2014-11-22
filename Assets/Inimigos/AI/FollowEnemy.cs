@@ -106,7 +106,8 @@ public class FollowEnemy : MonoBehaviour {
 			hedgehog.SetBool("idle", false);
 			hedgehog.SetBool("walkin", false);
 			hedgehog.SetBool("death", true);
-			teste.Play();
+			Invoke("Smoke", 1.3f);
+
 
 
 			if (once == false)
@@ -143,6 +144,11 @@ public class FollowEnemy : MonoBehaviour {
 		Quaternion rotation = Quaternion.LookRotation (transform.position - Target.position);
 		transform.rotation = Quaternion.Slerp(transform.rotation, rotation,Time.deltaTime * smoothing);
 
+	}
+
+	void Smoke()
+	{
+		teste.Play ();
 	}
 
 

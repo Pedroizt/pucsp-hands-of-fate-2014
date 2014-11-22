@@ -7,11 +7,14 @@ public class HedgehogBehaviour : MonoBehaviour {
 	public float Damage;
 	private Hpsih HPSihir;
 
+
 	// Use this for initialization
 	void Start () {
 
 		GameObject h = GameObject.Find ("Sihir");
 		HPSihir = h.GetComponent<Hpsih> ();
+
+
 
 	
 	}
@@ -20,5 +23,9 @@ public class HedgehogBehaviour : MonoBehaviour {
 	void ApplyDamage()
 	{
 		HPSihir.curHealth -= Damage;
+		Debug.Log ("Damaging");
+
+
+
 	}
 }

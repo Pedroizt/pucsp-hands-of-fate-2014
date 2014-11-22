@@ -9,6 +9,7 @@ public class SpellCast : MonoBehaviour {
 	public string espaço = "";
 	public string selo;
 	private Inventario pause;
+	public Transform trsihir;
 
 
 	/*Corrigir bug do inventário
@@ -40,6 +41,8 @@ corrigir bug de morrer no pause*/
 						showtext ();
 						spellcolors();
 				}
+
+		gameObject.transform.rotation = trsihir.transform.rotation;
 
 				
 
@@ -112,15 +115,7 @@ corrigir bug de morrer no pause*/
 
 
 	
-	void FixedUpdate()
-	{
 
-
-		gameObject.transform.rotation = cameratarget.transform.rotation; 
-
-						
-		
-	}
 
 	
 }

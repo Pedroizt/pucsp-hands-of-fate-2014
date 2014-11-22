@@ -11,6 +11,7 @@ public class Destruicao : MonoBehaviour {
 	private SpellCast castspell;
 	Transform impacto;
 	Transform target;
+	GameObject trsihir;
 
 	//int range = 1;
 
@@ -18,11 +19,13 @@ public class Destruicao : MonoBehaviour {
 	{
 		GameObject s = GameObject.Find ("SpellCast");
 		castspell = s.GetComponent<SpellCast> ();
-		target = GameObject.Find ("Sihir/SpellCast").transform;
+
 		impacto = GameObject.Find ("impacto").transform;
 
 		GameObject h = GameObject.Find ("Sihir");
 		hp = h.GetComponent<Hpsih> ();
+
+		trsihir = GameObject.Find ("Sihir");
 		}
 	
 
@@ -43,11 +46,16 @@ public class Destruicao : MonoBehaviour {
 
 
 		if (castspell.selo == "83") {
+			target = GameObject.Find ("Sihir/SpellCast").transform;
+			GameObject s = GameObject.Find ("SpellCast");
+			castspell = s.GetComponent<SpellCast> ();
+
 						Debug.Log ("Funciona");
 			   			 Object obj = Instantiate(impacto, target.position, target.rotation);
 						castspell.selo = "";
 						hp.curHealth -= hp.maxHealth/16;
 				Destroy((obj as Transform).gameObject, 1);
+			trsihir.SendMessage("Attack", SendMessageOptions.DontRequireReceiver);
 
 				}
 
