@@ -12,6 +12,7 @@ public class Desoxigen : MonoBehaviour {
 	GameObject teste;
 	int scalerate;
 	public float damage = 0.5f;
+	GameObject trsihir;
 
 
 
@@ -22,12 +23,13 @@ public class Desoxigen : MonoBehaviour {
 
 	void Start()
 	{
+
 		GameObject s = GameObject.Find ("SpellCast");
 		castspell = s.GetComponent<SpellCast> ();
-		target = GameObject.Find ("Sihir/SpellCast").transform;
 		DesoxField = GameObject.Find ("desoxfield");
 		GameObject h = GameObject.Find ("Sihir");
 		hp = h.GetComponent<Hpsih> ();
+		trsihir = GameObject.Find ("Sihir");
 
 
 
@@ -43,12 +45,15 @@ public class Desoxigen : MonoBehaviour {
 
 		if (castspell.selo == "01") {
 
+			GameObject s = GameObject.Find ("SpellCast");
+			castspell = s.GetComponent<SpellCast> ();
+			target = GameObject.Find ("Sihir/SpellCast").transform;
 
 			GameObject obj = Instantiate (DesoxField, target.position, target.rotation) as GameObject;
 			obj.rigidbody.AddForce(target.forward * 50);
 			castspell.selo = "";
 			hp.curHealth -= hp.maxHealth/8;
-
+			trsihir.SendMessage("Attack", SendMessageOptions.DontRequireReceiver);
 			Destroy(obj, 3);
 
 		}

@@ -19,7 +19,7 @@ public class TrueSihir : MonoBehaviour
 		public GameObject camera;
 		private Rigidbody rb;
 		//public audioplay SihirSounds;
-		float pos;
+		public float pos;
 		bool walking;
 		bool sidewalk;
 		bool lateral;
@@ -45,7 +45,7 @@ public class TrueSihir : MonoBehaviour
 				SihirSounds = a.GetComponent <audioplay> ();*/
 
 				rb = GetComponent<Rigidbody> ();
-				pos = 0f;
+		pos = 0f;
 				pos = transform.localEulerAngles.y;
 
 				#region Audio
@@ -198,9 +198,7 @@ public class TrueSihir : MonoBehaviour
 								Attack ();
 				}
 
-				if (Input.GetKeyDown (KeyCode.V)) {
-						damaged = true;
-				}
+				
 				
 				if (Input.GetKey (KeyCode.S) && pressedW == false) {
 
@@ -263,7 +261,7 @@ public class TrueSihir : MonoBehaviour
 		void OnCollisionExit (Collision col)
 		{
 				Debug.Log ("NotGrounded");
-					;
+					
 				//jumped = true;
 		}
 
@@ -279,6 +277,12 @@ public class TrueSihir : MonoBehaviour
 				bursts.Play ();
 
 
+		}
+
+		void Damage()
+		{
+		damaged = true;
+		Debug.Log ("Correct");
 		}
 
 		IEnumerator boolback ()
