@@ -53,7 +53,7 @@ public class Destruicao : MonoBehaviour {
 
 
 
-		if (castspell.selo == "83") {
+		if (castspell.selo == "83" || castspell.selo == "U L ") {
 			target = GameObject.Find ("Sihir/SpellCast").transform;
 			GameObject s = GameObject.Find ("SpellCast");
 			castspell = s.GetComponent<SpellCast> ();
