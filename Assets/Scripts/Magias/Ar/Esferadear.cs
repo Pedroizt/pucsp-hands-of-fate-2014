@@ -41,7 +41,7 @@ public class Esferadear : MonoBehaviour {
 
 
 
-		if (castspell.selo == "10") {
+		if (castspell.selo == "10" || castspell.selo == "R D ") {
 
 			GameObject s = GameObject.Find ("SpellCast");
 			castspell = s.GetComponent<SpellCast> ();

@@ -97,7 +97,7 @@ public class TrueSihir : MonoBehaviour
 
 				walking = false;
 
-				if (Input.GetKey (KeyCode.W) && 
+				if (Input.GetAxis("Vertical") > 0.1f && 
 		    attacking == false && pressedS == false && collided == false) {
 
 						
@@ -141,7 +141,7 @@ public class TrueSihir : MonoBehaviour
 		}
 
 
-				if (Input.GetKey (KeyCode.D) && Input.GetKey (KeyCode.W)) {
+		if (Input.GetAxis("Horizontal") > 0.1f && Input.GetAxis("Vertical") > 0.1f) {
 						walking = true;
 						if (pos < 45f)
 
@@ -151,7 +151,7 @@ public class TrueSihir : MonoBehaviour
 				 
 				}
 
-				if (Input.GetKey (KeyCode.D) && attacking == false && pressedS == false) {
+		if (Input.GetAxis("Horizontal") > 0.1f && attacking == false && pressedS == false) {
 
 						if (walking == false) {
 
@@ -179,14 +179,14 @@ public class TrueSihir : MonoBehaviour
 
 				} 
 
-				if (Input.GetKey (KeyCode.A) && Input.GetKey (KeyCode.W)) {
+		if (Input.GetAxis("Horizontal") < -0.1f && Input.GetAxis("Vertical") > 0.1f) {
 						walking = true;
 						if (pos >= -45f)
 
 								pos -= 5f * Time.deltaTime * vel;
 				}
 
-				if (Input.GetKey (KeyCode.A) && attacking == false && pressedS == false) {
+		if (Input.GetAxis("Horizontal") < -0.1f && attacking == false && pressedS == false) {
 			
 						if (walking == false) {
 								/*if (!already_runningD && !already_runningW && !already_runningS) {
@@ -212,7 +212,7 @@ public class TrueSihir : MonoBehaviour
 			pos = 0;
 				}*/
 
-				if (Input.GetKey (KeyCode.W)) {
+		if (Input.GetAxis("Vertical") > 0.1f) {
 						if (pos >= 0f && walking == false)
 								pos -= 1f * Time.deltaTime * vel * 2;
 
@@ -236,7 +236,7 @@ public class TrueSihir : MonoBehaviour
 
 				
 
-				if (Input.GetKeyDown (KeyCode.Space)) {
+				if (Input.GetButtonDown("Jump")) {
 						if (nojump == true) {
 								nojump = false;
 								jumped = true;
@@ -260,15 +260,15 @@ public class TrueSihir : MonoBehaviour
 								rb.useGravity = true;
 						}
 
-				
+				/*
 				if (Input.GetKeyDown (KeyCode.F)) {
 						if (attacking == false)
 								Attack ();
-				}
+				}*/
 
 				
 				
-				if (Input.GetKey (KeyCode.S) && pressedW == false) {
+				if (Input.GetAxis("Vertical") < -0.1f && pressedW == false) {
 
 						anim.SetBool ("_run", true);
 						gameObject.transform.position -= transform.forward * Time.deltaTime * speed / 2;
@@ -276,11 +276,11 @@ public class TrueSihir : MonoBehaviour
 
 				}
 
-				if (Input.GetKeyUp (KeyCode.S)) {
+		if (Input.GetAxis("Vertical") < -0.1f) {
 						pressedS = false;
 				}
 
-				if (Input.GetKeyUp (KeyCode.W))
+		if (Input.GetAxis("Vertical") > 0.1f)
 						pressedW = false;
 				
 

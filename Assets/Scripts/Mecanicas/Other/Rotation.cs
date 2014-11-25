@@ -28,7 +28,7 @@ public class Rotation : MonoBehaviour {
 
 	void OnTriggerStay(Collider col){
 		if (col.gameObject.tag == "Player") {
-			if (Input.GetKeyDown(KeyCode.F)){
+			if (Input.GetButtonDown("Trigger")){
 				vel = 0;
 			}
 				}

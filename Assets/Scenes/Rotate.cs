@@ -5,26 +5,16 @@ public class Rotate : MonoBehaviour {
 
 	public bool girou = false;
 	public bool naogirou = true;
-	Xbox360_Controls XboxButton;
-
-	void Awake ()
-	{
-
-		GameObject x = GameObject.Find ("XboxControl");
-		XboxButton = x.GetComponent <Xbox360_Controls> ();
-
-	}
 
 	void Update()
 	{
 
-		if (Input.GetKeyDown (KeyCode.F) || XboxButton.PressedButton == "Y") {
+		if (Input.GetButtonDown("Trigger")) {
 			if (naogirou == true && girou == false)
 			{
 			girou = true;
 			naogirou = false;
 			Debug.Log("girou a switch");
-			XboxButton.NullButton ();
 			}
 		} 
 

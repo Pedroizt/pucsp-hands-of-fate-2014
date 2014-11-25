@@ -45,7 +45,7 @@ public class Desoxigen : MonoBehaviour {
 
 
 
-		if (castspell.selo == "01") {
+		if (castspell.selo == "01" || castspell.selo == "D R ") {
 
 			GameObject s = GameObject.Find ("SpellCast");
 			castspell = s.GetComponent<SpellCast> ();

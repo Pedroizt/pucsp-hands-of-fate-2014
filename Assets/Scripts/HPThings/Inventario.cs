@@ -37,7 +37,6 @@ public class Inventario : MonoBehaviour {
 	public bool isinvent = false;
 	private mapa map;
 	private CutsceneControl opening;
-	public Xbox360_Controls XboxButton;
 
 	
 	/*public GameObject armor;
@@ -68,8 +67,6 @@ public class Inventario : MonoBehaviour {
 		//GameObject t = GameObject.Find ("MagicTextures");
 		//mt = t.GetComponent<MagicTextures> ();
 
-		GameObject a = GameObject.Find ("XboxControl");
-		XboxButton = a.GetComponent <Xbox360_Controls> ();
 
 		GameObject p = GameObject.Find ("Magic");
 		unlc = p.GetComponent<UnlockToInventary> ();
@@ -110,8 +107,7 @@ public class Inventario : MonoBehaviour {
 	void Update () {
 
 				
-				if ((Input.GetKeyDown (KeyCode.I) && map.ismap == false && opening.jogoinicia == true)
-		    	|| (XboxButton.PressedButton == "Y" && map.ismap == false && opening.jogoinicia == true)) {
+		if (Input.GetButtonDown("Inventario") && map.ismap == false && opening.jogoinicia == true) {
 						pause ();
 			
 						if (isPause || map.ismap) {
@@ -160,10 +156,7 @@ public class Inventario : MonoBehaviour {
 				
 						}
 			
-			
-					XboxButton.NullButton ();
-			
-			
+
 				}
 			
 			

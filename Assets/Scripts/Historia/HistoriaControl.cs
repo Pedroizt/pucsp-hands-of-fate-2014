@@ -13,7 +13,6 @@ public class HistoriaControl : MonoBehaviour {
 	public bool começacutscene = false;
 	bool fimdoarray = false;
 	bool disable = false;
-	Xbox360_Controls XboxButton;
 
 	public SihirSounds Music;
 
@@ -32,11 +31,6 @@ public class HistoriaControl : MonoBehaviour {
 
 		collor2 = Imagem3.renderer.material.color;
 		collor2.a = 1.0f;
-
-
-		
-		GameObject x = GameObject.Find ("XboxControl");
-		XboxButton = x.GetComponent <Xbox360_Controls> ();
 
 		GameObject y = GameObject.Find ("Sihir");
 		Music = y.GetComponent <SihirSounds> ();
@@ -61,11 +55,10 @@ public class HistoriaControl : MonoBehaviour {
 
 
 		if (fimdoarray == false) {
-						if (Input.GetKeyDown (KeyCode.F) || XboxButton.PressedButton == "B") {
+						if (Input.GetButtonDown("Trigger")) {
 								i += 1;
 								
 								Partes [i - 1].renderer.enabled = false;
-								XboxButton.NullButton ();
 						}
 				}
 
