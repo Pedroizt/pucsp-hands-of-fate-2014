@@ -13,6 +13,10 @@ public class Destruicao : MonoBehaviour {
 	Transform target;
 	GameObject trsihir;
 
+	public SihirSounds SihirSounds;
+	bool AtackSound;
+
+
 	//int range = 1;
 
 	void Start()
@@ -26,6 +30,10 @@ public class Destruicao : MonoBehaviour {
 		hp = h.GetComponent<Hpsih> ();
 
 		trsihir = GameObject.Find ("Sihir");
+
+		GameObject a = GameObject.Find ("Sihir");
+		SihirSounds = a.GetComponent <SihirSounds> ();
+
 		}
 	
 
@@ -53,6 +61,21 @@ public class Destruicao : MonoBehaviour {
 						Debug.Log ("Funciona");
 			   			 Object obj = Instantiate(impacto, target.position, target.rotation);
 						castspell.selo = "";
+
+			
+						#region Atack Sound Switch
+						if (AtackSound)
+						{
+							SihirSounds.PlaySound (0);
+							AtackSound = false;
+						}	
+						else
+						{
+							SihirSounds.PlaySound (1);
+							AtackSound = true;
+						}
+						#endregion
+
 						hp.curHealth -= hp.maxHealth/16;
 				Destroy((obj as Transform).gameObject, 1);
 			trsihir.SendMessage("Attack", SendMessageOptions.DontRequireReceiver);

@@ -52,8 +52,8 @@ public class Xbox360_Controls : MonoBehaviour
 		// A Button is read from Input Positive Button "joystick button 0"
 		if(Input.GetButtonDown ("360_AButton"))
 		{
-			//Finish the Magic
-			Controller2.FinishMagic();
+
+			Debug.Log("A Button!");
 			PressedButton = "A";
 		}
 		
@@ -67,6 +67,7 @@ public class Xbox360_Controls : MonoBehaviour
 		// X Button is read from Input Positive Button "joystick button 2"
 		if(Input.GetButtonDown ("360_XButton"))
 		{
+			Controller2.FinishMagic();
 			Debug.Log("X Button!");
 			PressedButton = "X";
 		}

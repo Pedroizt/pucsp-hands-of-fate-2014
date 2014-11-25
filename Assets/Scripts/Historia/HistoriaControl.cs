@@ -15,11 +15,18 @@ public class HistoriaControl : MonoBehaviour {
 	bool disable = false;
 	Xbox360_Controls XboxButton;
 
+	public SihirSounds Music;
+
 	public Color collor2;
+
+	bool music_running = false;
 
 
 	// Use this for initialization
 	void Start () {
+
+
+
 
 		Partes [i].renderer.enabled = true;
 
@@ -31,12 +38,22 @@ public class HistoriaControl : MonoBehaviour {
 		GameObject x = GameObject.Find ("XboxControl");
 		XboxButton = x.GetComponent <Xbox360_Controls> ();
 
+		GameObject y = GameObject.Find ("Sihir");
+		Music = y.GetComponent <SihirSounds> ();
+
+
+
 	
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
+		if (!music_running) {
+
+			Music.History_Music();
+			music_running = true;
+		}
 
 
 		if (disable == false)
@@ -67,6 +84,8 @@ public class HistoriaControl : MonoBehaviour {
 			{
 				Partes[i].renderer.enabled = false;
 				AperteF.renderer.enabled = false;
+
+				Music.StopHistory();
 
 
 					disable = true;
