@@ -10,6 +10,7 @@ public class SpellCast : MonoBehaviour {
 	public string selo;
 	private Inventario pause;
 	public Transform trsihir;
+	Xbox360_Controls XboxButton;
 
 
 	/*Corrigir bug do inventário
@@ -31,6 +32,11 @@ corrigir bug de morrer no pause*/
 	void Start(){
 		GameObject i = GameObject.Find ("inventario 2");
 		pause = i.GetComponent<Inventario> ();
+
+		GameObject x = GameObject.Find ("XboxControl");
+		XboxButton = x.GetComponent <Xbox360_Controls> ();
+
+
 		}
 	
 	// Update is called once per frame
@@ -42,7 +48,7 @@ corrigir bug de morrer no pause*/
 						spellcolors();
 				}
 
-		gameObject.transform.rotation = trsihir.transform.rotation;
+		gameObject.transform.rotation = cameratarget.transform.rotation;
 
 				
 
@@ -81,7 +87,8 @@ corrigir bug de morrer no pause*/
 			espaço = "";
 		} 
 		
-		if (Input.GetKeyDown (KeyCode.KeypadEnter) || (Input.GetMouseButtonDown (0))) 
+		if (Input.GetKeyDown (KeyCode.KeypadEnter) || (Input.GetMouseButtonDown (0))
+		    ) 
 			FinishMagic ();
 
 		}

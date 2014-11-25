@@ -46,7 +46,7 @@ public class mapa : MonoBehaviour {
 
 
 		if((Input.GetKeyDown(KeyCode.M) && isinventario == false && opening.jogoinicia == true)
-		   || (XboxButton.PressedButton == "X" && isinventario == false && opening.jogoinicia == true))
+		   || (XboxButton.PressedButton == "StartButton" && isinventario == false && opening.jogoinicia == true))
 		{
 			ismap = !ismap;
 

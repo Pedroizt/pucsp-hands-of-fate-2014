@@ -11,6 +11,9 @@ public class Esferadear : MonoBehaviour {
 	private TrueSihir tr;
 	GameObject trsih;
 
+	public SihirSounds SihirSounds;
+	bool AtackSound;
+
 	// Use this for initialization
 	void Start () {
 
@@ -26,6 +29,9 @@ public class Esferadear : MonoBehaviour {
 		hp = h.GetComponent<Hpsih> ();
 
 		trsih = GameObject.Find ("Sihir");
+
+		GameObject a = GameObject.Find ("Sihir");
+		SihirSounds = a.GetComponent <SihirSounds> ();
 
 	
 	}
@@ -46,6 +52,22 @@ public class Esferadear : MonoBehaviour {
 						obj.rigidbody.AddForce (target.forward * 200 * Time.deltaTime);
 						castspell.selo = "";
 						Destroy (obj, 2);
+
+
+			#region Atack Sound Switch
+						if (AtackSound)
+						{
+							SihirSounds.PlaySound (0);
+							AtackSound = false;
+						}	
+						else
+						{
+							SihirSounds.PlaySound (1);
+							AtackSound = true;
+						}
+			#endregion
+
+
 						hp.curHealth -= hp.maxHealth / 16;
 			trsih.SendMessage("Attack", SendMessageOptions.DontRequireReceiver);
 

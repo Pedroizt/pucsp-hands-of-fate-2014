@@ -17,8 +17,12 @@ public class Hpsih : MonoBehaviour {
 	private HistoriaControl history;
 	private CutsceneControl cutsc;
 	public bool Damaged = false;
+	public SihirSounds SihirSounds;
 
-
+	public bool counterEnable = false;
+	public float counter = 4;	
+		
+		
 
 	// Use this for initialization
 	void Start () {
@@ -34,6 +38,12 @@ public class Hpsih : MonoBehaviour {
 
 		GameObject c = GameObject.Find ("Opening Cutscene");
 		cutsc = c.GetComponent<CutsceneControl> ();
+
+		GameObject v = GameObject.Find ("Sihir");
+		SihirSounds = v.GetComponent<SihirSounds> ();
+
+
+
 
 
 		maxH.SetActive (true);
@@ -67,6 +77,23 @@ public class Hpsih : MonoBehaviour {
 				}
 
 		ReducaoHp ();
+
+
+
+
+		if (counterEnable) 
+		{
+			if (counter >= 4)
+			{
+				HeartBeatingSound();
+				counter = 0;
+				
+			}
+			counter += Time.deltaTime;
+
+			
+		}
+
 	
 	}
 
@@ -81,6 +108,12 @@ public class Hpsih : MonoBehaviour {
 				HalfH.SetActive (false);
 				AlmostEmptyH.SetActive (false);
 				Empty.SetActive (false);
+				if (counterEnable == true)
+				{
+					counter = 4;
+					counterEnable = false;
+					SihirSounds.StopHeart();
+				}
 			}
 								//GUI.DrawTexture (new Rect (Screen.width - 790, Screen.height - 580, 80, 100), maxH);
 
@@ -91,6 +124,12 @@ public class Hpsih : MonoBehaviour {
 				HalfH.SetActive (false);
 				AlmostEmptyH.SetActive (false);
 				Empty.SetActive (false);
+				if (counterEnable == true)
+				{
+					counter = 4;
+					counterEnable = false;
+					SihirSounds.StopHeart();
+				}
 			}
 
 								//GUI.DrawTexture (new Rect (Screen.width - 790, Screen.height - 580, 80, 100), AlmostMaxH);
@@ -102,6 +141,13 @@ public class Hpsih : MonoBehaviour {
 				HalfH.SetActive (true);
 				AlmostEmptyH.SetActive (false);
 				Empty.SetActive (false);
+				if (counterEnable == true)
+				{
+					counter = 4;
+					counterEnable = false;
+					SihirSounds.StopHeart();
+				}
+				
 			}
 								//GUI.DrawTexture (new Rect (Screen.width - 790, Screen.height - 580, 80, 100), HalfH);
 
@@ -112,6 +158,10 @@ public class Hpsih : MonoBehaviour {
 				HalfH.SetActive (false);
 				AlmostEmptyH.SetActive (true);
 				Empty.SetActive (false);
+				HeartBeatingSound();
+
+
+
 			}
 								//GUI.DrawTexture (new Rect (Screen.width - 790, Screen.height - 580, 80, 100), AlmostEmptyH);
 
@@ -122,6 +172,8 @@ public class Hpsih : MonoBehaviour {
 				HalfH.SetActive (false);
 				AlmostEmptyH.SetActive (false);
 				Empty.SetActive (true);
+				HeartBeatingSound();
+
 			}
 								//GUI.DrawTexture (new Rect (Screen.width - 790, Screen.height - 580, 80, 100), Empty);
 				}
@@ -150,7 +202,19 @@ public class Hpsih : MonoBehaviour {
 	}
 
 
+	void HeartBeatingSound ()
+	{
+		if (counter >= 3.98f) 
+		{
+			SihirSounds.Heartbeating() ;
+			counterEnable = true;
+		}
 
+	}
+
+
+	
+	
 	/*IEnumerator HealthRegeneration()
 	{
 

@@ -13,8 +13,9 @@ public class Desoxigen : MonoBehaviour {
 	int scalerate;
 	public float damage = 0.5f;
 	GameObject trsihir;
+	bool AtackSound;
 
-
+	public SihirSounds SihirSounds;
 
 
 
@@ -32,7 +33,8 @@ public class Desoxigen : MonoBehaviour {
 		trsihir = GameObject.Find ("Sihir");
 
 
-
+		GameObject a = GameObject.Find ("Sihir");
+		SihirSounds = a.GetComponent <SihirSounds> ();
 
 	}
 	void Update()
@@ -51,6 +53,21 @@ public class Desoxigen : MonoBehaviour {
 
 			GameObject obj = Instantiate (DesoxField, target.position, target.rotation) as GameObject;
 			obj.rigidbody.AddForce(target.forward * 50);
+
+			#region Atack Sound Switch
+			if (AtackSound)
+			{
+				SihirSounds.PlaySound (0);
+				AtackSound = false;
+			}	
+			else
+			{
+				SihirSounds.PlaySound (1);
+				AtackSound = true;
+			}
+			#endregion
+
+
 			castspell.selo = "";
 			hp.curHealth -= hp.maxHealth/8;
 			trsihir.SendMessage("Attack", SendMessageOptions.DontRequireReceiver);
