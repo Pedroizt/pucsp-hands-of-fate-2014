@@ -7,12 +7,12 @@ public class SihirSounds : MonoBehaviour {
 	public AudioSource SihirVoices;
 	public AudioSource Heartbeat;
 	public AudioSource Footsteps;
-	public AudioSource History_au;
+	public AudioSource Musics_au;
 
 	public AudioClip[] audioClip;
 	public AudioClip Heart_Sihir;
 	public AudioClip Footsteps_sihir;
-	public AudioClip History_ac;
+	public AudioClip[] Musics_ac;
 
 
 
@@ -22,7 +22,7 @@ public class SihirSounds : MonoBehaviour {
 		SihirVoices = (AudioSource)gameObject.AddComponent ("AudioSource");
 		Heartbeat = (AudioSource)gameObject.AddComponent ("AudioSource");
 		Footsteps = (AudioSource)gameObject.AddComponent ("AudioSource");
-		History_au = (AudioSource)gameObject.AddComponent ("AudioSource");
+		Musics_au = (AudioSource)gameObject.AddComponent ("AudioSource");
 
 
 
@@ -71,6 +71,21 @@ public class SihirSounds : MonoBehaviour {
 		
 		
 	}
+
+	public void MuteFootsteps()
+	{
+
+		Footsteps.mute = true;
+
+	}
+
+	public void UnMuteFootsteps()
+	{
+
+		Footsteps.mute = false;
+
+	}
+
 	
 	public void StopFootsteps ()
 	{
@@ -79,18 +94,18 @@ public class SihirSounds : MonoBehaviour {
 	#endregion
 
 	#region History Music Script
-	public void History_Music ()
+	public void Musics (int clip)
 	{
 		
-		History_au.clip = History_ac;
-		History_au.Play ();
+		Musics_au.clip = Musics_ac[clip];
+		Musics_au.Play ();
 		
 		
 	}
 	
-	public void StopHistory ()
+	public void StopMusic ()
 	{
-		History_au.Stop ();
+		Musics_au.Stop ();
 	}
 	#endregion
 

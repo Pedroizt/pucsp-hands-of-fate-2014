@@ -40,10 +40,9 @@ public class TrueSihir : MonoBehaviour
 		public float counter_f = 0.4f;	
 		public bool jumpsound;
 		public float counter2 = 0;
-		bool already_runningW = false;
-		bool already_runningA = false;
-		bool already_runningS = false;
-		bool already_runningD = false;
+		bool already_running = false;
+		bool already_jumping = false;
+		float counter_j;
 
 		// Use this for initialization
 		void Start ()
@@ -97,17 +96,19 @@ public class TrueSihir : MonoBehaviour
 
 				walking = false;
 
+				banwalking ();
+
 				if (Input.GetAxis("Vertical") > 0.1f && 
 		    attacking == false && pressedS == false && collided == false) {
 
 						
 		
 						
-						if(!already_runningD && !already_runningA && !already_runningS)
-			{
-						FootstepsSound();
-						already_runningW=true;			
-			}
+						//if(already_running == false)
+						//{
+							FootstepsSound();
+						//	already_running=true;	
+						//}
 						anim.SetBool ("_run", true);
 						pressedW = true;		
 								
@@ -133,7 +134,7 @@ public class TrueSihir : MonoBehaviour
 						speed = resetspeed;
 
 						SihirSounds.StopFootsteps();
-						already_runningW=false;
+						already_running=false;
 						anim.speed = speed / 10f;
 						progressivespeed = 0.1f;
 				
@@ -155,11 +156,11 @@ public class TrueSihir : MonoBehaviour
 
 						if (walking == false) {
 
-								/*if(!already_runningW&&!already_runningA&&!already_runningS)
-								{
+								//if(already_running == false)
+								//{
 									FootstepsSound();
-									already_runningD=true;			
-								}*/
+								//	already_running=true;	
+								//}
 								anim.SetBool ("_run", true);
 								pos = 90f;
 								gameObject.transform.position += transform.forward 
@@ -170,14 +171,14 @@ public class TrueSihir : MonoBehaviour
 						
 
 						}
-			/*else{
 
-				SihirSounds.StopFootsteps();
-				already_runningD = false;
 
-			}*/
+		} else{
 
-				} 
+				//SihirSounds.StopFootsteps();
+				already_running = false;
+
+			}
 
 		if (Input.GetAxis("Horizontal") < -0.1f && Input.GetAxis("Vertical") > 0.1f) {
 						walking = true;
@@ -189,10 +190,11 @@ public class TrueSihir : MonoBehaviour
 		if (Input.GetAxis("Horizontal") < -0.1f && attacking == false && pressedS == false) {
 			
 						if (walking == false) {
-								/*if (!already_runningD && !already_runningW && !already_runningS) {
-										FootstepsSound ();
-										already_runningA = true;			
-								}*/
+								//if(already_running == false)
+								//{
+									FootstepsSound();
+								//	already_running=true;	
+								//}
 								anim.SetBool ("_run", true);
 								pos = -90f;
 								gameObject.transform.position += transform.forward 
@@ -201,12 +203,13 @@ public class TrueSihir : MonoBehaviour
 
 				
 						}
-				}/* else {
+				} else {
 				
-								SihirSounds.StopFootsteps();
-								already_runningA = false;
+								
+								//SihirSounds.StopFootsteps();
+								already_running = false;
 				
-				}*/
+				}
 
 				/*if (pos != 0 && Input.GetKey (KeyCode.W) && walking == false) {
 			pos = 0;
@@ -244,7 +247,7 @@ public class TrueSihir : MonoBehaviour
 								anim.SetTrigger ("_jump");
 								rb.useGravity = false;
 								speed = speed / 2;
-
+								already_jumping = true;
 								#region Jump Sounds Switch
 								if (jumpsound) {
 										SihirSounds.PlaySound (3);
@@ -257,8 +260,7 @@ public class TrueSihir : MonoBehaviour
 						} 
 				}else {
 						
-								rb.useGravity = true;
-						}
+								rb.useGravity = true;						}
 
 				/*
 				if (Input.GetKeyDown (KeyCode.F)) {
@@ -377,7 +379,25 @@ public class TrueSihir : MonoBehaviour
 		}
 	
 
+		void banwalking () 
+		{
+			
+			if (already_jumping) 
+			{
 
+			counter_j += Time.deltaTime;
+			SihirSounds.MuteFootsteps();
+			if(counter_j >= 1)
+			{
+
+				SihirSounds.UnMuteFootsteps();
+				counter_j = 0;
+				already_jumping = false;
+
+			}
+			}
+
+		}
 		/*void progressivespeed()
 	{
 		while (speed < 5)

@@ -25,6 +25,8 @@ public class FollowEnemy : MonoBehaviour {
 	Vector3 inipos;
 	float pos;
 	public ParticleSystem teste;
+	SihirSounds Music;
+	bool already_music = false;
 
 
 
@@ -35,6 +37,8 @@ public class FollowEnemy : MonoBehaviour {
 
 		GameObject h = GameObject.Find ("Sihir");
 		HPSihir = h.GetComponent<Hpsih> ();
+		Music = h.GetComponent<SihirSounds> ();
+
 
 
 
@@ -76,11 +80,17 @@ public class FollowEnemy : MonoBehaviour {
 								hedgehog.SetBool ("idle", true);
 								//renderer.material.color = Color.yellow;
 								lookAt ();
+								if(already_music == false)
+						{
+								Music.Musics (2);
+								already_music = true;
+						}
 						}
 
 						if (Distancia > VistaDistancia) {
 			
 								hedgehog.SetBool ("idle", true);
+								already_music = false;
 								//renderer.material.color = Color.grey;
 						}
 
