@@ -58,7 +58,7 @@ corrigir bug de morrer no pause*/
 				if (already_pressed) {
 
 						counter += Time.deltaTime;
-						if (counter >= 0.3f) {
+						if (counter >= 0.4f) {
 
 								already_pressed = false;
 								counter = 0;

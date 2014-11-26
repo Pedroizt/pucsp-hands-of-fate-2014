@@ -34,6 +34,7 @@ public class mapa : MonoBehaviour {
 
 
 
+
 	
 	}
 	
@@ -50,7 +51,6 @@ public class mapa : MonoBehaviour {
 			{
 				Time.timeScale = 0;
 				DrawMap();
-
 
 
 			}

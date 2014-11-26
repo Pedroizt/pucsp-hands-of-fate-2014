@@ -27,6 +27,8 @@ public class CutsceneControl : MonoBehaviour {
 		history = h.GetComponent<HistoriaControl> ();
 
 
+
+
 		Text.SetActive (false);
 		S1.SetActive (true);
 		S1.GetComponent<Animator> ().enabled = false;
