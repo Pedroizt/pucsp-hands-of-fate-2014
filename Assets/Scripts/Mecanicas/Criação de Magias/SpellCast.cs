@@ -90,7 +90,7 @@ corrigir bug de morrer no pause*/
 						espaço += "8";
 				} else if (Input.GetKeyDown (KeyCode.Keypad9) || (Input.GetKeyDown (KeyCode.Alpha9))) {
 						espaço += "9";
-				} else if (espaço.Length >= 6) {
+				} else if (espaço.Length >= 7) {
 			
 						espaço = "";
 				} else if (Input.GetButtonDown ("Backspace")) {

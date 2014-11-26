@@ -193,7 +193,7 @@ public class FollowEnemy : MonoBehaviour {
 			{
 						child.gameObject.SetActive (false);
 			}
-			yield return new WaitForSeconds(3);
+			yield return new WaitForSeconds(30);
 			reset = true;
 
 				}

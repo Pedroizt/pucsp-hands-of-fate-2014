@@ -142,7 +142,7 @@ public class TrueSihir : MonoBehaviour
 		}
 
 
-		if (Input.GetAxis("Horizontal") > 0.1f && Input.GetAxis("Vertical") > 0.1f) {
+		if (Input.GetAxis("Horizontal") > 0.1f && Input.GetAxis("Vertical") > 0.1f && pressedS == false) {
 						walking = true;
 						if (pos < 45f)
 
@@ -180,7 +180,7 @@ public class TrueSihir : MonoBehaviour
 
 			}
 
-		if (Input.GetAxis("Horizontal") < -0.1f && Input.GetAxis("Vertical") > 0.1f) {
+		if (Input.GetAxis("Horizontal") < -0.1f && Input.GetAxis("Vertical") > 0.1f&& pressedS == false) {
 						walking = true;
 						if (pos >= -45f)
 
@@ -278,12 +278,35 @@ public class TrueSihir : MonoBehaviour
 
 				}
 
+		if (Input.GetAxis("Vertical") < -0.1f && pressedS == true && Input.GetAxis("Horizontal") > 0.1f) {
+
+			if (pos > -45f)
+				
+				pos -= 5f * Time.deltaTime * vel;
+			
+			
+			
+		}
+
+		if (Input.GetAxis("Vertical") < -0.1f && pressedS == true && Input.GetAxis("Horizontal") < -0.1f) {
+
+			if (pos < 45f)
+				
+				pos += 5f * Time.deltaTime * vel;
+			
+			
+			
+		}
+
 		if (Input.GetAxis("Vertical") < -0.1f) {
-						pressedS = false;
+						pressedS = true;
+						pressedW = false;
 				}
 
-		if (Input.GetAxis("Vertical") > 0.1f)
-						pressedW = false;
+		if (Input.GetAxis ("Vertical") > 0.1f) {
+						pressedW = true;
+						pressedS = false;
+				}
 				
 
 						

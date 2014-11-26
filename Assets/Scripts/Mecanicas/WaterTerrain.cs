@@ -32,7 +32,7 @@ public class WaterTerrain : MonoBehaviour {
 	void Update()
 	{
 		if (InsideWater == true) {
-			health.curHealth -= health.maxHealth / 4 * Time.deltaTime;
+			health.curHealth -= health.maxHealth / 2 * Time.deltaTime;
 			mb.blurAmount += 0.3f * Time.deltaTime;
 				}
 		if (InsideWater == false) {
