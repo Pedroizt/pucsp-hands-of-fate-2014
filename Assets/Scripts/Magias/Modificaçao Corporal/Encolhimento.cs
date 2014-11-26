@@ -7,7 +7,7 @@ public class Encolhimento : MonoBehaviour {
 	private bool duracao = false;
 	bool parardecrescer = false;
 	private GameObject longc;
-
+	private Unlockeds un;
 
 
 
@@ -15,8 +15,11 @@ public class Encolhimento : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		 longc = GameObject.Find ("LongCast");
+		 longc = GameObject.Find ("SpellCast");
 		spellcast1 = longc.GetComponent<SpellCast> ();
+
+		GameObject u = GameObject.Find ("UnObj");
+		un = u.GetComponent<Unlockeds> ();
 
 	
 	}
@@ -26,18 +29,20 @@ public class Encolhimento : MonoBehaviour {
 
 				
 
-				if (spellcast1.selo == "80" && modificacorpo_locked == false && duracao == false) {
+				if (spellcast1.selo == "131" || spellcast1.selo == "R L R") {
+							if(un.UnlockedBodyChange == true && duracao == false){
 						transform.localScale = new Vector3 (transform.localScale.x * 0.5f, transform.localScale.y * 0.5f, transform.localScale.z * 0.5f);
 			duracao = true;
 			StartCoroutine (duracaoencolhimento());
 						spellcast1.selo = "";
+			}
 
 
 
 
 				}
 
-		else if (spellcast1.selo == "80" && modificacorpo_locked == true)
+		if (spellcast1.selo == "131" && un.UnlockedBodyChange == false)
 			spellcast1.selo = "";
 		}
 

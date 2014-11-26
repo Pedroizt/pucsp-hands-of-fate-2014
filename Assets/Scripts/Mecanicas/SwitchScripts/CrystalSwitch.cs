@@ -6,7 +6,7 @@ public class CrystalSwitch : MonoBehaviour {
 	bool EstaSwitch = false;
 	bool naofucionamais = false;
 	public float vel = 2.0f;
-	public ParticleSystem glow;
+
 	private CristalGrande cgrande;
 	public GameObject F;
 
@@ -14,7 +14,7 @@ public class CrystalSwitch : MonoBehaviour {
 	void Awake () {
 
 		gameObject.renderer.material.color = Color.red;
-		glow.renderer.enabled = true;;
+
 
 
 
@@ -52,7 +52,7 @@ public class CrystalSwitch : MonoBehaviour {
 			gameObject.renderer.material.color = Color.blue;
 			gameObject.tag = "On";
 			cgrande.Start ();
-				glow.renderer.enabled = false;
+
 			
 			naofucionamais = true;
 			vel = 0;
