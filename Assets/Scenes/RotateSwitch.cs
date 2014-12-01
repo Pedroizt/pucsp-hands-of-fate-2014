@@ -7,6 +7,9 @@
 //     o código for gerado novamente.
 // </auto-generated>
 //------------------------------------------------------------------------------
+
+//SCRIPT NAO UTILIZADO.
+//MOTIVO: NAO CRIADO CORRETAMENTE.
 using System;
 namespace AssemblyCSharp
 {

@@ -3,7 +3,9 @@ using System.Collections;
 
 
 public class MouseOrbitInfiniteRotateZoom : MonoBehaviour {
-	
+
+	//SCRIPT NAO UTILIZADO.
+	//MOTIVO: SUBSTITUIDO PELO MOUSEORBIT CONVENCIONAL, PADRAO DA UNITY.
 	public Transform target;
 	public float xSpeed = 12.0f;
 	public float ySpeed = 12.0f;

@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Wind2Switch : MonoBehaviour {
 
+	//SCRIPT NAO UTILIZADO.
+	//MOTIVO: CONSERTADO E SUBSTITUIDO PELO "WindSwitch.cs".
 	private Hovering2 winds;
 	
 	void Start()

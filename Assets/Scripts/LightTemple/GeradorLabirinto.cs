@@ -3,6 +3,9 @@ using System.Collections;
 
 public static class GeradorLabirinto
 {
+	/*SCRIPT NAO UTILIZADO.
+	 * MOTIVO: SCRIPT DE QUARTA FASE. NAO IMPLEMENTADO.
+	 * FUNÇAO: Auxilia na criaçao de um labirinto para o jogador ultrapassar.*/
 	public static int[,] retornaLabirinto (int tipo)
 	{
 				int[,] labirinto = new int[0, 0];

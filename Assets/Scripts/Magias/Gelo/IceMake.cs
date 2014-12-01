@@ -3,6 +3,10 @@ using System.Collections;
 
 public class IceMake : MonoBehaviour {
 
+
+	/*SCRIPT NAO UTILIZADO.
+	 * MOTIVO: SCRIPT DE SEGUNDA FASE. NAO IMPLEMENTADO.
+	 * FUNÇAO: Criar objetos que seriam utilizaveis no jogo, como uma esfera, uma ponte e um escudo.*/
 	public Object IceSphere;
 	public Object IceBridge;
 	public Object IceShield;

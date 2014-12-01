@@ -3,6 +3,9 @@ using System.Collections;
 
 public class GameOverFade : MonoBehaviour
 {
+
+	//Funciona da mesma maneira de outros fades, usado no gameover, para que o mesmo
+	//volte ao menu apos o termino do fade.
 	public float fadeSpeed = 1.5f;          // Speed that the screen fades to and from black.
 	bool sceneStarting = true;
 	public bool gameOver = false;

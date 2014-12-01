@@ -3,6 +3,7 @@ using System.Collections;
 
 public class HistoriaControl : MonoBehaviour {
 
+	//Controle da cutscene inicial do jogo, funciona do mesmo modo que OtherHistoryControl.
 	public Camera camera;
 	public GameObject Imagem1;
 	public GameObject Imagem2;

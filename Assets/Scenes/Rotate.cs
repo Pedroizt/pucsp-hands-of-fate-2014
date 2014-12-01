@@ -3,6 +3,10 @@ using System.Collections;
 
 public class Rotate : MonoBehaviour {
 
+
+	//SCRIPT NAO UTILIZADO.
+	//MOTIVO: O SCRIPT A SEGUIR E O DA SEGUNDA FASE, NAO IMPLEMENTADA.
+	//O script a seguir e uma sala giratoria que seria controlada com switches (Outro teste).
 	public bool girou = false;
 	public bool naogirou = true;
 

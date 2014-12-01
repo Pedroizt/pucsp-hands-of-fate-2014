@@ -2,6 +2,10 @@
 using System.Collections;
 
 public class Boomerang : MonoBehaviour {
+
+	/*SCRIPT NAO UTILIZADO.
+	 * MOTIVO: SUBSTITUIDO POR LIGHRANG, USADO PARA TESTE.
+	 * FUNÇAO: Atuaria como um boomerang.*/
 	public float duration = 1; // in seconds
 	
 	public Vector3 beginPoint = new Vector3(0, 0, 0);

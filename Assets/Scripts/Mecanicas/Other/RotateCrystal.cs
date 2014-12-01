@@ -4,7 +4,9 @@ using System.Collections;
 public class RotateCrystal : MonoBehaviour {
 
 
-
+	/*SCRIPT NÃO UTILIZADO
+	MOTIVO: SCRIPT DE SEGUNDA FASE. NAO IMPLEMENTADO 
+	FUNÇAO: Auxilio na criaçao de sala giratoria.*/
 	public bool girou;
 	void Update()
 	{

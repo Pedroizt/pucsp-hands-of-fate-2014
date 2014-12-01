@@ -3,6 +3,10 @@ using System.Collections;
 
 public  class BreakingBlocks : MonoBehaviour {
 
+
+	/*SCRIPT NÃO UTILIZADO
+	MOTIVO: SCRIPT DE SEGUNDA FASE. NAO IMPLEMENTADO.
+	FUNÇAO: Criaria um bloco que e quebrado ao pisar com muito peso e que reaparece apos um tempo*/
 	private VariaveisBloco breaking;
 
 	void Awake()

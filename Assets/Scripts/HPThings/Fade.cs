@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Fade : MonoBehaviour
 {
+	//Outro script de fade, foi utilizado como referencia e em um objeto.
 	public float fadeSpeed = 5f;          // Speed that the screen fades to and from black.
 	public bool sceneStarting = true;
 	public bool gameOver = false;

@@ -3,6 +3,10 @@ using System.Collections;
 
 public class RotateSwitch : MonoBehaviour {
 
+
+	/*SCRIPT NÃO UTILIZADO
+	MOTIVO: SCRIPT DE SEGUNDA FASE. NAO IMPLEMENTADO. 
+	FUNÇAO: Cria uma switch rotacionavel.*/
 	private RotateCrystal rotacionar;
 
 	// Use this for initialization

@@ -3,6 +3,9 @@ using System.Collections;
 
 public class HedgehogBehaviour : MonoBehaviour {
 
+	//O SCRIPT ABAIXO NAO FOI UTILIZADO.
+	//MOTIVO: SUBSTITUIDO PELO HEDGEHOGHITBOX.
+
 	public float HP;
 	public float Damage;
 	private Hpsih HPSihir;

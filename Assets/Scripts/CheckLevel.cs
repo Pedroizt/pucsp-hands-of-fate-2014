@@ -3,6 +3,9 @@ using System.Collections;
 
 public class CheckLevel : MonoBehaviour {
 
+
+	//SCRIPT NAO UTILIZADO.
+	//MOTIVO: NAO TEVE NECESSIDADE DE CRIAR UM CHECADOR DE NIVEIS.
 	// Use this for initialization
 	void Start () {
 	

@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Arvores : MonoBehaviour {
 
+	/*SCRIPT NAO UTILIZADO.
+	 * MOTIVO: SCRIPT DE TERCEIRA FASE. NAO IMPLEMENTADO.
+	 * FUNCAO: Criar uma "arvore", que poderia ser usada como modificador para a magia de fogo.*/
 	public Object GreenTree;
 	public Object PurpleTree;
 	public bool temarvore = false;

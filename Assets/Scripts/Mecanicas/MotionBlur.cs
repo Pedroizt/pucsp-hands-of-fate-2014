@@ -9,6 +9,9 @@ using UnityEngine;
 [AddComponentMenu("Image Effects/Blur/Motion Blur (Color Accumulation)")]
 [RequireComponent(typeof(Camera))]
 
+
+//ESSE SCRIPT E UM ASSET DA UNITY.
+//Ele tem como funçao criar um efeito que borra a camera, criando o efeito de Motion Blur.
 public class MotionBlur : ImageEffectBase
 {
 	public float blurAmount = 0.0f;

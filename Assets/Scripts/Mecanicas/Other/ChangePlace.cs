@@ -3,6 +3,10 @@ using System.Collections;
 
 public class ChangePlace : MonoBehaviour {
 
+	//SCRIPT NAO UTILIZADO
+	//MOTIVO: SCRIPT DA SEGUNDA FASE DO JOGO. NAO IMPLEMENTADO. 
+	//FUNÇAO: TROCAR OBJETOS DE LUGAR APOS UM TEMPO.
+
 	public Transform posicao1;
 	public Transform posicao2;
 	bool repetirrotina = true;

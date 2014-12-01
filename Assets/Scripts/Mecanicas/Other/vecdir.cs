@@ -3,6 +3,9 @@ using System.Collections;
 
 public class vecdir : MonoBehaviour {
 
+	/*SCRIPT NÃO UTILIZADO
+	MOTIVO: SCRIPT DE SEGUNDA FASE. MUDANÇA DE PUZZLE.
+	FUNÇAO: Criar um cubo que podia ser controlado*/
 	public Vector3 direcao;
 	public float dir;
 	public float vel;

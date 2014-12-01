@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Opções : MonoBehaviour {
 
+
+	//O script abaixo nao esta terminado, ele se trata do carregar jogo, apenas o som de mouse over 
+	//e sua cor sao alterados no momento.
 	public ParticleSystem particle;
 
 	public MouseSounds MouseSounds;

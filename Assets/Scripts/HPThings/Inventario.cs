@@ -3,20 +3,26 @@ using System.Collections;
 
 public class Inventario : MonoBehaviour {
 
-	GameObject Pause;
-	GameObject RealCamera;
-	public bool isPause = false;
+	//Esse script se trata do inventario do jogo;
+	GameObject Pause; //Nao utilizado, usaria um gameobject que teria a funçao de pause.
+	GameObject RealCamera; //Camera do jogo.
+	public bool isPause = false; //Controle de pause do jogo
+
+	//As variaveis abaixo nao foram utilizadas.
 	public LayerMask Invent;
 	public LayerMask Everything;
 	//public Camera MainCamera;
-	public GameObject camerainvent;
+
+	public GameObject camerainvent; //Camera exclusiva do inventario.
 	//private MagicTextures mt;
-	public float width1;
-	public float heigth1;
+	public float width1; //Teste para largura do inventario.
+	public float heigth1; //Teste para altura do inventario.
+	//As variaveis a seguir, sao utilizadas para conseguir componentes de outros script
 	private UnlockToInventary unlc;
 	private Unlockeds un2;
 	private FragsOnInventory fr;
 	private Hpsih hp;
+	//As variaveis a seguir sao os icones de feitiços do inventario.
 	public GameObject Air;
 	public GameObject BC;
 	public GameObject Ice;
@@ -27,16 +33,18 @@ public class Inventario : MonoBehaviour {
 	public GameObject Water;
 	public GameObject Void;
 	public GameObject TimeSpace;
-	float cm;
-	public Texture2D cursorTexture;
+	float cm;//nao utilizado.
+	//Variaveis usadas para mudar o cursor.
+	public Texture2D cursorTexture; 
 	CursorMode cursormode = CursorMode.Auto;
 	Vector2 hotspot = Vector2.zero;
+	//Outras partes do inventario
 	public GameObject menuhistoria;
 	public GameObject menuopcoes;
 	public GameObject menusalvar;
-	public bool isinvent = false;
-	private mapa map;
-	private CutsceneControl opening;
+	public bool isinvent = false; //nao utilizado, saber se o inventario esta ligado.
+	private mapa map;//checar o mapa
+	private CutsceneControl opening;//checar para saber se a cutscene inicial ja aconteceu.
 
 	
 	/*public GameObject armor;
@@ -53,6 +61,7 @@ public class Inventario : MonoBehaviour {
 		//guiTexture.enabled = false;
 		//guiTexture.pixelInset = new Rect (-410, -283, 824, 568);
 
+		//Mouse e inventario desabilitado.
 		Screen.showCursor = false;
 		gameObject.renderer.enabled = false;
 		menuhistoria.renderer.enabled = false;
@@ -67,7 +76,8 @@ public class Inventario : MonoBehaviour {
 		//GameObject t = GameObject.Find ("MagicTextures");
 		//mt = t.GetComponent<MagicTextures> ();
 
-
+		//Os gameobjects a seguir sao inicializados para conseguir componentes de outros scripts utilizando
+		//as variaveis ja declaradas.
 		GameObject p = GameObject.Find ("Magic");
 		unlc = p.GetComponent<UnlockToInventary> ();
 
@@ -83,6 +93,7 @@ public class Inventario : MonoBehaviour {
 		GameObject c = GameObject.Find ("Opening Cutscene");
 		opening = c.GetComponent<CutsceneControl> ();
 
+		//Icones dos feitiços desabilitados.
 		Air.SetActive (false);
 		BC.SetActive (false);
 		Ice.SetActive (false);
@@ -107,13 +118,15 @@ public class Inventario : MonoBehaviour {
 	void Update () {
 
 				
+		//Caso ja esteja fora da cutscene do jogo e que o mapa nao esta habilitado.
+		//E o botao do inventario foi pressionado (No caso START ou I).
 		if (Input.GetButtonDown("Inventario") && map.ismap == false && opening.jogoinicia == true) {
-						pause ();
+						pause ();//metodo para trocar a bool de pause, controlando o inventario.
 			
 						if (isPause || map.ismap) {
 				
 				
-				
+								//Para o tempo do jogo, pausando-o, habilitando todo inventario.
 								Time.timeScale = 0;
 								Air.SetActive (true);
 								RealCamera.SendMessage ("MouseDisabled");
@@ -139,6 +152,7 @@ public class Inventario : MonoBehaviour {
 				
 				
 						else {
+								//Volta o tempo ao normal e desabilita tudo que o inventario tem.
 								Time.timeScale = 1;
 								//MainCamera.cullingMask = Everything;
 								//guiTexture.enabled = false;
@@ -164,7 +178,7 @@ public class Inventario : MonoBehaviour {
 			
 			
 			
-			
+						//Caso o jogador tenha usado setas do teclado para mover o inventario.
 						if (Input.GetKeyDown (KeyCode.RightArrow) && isPause) {
 								camerainvent.transform.Rotate (0, 90, 0);
 				
@@ -172,7 +186,7 @@ public class Inventario : MonoBehaviour {
 						if (Input.GetKeyDown (KeyCode.LeftArrow) && isPause) {
 								camerainvent.transform.Rotate (0, -90, 0);
 						}
-			
+						//Habilita o cursor do mosue.
 						if (isPause) {
 								Screen.showCursor = true;
 								Cursor.SetCursor (cursorTexture, hotspot, cursormode);
@@ -192,7 +206,7 @@ public class Inventario : MonoBehaviour {
 		guiTexture.enabled = true;
 	}*/
 
-	void DontDraw()
+	void DontDraw() //Desabilita todos os icones de feitiços quando o inventario nao esta ligado.
 	{
 			Air.SetActive(false);
 			BC.SetActive (false);
@@ -212,19 +226,20 @@ public class Inventario : MonoBehaviour {
 		
 	}
 
-	void pause()
+	void pause()//Metodo de controle de inventario, a bool e trocada ao usar o comando de inventario.
 	{
 		isPause = !isPause;
 	}
 
-	void DrawItems()
+	void DrawItems()//Nao utilizado, ia exibir itens.
 	{
 
 
 
 		}
 
-	void DrawSkills()
+	void DrawSkills() //Controle, caso algum feitiço fosse habilitado
+		//A vida da personagem seria desabilitada e o icone de feitiço seria habilitado propriamente.
 	{
 		
 		if (isPause && un2.UnlockedAir == true){

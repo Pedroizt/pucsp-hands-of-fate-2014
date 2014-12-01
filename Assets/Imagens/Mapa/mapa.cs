@@ -3,18 +3,21 @@ using System.Collections;
 
 public class mapa : MonoBehaviour {
 
-	public GameObject map;
-	public GameObject[] nuvens;
-	public Inventario invent;
-	public bool ismap = false;
-	public bool isinventario = false;
+	//O script atual se trata do mapa do jogo.
+	public GameObject map; //Mapa
+	public GameObject[] nuvens;//array que armazena as nuvens do jogo.
+	public Inventario invent;//Coleta informaçoes do inventario.
+	public bool ismap = false; //checagem do mapa
+	public bool isinventario = false;//checagem do inventario.
 
-	public GameObject[] triggers;
+	public GameObject[] triggers;//armazenamento de triggers.
 
+	//Nuvens que cobrem o mapa.
 	bool notcloud1 = false;
 	bool notcloud2 = false;
 	bool notcloud3 = false;
 	bool notcloud4 = false;
+	//Controle para que o mapa nao abra durante a cutscene
 	private CutsceneControl opening;
 
 
@@ -23,6 +26,7 @@ public class mapa : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+		//O mapa esta desabilitado.
 		map.renderer.enabled = false;
 		nuvens[0].renderer.enabled = false;
 		nuvens[1].renderer.enabled = false;
@@ -41,23 +45,24 @@ public class mapa : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-
+		//Caso o comando de mapa seja usado, apenas abre se o inventario n estiver aberto
+		//ou quando nao existe mais a cutscene inicial.
 		if(Input.GetButtonDown("Mapa") && isinventario == false && opening.jogoinicia == true)
 		{
-			ismap = !ismap;
+			ismap = !ismap; //Ligar ou desligar o mapa.
 
 
 			if (ismap == true)
 			{
-				Time.timeScale = 0;
-				DrawMap();
+				Time.timeScale = 0; //Pause.
+				DrawMap();//Habilitar o mapa.
 
 
 			}
 
 
 
-			else
+			else//Unpause.
 			{
 				DontDrawMap();
 				Time.timeScale = 1;
@@ -71,7 +76,8 @@ public class mapa : MonoBehaviour {
 	
 	}
 
-	void DrawMap()
+	void DrawMap()//Habilitar o mapa e as nuvens, caso tenha pisado na trigger, a nuvem da trigger nao sera
+		//renderizada mais.
 	{
 		map.renderer.enabled = true;
 
@@ -85,7 +91,7 @@ public class mapa : MonoBehaviour {
 		nuvens[3].renderer.enabled = true;
 	}
 
-	public void DontDrawMap()
+	public void DontDrawMap()//Desabilitar o mapa.
 	{
 		map.renderer.enabled = false;
 
@@ -98,6 +104,7 @@ public class mapa : MonoBehaviour {
 			nuvens[3].renderer.enabled = false;
 	}
 
+	//Bools para controle das nuvens.
 	void DonDrawCloud1()
 	{
 		Debug.Log ("Teste");

@@ -3,6 +3,10 @@ using System.Collections;
 
 public class CriarLuz : MonoBehaviour {
 
+
+	/*SCRIPT NAO UTILIZADO.
+	 * MOTIVO: SCRIPT DE SEGUNDA/TERCEIRA FASE.
+	 * FUNÇAO: Criar o projetil do feitiço de luz.*/
 	bool noluz = false;
 	public Object ob;
 	// Use this for initialization

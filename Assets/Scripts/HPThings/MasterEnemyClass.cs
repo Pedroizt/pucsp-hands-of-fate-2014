@@ -3,6 +3,9 @@ using System.Collections;
 
 public class MasterEnemyClass : MonoBehaviour {
 
+	/*SCRIPT NAO UTILIZADO.
+	 * MOTIVO: NAO FUNCIONAMENTO DE UMA CLASSE QUE CONTROLA TODOS OS INIMIGOS. SUBSTITUIDO POR OUTROS SCRIPTS.
+	 * FUNÇAO: A funçao original era controlar todos os atributos dos inimigos.*/
 	public float maxHealth;
 	public float curHealth;
 	public Texture maxH;

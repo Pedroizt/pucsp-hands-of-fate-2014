@@ -4,6 +4,9 @@ using System.Collections;
 public class TriggerBlock : MonoBehaviour {
 
 
+	/*SCRIPT NÃO UTILIZADO
+	MOTIVO: SCRIPT DE SEGUNDA FASE. NAO IMPLEMENTADO.
+	FUNÇAO: Peso necessario para quebrar o bloco*/
 	private VariaveisBloco breaking;
 	// Use this for initialization
 

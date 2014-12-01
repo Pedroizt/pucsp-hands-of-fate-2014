@@ -3,6 +3,10 @@ using System.Collections;
 
 public class Unlockeds : MonoBehaviour {
 
+
+	//Controle de feitiços, se eles estao habilitados ou nao.
+	//Quando alguma dessas bools se tornam verdadeiras, o feitiço pode ser executado.
+	//No caso, apenas a UnlockedBodyChange realmente funciona.
 	public bool UnlockedAir = true;
 	public bool UnlockedBodyChange = false;
 	public bool UnlockedIce = false;

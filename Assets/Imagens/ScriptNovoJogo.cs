@@ -2,20 +2,25 @@
 using System.Collections;
 
 public class ScriptNovoJogo : MonoBehaviour {
-	
-	public ParticleSystem particle;
 
-	public bool loading = false;
+	//Script utilizado no objeto NovoJogo.
+	public ParticleSystem particle;//Particulas que saem do mouse.
 
-	public MouseSounds MouseSounds;
+	public bool loading = false;//bool para controle que auxilia na tela de loading.
+
+	public MouseSounds MouseSounds;//Objeto que armazena sons do mouse.
 
 	void Start(){
 
+		//O gameobject a seguir foi inicializado para conseguir componente de outro script utilizando
+		//a variavel ja declarada.
 		GameObject a = GameObject.Find ("MouseSounds");
 		MouseSounds = a.GetComponent <MouseSounds> ();
 
 	}
 
+
+	//Caso exista a colisao do mouse com o objeto, a particula passa a existir e a cor do objeto muda.
 
 	void OnMouseEnter()
 	{
@@ -26,7 +31,7 @@ public class ScriptNovoJogo : MonoBehaviour {
 
 	}
 	
-
+	//Caso contrario, a cor volta ao normal e a particula para.
 	void OnMouseExit()
 	{
 
@@ -34,6 +39,7 @@ public class ScriptNovoJogo : MonoBehaviour {
 		particle.Stop ();
 	}
 
+	//Caso o objeto tenha sido clicado, a bool de loading sera acionada e o som de mouse disparado.
 	void OnMouseDown()
 	{
 		/*Fadeout = true;

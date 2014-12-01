@@ -4,6 +4,8 @@ using System.Collections;
 public class Rotation : MonoBehaviour {
 
 
+	//Esse script tem como unica funçao rotacionar o cristal que fica na switch da primeira fase
+	// e para-lo ao usar o comando necessario.
 	float vel = 2f;
 	// Use this for initialization
 	void Start () {

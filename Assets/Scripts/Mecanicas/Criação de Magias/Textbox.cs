@@ -3,6 +3,10 @@ using System.Collections;
 
 public class Textbox : MonoBehaviour {
 
+
+	SCRIPT NAO UTILIZADO.
+	MOTIVO: NAO HOUVE NECESSIDADE.
+	FUNÇAO: Tentativa de desacoplamento do spellcast, nao houve necessidade.
 	string espaço = "";
 	string selo;
 

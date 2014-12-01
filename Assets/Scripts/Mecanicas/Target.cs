@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Target : MonoBehaviour {
 
+	//SCRIPT NAO UTILIZADO.
+	//MOTIVO: O INVENTARIO NAO PRECISOU DE UMA CONVERSAO DO PONTEIRO DO MOUSE.
 	// Use this for initialization
 	void Start () {
 	
