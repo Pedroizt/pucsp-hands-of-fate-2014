@@ -4,6 +4,10 @@ using System.Collections;
 public class MovingPlat : MonoBehaviour {
 
 
+
+	/*SCRIPT NÃO UTILIZADO
+	MOTIVO: SCRIPT DE SEGUNDA FASE. NAO IMPLEMENTADO.
+	FUNÇAO: Criaria uma plataforma movel que seria destruida toda vez que se encontrasse com uma parede.*/
 	public Transform respawn;
 	public Vector3 dir;
 	public float vel = 1;

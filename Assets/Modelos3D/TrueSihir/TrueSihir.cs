@@ -4,42 +4,47 @@ using System.Collections;
 public class TrueSihir : MonoBehaviour
 {
 
+	//O script a seguir se trata de toda movimentaçao da personagem.
 
-		public float vel;
-		public bool damaged = false;
-		public bool attacking;
-		public bool nojump;
-		public Animator anim;
-		public float jumpforce = 7;
-		public float speed = 10;
-		public float smooth = 2;
-		public float resetspeed = 7;
-		float progressivespeed = 0.2f;
-		float resetprogressivespeed = 0.2f;
-		public GameObject camera;
-		private Rigidbody rb;
+
+		public float vel; //bool feita para auxiliar na velocidade de aumentar o personagem.
+		public bool damaged = false;//bool feita para usar caso a personagem tenha recebido dano ou nao.
+		public bool attacking;//bool utilizada para verificar se a personagem esta atacando.
+		public bool nojump;//bool utilizada para verificar o pulo da personagem.
+		public Animator anim;//varivel que armazena o animator da personagem.
+		public float jumpforce = 7;//Força do pulo da personagem.
+		public float speed = 10;//Tambem auxilia na velocidade do personagem e da animaçao.
+		public float resetspeed = 7;//Utilizado para retornar a velocidade original do personagem.
+		float progressivespeed = 0.2f;//Armazena a velocidade que ela ganhara indo para frente. Modificada futuramente.
+		float resetprogressivespeed = 0.2f;//Armazena a velocidade progressiva original da personagem.
+		public GameObject camera;//Armazena a camera que segue o personagem.
+		private Rigidbody rb;//Variavel que permite a modificaçao do rigidbody da personagem.
 		//public audioplay SihirSounds;
-		public float pos;
-		bool walking;
-		bool sidewalk;
-		bool lateral;
-		bool jumped = false;
+		public float pos;//Utilizada para modificar o eixo da personagem, fazendo possivel ela virar.
+		bool walking;//checar se a personagem esta andando.
+		bool sidewalk;//caso ela esteja andando na lateral.
+		bool jumped = false;//outra bool de controle de pulo.
+
+	/*As variaveis abaixo controlam o Animator dos dados que giram em torno da personagem*/
 		public Animator dado1;
 		public Animator dado2;
 		public Animator dado3;
 		public Animator dado4;
-		public bool collided;
-		public ParticleSystem bursts;
-		float cd;
-		bool pressedS;
-		bool pressedW;
 
-		public SihirSounds SihirSounds;
-		int randomnumber;
-		public bool counterEnable = false;
-		public float counter_f = 0.4f;	
-		public bool jumpsound;
-		public float counter2 = 0;
+		public bool collided; //bool que checa se houve colisao com algo.
+		public ParticleSystem bursts;//Particle system que controla os "bursts" que saem dos dados apos o comando de ataque.
+		float cd; //Variavel que auxilia no controle do collided.
+		bool pressedS;//Caso a tecla S seja acionada.
+		bool pressedW;//Caso a tecla W seja acionada.
+
+		public SihirSounds SihirSounds; //Objeto que armazena os sons da personagem.
+		int randomnumber;//Variavel necessaria para que ela comece a rir aleatoriamente.
+		public bool counterEnable = false; //Auxilia para que o som de passos seja tocado corretamente.
+		public float counter_f = 0.4f;	//O mesmo do anterior.
+		public bool jumpsound;//bool usada para auxiliar o som de pulo.
+		public float counter2 = 0;//Variavel necessaria para que ela comece a rir aleatoriamente.
+
+		//As variaveis abaixo foram utilizadas no controle de sons.
 		bool already_running = false;
 		bool already_jumping = false;
 		float counter_j;
@@ -47,14 +52,16 @@ public class TrueSihir : MonoBehaviour
 		// Use this for initialization
 		void Start ()
 		{
-
+		//O gameobject a seguir foi inicializado para conseguir componente de outro script utilizando
+		//a variavel ja declarada.
 				GameObject a = GameObject.Find ("Sihir");
 				SihirSounds = a.GetComponent <SihirSounds> ();
 
-				rb = GetComponent<Rigidbody> ();
-				pos = 0f;
-				pos = transform.localEulerAngles.y;
-				jumpsound = true;
+
+				rb = GetComponent<Rigidbody> ();//Para que a variavel consiga armazenar o Rigidbody do objeto.
+				pos = 0f;//o pos começara no 0.
+				pos = transform.localEulerAngles.y;//E sera igual ao Y do objeto.
+		 		jumpsound = true;//bool para controlar o som de pulo.
 
 				
 	
@@ -64,9 +71,12 @@ public class TrueSihir : MonoBehaviour
 		void FixedUpdate ()
 		{
 
+		//o contador começa e iniciado.
 		counter2 += Time.deltaTime;
 
 		#region Som Risada
+
+		//Caso o random number seja igual ao "666", tocara o som de risada".
 		if (counter2 >= 30) 
 		{
 			randomnumber = Random.Range (1, 6000);
@@ -79,7 +89,7 @@ public class TrueSihir : MonoBehaviour
 		}
 		#endregion
 
-
+		//Para auxiliar no som de passos.
 		#region Contador Passos
 		if (counterEnable) 
 		{
@@ -94,9 +104,18 @@ public class TrueSihir : MonoBehaviour
 		}
 		#endregion
 
+		//
 				walking = false;
 
 				banwalking ();
+
+		/* Da linha 112, ate a linha 239 descreve toda a movimentaçao da personagem. Ao personagem ir para frente
+		 * sua animaçao de corrida sera ativada junto com os sons de passo, e a velocidade de sua animaçao aumentara progressivamente.
+		 * Caso outra direçao adjacente seja acionada, o POS sera modificado fazendo com que a personagem va para a diagonal.
+		 * Caso o jogador acione a esquerda ou direita, o pos virara 90 e o personagem ira apenas de lado.
+		 * Ela so andara para frente ou para os lados enquanto ela nao estiver atacando (attacking == false), caso o comando para tras esteja acionado
+		 * (PressedS = false) ou caso ela tenha colidido com algo (collided == false). Caso o jogador solte o comando de ir para frente
+		 o pos retornara a ser lentamente 0.*/
 
 				if (Input.GetAxis("Vertical") > 0.1f && 
 		    attacking == false && pressedS == false && collided == false) {
@@ -230,15 +249,24 @@ public class TrueSihir : MonoBehaviour
 				
 		
 		 		
-
+		/*As linhas abaixo sao as principais e talvez as mais importantes do codigo.
+		 * Ele controla a rotaçao da personagem usando a rotaçao da camera, caso pos seja maior ou menor que 0
+		 * ele adicionara o mesmo na rotaçao do personagem, fazendo com que ela vire sem estar necessariamente de costas
+		 * pra camera*/
 				transform.localEulerAngles = 
 			new Vector3 (transform.localEulerAngles.x, 
 		                                         
 			     camera.transform.localEulerAngles.y + pos
 		                                         , transform.localEulerAngles.z);
 
-				
 
+				
+		/*Caso o botao de pulo seja acionado (No caso o Space ou o "A" do controle do XBOX), Ela recebera 
+		 * uma força que a levantara para cima, que sera multiplicada pela variavel Jumpforce. As bools "nojump" e 
+		 * "jumped" se tornam false e true respectivamente. A gravidade sera desligada brevemente, a velocidade de animaçao
+		 * da animaçao e do transform.forward sera cortada pela metade, tornado ela muito mais lenta no ar, prevenindo
+		 * que quebre o jogo com grandes saltos. O som de pulo e executado tambem. Caso ela nao esteja pulando mais, ou tenha chegado ao chao
+		 sua gravidade volta a ser verdadeira.*/
 				if (Input.GetButtonDown("Jump")) {
 						if (nojump == true) {
 								nojump = false;
@@ -269,7 +297,8 @@ public class TrueSihir : MonoBehaviour
 				}*/
 
 				
-				
+				//Abaixo estao as condiçoes para que a personagem ande de costas e ande de costas diagonalmente,
+		//a velocidade da personagem e cortada pela metade ao andar de costas.
 				if (Input.GetAxis("Vertical") < -0.1f && pressedW == false) {
 
 						anim.SetBool ("_run", true);
@@ -313,6 +342,11 @@ public class TrueSihir : MonoBehaviour
 				
 		}
 
+
+	/*Caso a personagem esteja em contato com o terreno, nojump ficara verdadeira caso a bool de jumped 
+	 * (assumindo que a personagem pulou) seja true, ao chegar ao chao, a animaçao de landing sera executada. 
+	 * Fazendo com que ela nao pule duas vezes. A velocidade
+	 da personagem volta ser a original, */
 		void OnCollisionEnter (Collision col)
 		{
 
@@ -325,7 +359,7 @@ public class TrueSihir : MonoBehaviour
 				anim.SetTrigger("_grounded");
 			speed = resetspeed;
 			    //anim.SetBool("_grounded", false);
-						Debug.Log ("Grounded");
+						
 
 				
 
@@ -335,6 +369,7 @@ public class TrueSihir : MonoBehaviour
 						
 				}
 
+		//caso ela colide com algum objeto que nao tenha tag, ela sera jogada levemente para tras, acionando a bool collided e disparando uma Coroutine.
 		if (col.gameObject.tag == "Untagged"){
 			
 			Debug.Log ("Collided");
@@ -348,16 +383,18 @@ public class TrueSihir : MonoBehaviour
 
 		
 		
-		
+
 		}
 
-		void OnCollisionExit (Collision col)
+		/*void OnCollisionExit (Collision col)
 		{
 				Debug.Log ("NotGrounded");
 					
 				//jumped = true;
-		}
+		}*/
 
+		/*Metodo utilizado para quando ela receber a mensagem de ataque. Disparando uma Coroutine, acionando a bool attacking
+		 * tocando os bursts e acionando a animaçao de ataque.*/
 		void Attack ()
 		{
 				anim.SetTrigger ("_attack");
@@ -372,18 +409,22 @@ public class TrueSihir : MonoBehaviour
 
 		}
 
+		//caso ela tenha recebido a mensagem de dano, a bool damaged sera verdadeira. (Usada tambem no script
+	// "Damaged");
 		void Damage()
 		{
 		damaged = true;
 		Debug.Log ("Correct");
 		}
 
+		//Coroutine que tem como objetivo voltar o estado original da bool;
 		IEnumerator boolback ()
 		{
 				yield return new WaitForSeconds (1.8f);
 				attacking = false;
 		}
-
+		
+		//Coroutine que tem como objetivo voltar o estado original da bool;
 		IEnumerator colcd()
 		{
 		yield return new WaitForSeconds(1);
@@ -391,7 +432,8 @@ public class TrueSihir : MonoBehaviour
 		}
 	
 	
-	
+		
+		//Abaixo estao os metodos que auxiliam na reproduçao dos sons.
 		void FootstepsSound()
 		{
 			if (counter_f >= 0.39f) 

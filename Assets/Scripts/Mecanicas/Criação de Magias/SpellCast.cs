@@ -5,38 +5,32 @@ public class SpellCast : MonoBehaviour
 {
 
 
-		public TextMesh spelltext;
-		public Transform cameratarget;
-		public string espaço = "";
-		public string selo;
-		private Inventario pause;
-		public Transform trsihir;
+	//O script a seguir se trata da classe mestra da mecanica do jogo.
+
+		public TextMesh spelltext; //Armazenamento do texto para que ele apareça acima do personagem.
+		public Transform cameratarget;//Para que a direçao do feitiço esteja alinhada com a posiçao da camera.
+		public string espaço = ""; //Armazena os comandos que foram pressionados no jogo.
+		public string selo;//Armazena o que a variavel espaço criou.
+		private Inventario pause;//Controle para que nao seja utilizado enquanto o jogo esta pausado.
+		//public Transform trsihir;
+
+		/*Auxiliam para melhorar a jogabilidade no controle de XBOX, fazendo com que os comandos
+		 * nao sejam usados de maneira incontrolavel*/
 		bool already_pressed;
 		public float counter = 0;
 		
 
 
-		/*Corrigir bug do inventário
-- Refinar as triggers de ajuda
-- Colocar feedback da magia
-- Camera
-- Cutscenes
-- Historia
-- Menu interno
-- Agua
-- (Talvez opções)
-- Bug do loadscreen
--
-há 12 minutos
-corrigir bug de morrer no pause*/
 
 
 		// Use this for initialization
 		void Start ()
 		{
+				//Coletar variavel de outro script.
 				GameObject i = GameObject.Find ("inventario 2");
 				pause = i.GetComponent<Inventario> ();
 
+				//Controle para que os botoes nao sejam usados tao rapidamente (XBOX Apenas)
 				already_pressed = false;
 				
 		}
@@ -44,7 +38,7 @@ corrigir bug de morrer no pause*/
 		// Update is called once per frame
 		void Update ()
 		{
-
+				//Caso o jogo nao esteja pausado, ira executar esses metodos)
 				if (pause.isPause == false) {
 						spellnumbers ();
 						spellarrows ();
@@ -68,6 +62,7 @@ corrigir bug de morrer no pause*/
 			
 		}
 
+		//Armazena que comandos podem ser colocados na variavel espaço.
 		void spellnumbers ()
 		{
 				if (Input.GetKeyDown (KeyCode.Keypad0) || (Input.GetKeyDown (KeyCode.Alpha0))) {
@@ -97,13 +92,16 @@ corrigir bug de morrer no pause*/
 			
 						espaço = "";
 				} 
-		
+
+				//Caso o botao listado seja acionado, a informaçao armazenada na variavel sera enviada
+				//para a variavel selo.
 				if (Input.GetButtonDown ("Cast"))
 		    
 						FinishMagic ();
 
 		}
 
+		//O mesmo do metodo acima, mas apenas usado para controle de XBOX.
 		public void spellarrows ()
 		{
 				if (!already_pressed) {
@@ -129,6 +127,8 @@ corrigir bug de morrer no pause*/
 
 		}
 
+		//Explicado anteriormente, a variavel espaço e resetada para que o jogador 
+		//possa colocar novos comandos nela.
 		public void FinishMagic ()
 		{
 
@@ -137,6 +137,7 @@ corrigir bug de morrer no pause*/
 		
 		}
 
+		//O spelltext atualizara constantemente quando um novo comando for adicionado na variavel espaço.
 		void showtext ()
 		{
 				
@@ -151,7 +152,8 @@ corrigir bug de morrer no pause*/
 		/*void showarrows{
 		
 }*/
-
+		//Caso algum desses comandos estejam na variavel espaço, o spelltext mudara de cor, caso contrario,
+		//ele sempre sera vermelho.
 		void spellcolors ()
 		{
 				

@@ -3,6 +3,10 @@ using System.Collections;
 
 public class Placa : MonoBehaviour {
 
+
+	/*SCRIPT NÃO UTILIZADO
+	MOTIVO: SCRIPT DE TERCEIRA FASE. NAO IMPLEMENTADO.
+	FUNÇAO: Criaria uma caixa de texto quando o personagem se aproximasse.*/
 	bool toggleGui = false;
 
 	void OnMouseDown()

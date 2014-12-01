@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Sair : MonoBehaviour {
 
+
+	//O script abaixo e utilizado para sair do jogo.
 	public ParticleSystem particle;
 
 	public MouseSounds MouseSounds;
@@ -31,6 +33,7 @@ public class Sair : MonoBehaviour {
 		particle.Stop ();
 	}
 
+	//Ao clicar no objeto, o jogo e fechado.
 	void OnMouseDown()
 	{
 		MouseSounds.MouseClick ();

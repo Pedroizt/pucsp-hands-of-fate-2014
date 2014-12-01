@@ -3,6 +3,9 @@ using System.Collections;
 
 public class InstanciarEscada : MonoBehaviour {
 
+	/*SCRIPT NAO UTILIZADO.
+	 * MOTIVO: SCRIPT DE SEGUNDA FASE. NAO IMPLEMENTADO.
+	 * FUNÇAO: Criaria uma escada para o jogador.*/
 	private CriarEscada instancia;
 	public Object escada;
 	bool existe = false;

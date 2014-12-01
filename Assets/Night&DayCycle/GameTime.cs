@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class GameTime : MonoBehaviour {
+
+	//SCRIPT NAO UTILIZADO.
+	//MOTIVO: NAO HOUVE TEMPO PARA IMPLEMENTAR O SISTEMA DE DIA E NOITE E DIFICULTARIA A PERFOMANCE.
 	public Transform[] sun;
 	public float dayCycleInMinutes = 1;
 	private const float second = 1;

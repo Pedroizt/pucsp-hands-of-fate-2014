@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Fade2 : MonoBehaviour {
 
+
+	//SCRIPT NAO UTILIZADO.
+	//MOTIVO: NAO FUNCIONOU CORRETAMENTE, SUBSTITUIDO PELO MENUFADE.
 	/*public Color collor;
 	private ScriptNovoJogo newgame;
 

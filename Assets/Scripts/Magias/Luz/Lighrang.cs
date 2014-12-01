@@ -3,6 +3,10 @@ using System.Collections;
 
 public class Lighrang : MonoBehaviour {
 
+
+	/*SCRIPT NAO UTILIZADO.
+	 * MOTIVO: SCRIPT DE SEGUNDA/TERCEIRA FASE.
+	 * FUNÇAO: Funciona como boomerang, seria utilizado em uma luz que revela objetos invisiveis..*/
 	public Transform inicio;
 	public Transform final;
 

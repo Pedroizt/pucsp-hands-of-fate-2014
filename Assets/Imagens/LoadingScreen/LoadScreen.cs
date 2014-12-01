@@ -4,32 +4,39 @@ using System.Collections;
 public class LoadScreen : MonoBehaviour {
 
 
+	//O script a seguir controla a tela de loading que acontece no inicio do jogo.
+
 	//public string LeveltoLoad;
-	AsyncOperation async;
-	bool test2;
-	public GameObject background;
-	public TextMesh text1;
-	public bool clear = false;
-	public GameObject progressbar;
-	bool test = false;
+	AsyncOperation async; //Utilizado para controlar o carregamento da cena.
+	//bool test2; 
+	public GameObject background; //Armazena o background da tela de loading.
+	public TextMesh text1;//Armazena a porcentagem da tela de loading.
+	public bool clear = false;//Controla caso o fade ja tenha terminado.
+	public GameObject progressbar;//Imagem que representa o progresso do jogo.
+	bool test = false;//Controlar o carregamento da cena.
+	//Variaveis usadas para conseguir variaveis de outros scripts.
 	private ScriptNovoJogo novojogo;
 	private MenuFade Fade;
-	private int LoadProgress = 0;
+
+	private int LoadProgress = 0;//Por onde começa o progresso do loading.
 
 
 
 	// Use this for initialization
 	void Start () {
 
+		// a bool inicializada começa como falsa.
 		bool test = false;
 
+		//Os gameobjects a seguir sao inicializados para conseguir componentes de outros scripts utilizando
+		//as variaveis ja declaradas.
 		GameObject n = GameObject.Find ("NovoJogo");
 		novojogo = n.GetComponent<ScriptNovoJogo> ();
 
 		GameObject f = GameObject.Find ("screenfader");
 		Fade = f.GetComponent<MenuFade> ();
 
-
+		//tudo que pertence ao loading e inativo no inicio do jogo.
 		background.SetActive (false);
 		text1.renderer.enabled = false;
 		progressbar.SetActive (false);
@@ -43,20 +50,18 @@ public class LoadScreen : MonoBehaviour {
 	void Update () {
 
 
+				//caso a bool do MenuFade seja verdadeira, e a bool de controle for falsa, uma coroutine sera executada
+				// a qual e o loading. A partir disso, a bool de controle e tomada como false para que o mesmo metodo nao seja executado outra vez.
+				if (Fade.loadscreeen == true) {
 
-		if (Fade.loadscreeen == true) {
-
-						if (test == false)
-			{
+						if (test == false) {
 								clear = true;
 
-						StartCoroutine (DisplayLoadScreen ());
-						test = true;
-				}
+								StartCoroutine (DisplayLoadScreen ());
+								test = true;
+						}
 
-			if(async.isDone)
-				Debug.Log("Teste");
-				}
+
 
 
 
@@ -64,9 +69,15 @@ public class LoadScreen : MonoBehaviour {
 
 
 	
-	}
+				}
+		}
 
-	IEnumerator DisplayLoadScreen ()
+
+		/*A coroutine abaixo descreve a loading screen, seus objetos sao ativados, o texto que se trata da porcentagem se torna
+		 * equivalente ao objeto progressbar que cresce durante o carregamento da cena. Caso o mesmo carregamento esteja completo
+		 * a proxima cena sera carregada*/
+
+		IEnumerator DisplayLoadScreen ()
 	{
 
 
@@ -110,3 +121,5 @@ public class LoadScreen : MonoBehaviour {
 
 	}
 }
+
+

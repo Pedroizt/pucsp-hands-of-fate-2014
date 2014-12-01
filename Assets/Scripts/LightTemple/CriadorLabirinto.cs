@@ -3,7 +3,9 @@ using System.Collections;
 
 public class CriadorLabirinto : MonoBehaviour {
 
-
+	/*SCRIPT NAO UTILIZADO.
+	 * MOTIVO: SCRIPT DE QUARTA FASE. NAO IMPLEMENTADO.
+	 * FUNÇAO: Auxilia na criaçao de um labirinto para o jogador ultrapassar.*/
 	private int[,] labirinto;
 	private int[,] labirinto2;
 	// Use this for initialization

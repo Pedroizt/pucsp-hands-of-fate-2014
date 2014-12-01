@@ -3,11 +3,12 @@ using System.Collections;
 
 public class SpawnRespawn : MonoBehaviour {
 
-	public Object Inimigo;
+	//Utilizado para spawnar o inimigo APENAS UMA VEZ¹.
+	public Object Inimigo; //Inimigo a ser adicionado.
 
-	public bool EnemyDead = false;
-	public bool canRespawn = false;
-	GameObject ini;
+	public bool EnemyDead = false; //Verificar se ele esta morto.
+	public bool canRespawn = false; //Verificar se ele pode respawnar.
+	GameObject ini; //OBjeto para clonagem do inimigo.
 
 
 
@@ -21,6 +22,7 @@ public class SpawnRespawn : MonoBehaviour {
 
 
 			ini = Instantiate (Inimigo, transform.position, transform.rotation) as GameObject;
+			//Cria um clone do inimigo, possibilitando a sua destruiçao*
 
 
 				
@@ -36,7 +38,7 @@ public class SpawnRespawn : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (EnemyDead == true) {
+		if (EnemyDead == true) { //Caso o inimigo esteja morto, lançara uma coroutine.
 			
 			StartCoroutine(EnemyDefeated());
 				
@@ -58,7 +60,7 @@ public class SpawnRespawn : MonoBehaviour {
 	
 	}
 
-	IEnumerator EnemyDefeated()
+	IEnumerator EnemyDefeated() //Espera dois segundos para que ele possa voltar ao estado original.
 	{
 		bool once = false;
 		yield return new WaitForSeconds (2);
@@ -71,6 +73,8 @@ public class SpawnRespawn : MonoBehaviour {
 
 		}
 	}
+	//¹ O script nao foi totalmente utilizado, apenas usado para instanciar os inimigos, bools de controle 
+	//nao foram setadas.
 
 	/*IEnumerator Respawn()
 	{

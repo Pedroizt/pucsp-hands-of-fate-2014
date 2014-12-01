@@ -3,6 +3,9 @@ using System.Collections;
 
 public class fading : MonoBehaviour {
 
+
+	//O script abaixo trata-se de outro fade, tem a mesma funçao que o MenuFade.cs
+
 	public bool fadeout = false;
 	public Color collor;
 

@@ -3,6 +3,11 @@ using System.Collections;
 
 public class MassChange : MonoBehaviour {
 
+
+	/*SCRIPT NAO UTILIZADO.
+	 * MOTIVO: NAO HOUVE NECESSIDADE PARA IMPLEMENTAÇAO.
+	 * FUNÇAO: O script apenas funcionaria na segunda fase, aumentaria a massa corporal do personagem, fazendo-o
+	 * quebrar varios tipos de plataformas, entretanto, os mesmos so existiam na segunda fase..*/
 	private SpellCast spellcast1;
 	private Encolhimento mc;
 	private bool duracao;

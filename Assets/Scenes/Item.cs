@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Item : MonoBehaviour {
 
+	//SCRIPT NAO UTILIZADO.
+	//MOTIVO: O SCRIPT A SEGUIR E O DA SEGUNDA FASE, NAO IMPLEMENTADA.
+	//O script a seguir seria um item que apenas pode eer coletado quando a switch for ativada.
 	private PassSwitch pass;
 	// Use this for initialization
 	void Start () {

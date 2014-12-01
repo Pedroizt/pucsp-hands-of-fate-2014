@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Hovering2 : MonoBehaviour {
 
+	/*SCRIPT NÃO UTILIZADO
+	MOTIVO: CLONE DE OUTRO SCRIPT, MUDANÇA NO PUZZLE.
+	FUNÇAO: Criar uma ponte flutuante.*/
 	float hoverforce = 100;
 	float variacao = 1;
 	public bool switchon = false;

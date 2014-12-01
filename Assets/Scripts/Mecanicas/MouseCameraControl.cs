@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MouseCameraControl : MonoBehaviour
 {
+	//SCRIPT NAO UTILIZADO.
+	//MOTIVO: SUBSTITUIDO PELO MOUSEORBIT CONVENCIONAL, PADRAO DA UNITY.
 	// Mouse buttons in the same order as Unity
 	public enum MouseButton { Left = 0, Right = 1, Middle = 2, None = 3 }
 	

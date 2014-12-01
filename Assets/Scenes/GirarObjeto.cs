@@ -3,6 +3,10 @@ using System.Collections;
 
 public class GirarObjeto : MonoBehaviour {
 
+
+	//SCRIPT NAO UTILIZADO.
+	//MOTIVO: O SCRIPT A SEGUIR E O DA SEGUNDA FASE, NAO IMPLEMENTADA.
+	//O script a seguir e uma sala giratoria que seria controlada com switches.
 	bool girou = false;
 	bool naogirou = true;
 	private Rotate r1;

@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Destroy : MonoBehaviour {
 
+	/*SCRIPT NAO UTILIZADO.
+	 * MOTIVO: SCRIPT DE TERCEIRA FASE. NAO IMPLEMENTADO.
+	 * FUNCAO: O Objeto a seguir so poderia ser destruido caso estivesse o objeto instanciado no jogo. */
 	GameObject[]Count;
 
 	void OnMouseDown()

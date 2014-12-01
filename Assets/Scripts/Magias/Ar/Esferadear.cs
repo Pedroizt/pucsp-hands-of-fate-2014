@@ -3,20 +3,25 @@ using System.Collections;
 
 public class Esferadear : MonoBehaviour {
 
-	public float damage = 2.0f;
+	//Esse script se trata do feitiço de Impactar.
+	public float damage = 2.0f;//Dano do feitiço.
+	//As variaveis a seguir, sao utilizadas para conseguir componentes de outros scripts
 	private SpellCast castspell;
-	Transform target;
-	GameObject esferar;
 	private Hpsih hp;
 	private TrueSihir tr;
+	//As variaveis a seguir foram usadas para conseguir objetos.
+	Transform target;
+	GameObject esferar;
 	GameObject trsih;
-
+	//Sons
 	public SihirSounds SihirSounds;
 	bool AtackSound;
 
 	// Use this for initialization
 	void Start () {
 
+		//Os gameobjects a seguir sao inicializados para conseguir componentes de outros scripts utilizando
+		//as variaveis ja declaradas.
 		GameObject s = GameObject.Find ("SpellCast");
 		castspell = s.GetComponent<SpellCast> ();
 
@@ -40,7 +45,11 @@ public class Esferadear : MonoBehaviour {
 	void Update () {
 
 
-
+		/*Caso a variavel da classe SpellCast chamada selo receba esses parametros, ele ira criar o objeto
+		 *e adicionara uma força para que o mesmo va para frente. Ao ser instanciado, o mesmo solta um som. Ele 
+		 *reseta a variavel da classe SpellCast, reduz 1/16 da vida maxima da personagem, e manda a mensagem 
+		 *para a classe TrueSihir, executando o metodo "Attack" que aciona a animaçao dos dados, bursts e etc.
+		 *Depois de dois segundos o gameobject desse script e destruido*/
 		if (castspell.selo == "10" || castspell.selo == "R D ") {
 
 			GameObject s = GameObject.Find ("SpellCast");
@@ -72,13 +81,14 @@ public class Esferadear : MonoBehaviour {
 			trsih.SendMessage("Attack", SendMessageOptions.DontRequireReceiver);
 
 
-						//Confiugar velocidade da esfera para deixar igual a da particula
+						
 				} 
 	
 	}
 
 	void OnTriggerEnter(Collider cols)
 	{
+		//Caso ele entre em contato com um objeto da tag inimigo, ele manda a mensagem para aplicar o dano por toda familia do inimigo e usar o dano aqui declarado.
 		if (cols.gameObject.tag == "Enemy") {
 			Debug.Log ("Colliding");
 			cols.gameObject.SendMessageUpwards("ApplyDamage", damage, SendMessageOptions.DontRequireReceiver);
