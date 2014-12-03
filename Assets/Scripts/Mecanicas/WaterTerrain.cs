@@ -46,7 +46,7 @@ public class WaterTerrain : MonoBehaviour {
 		/*Caso a bool InsideWater seja verdadeira, a personagem perdera metade de sua vida maxima por segundo. 
 		 * aumentando assim o blur da camera.*/
 		if (InsideWater == true) {
-			health.curHealth -= health.maxHealth / 2 * Time.deltaTime;
+			health.curHealth -= health.maxHealth / 1.1f * Time.deltaTime;
 			mb.blurAmount += 0.3f * Time.deltaTime;
 				}
 		//Caso essa bool seja falsa, o blur da cemera sera diminuido 0.1f por segundo

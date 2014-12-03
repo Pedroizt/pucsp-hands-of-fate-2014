@@ -21,11 +21,17 @@ public class TriggerControl : MonoBehaviour {
 
 
 	public ParticleSystem torre1;
+	public ParticleSystem ptorre1;
 	public ParticleSystem torre2;
+	public ParticleSystem ptorre2;
 	public ParticleSystem torre3;
+	public ParticleSystem ptorre3;
 	public ParticleSystem torre4;
+	public ParticleSystem ptorre4;
 	public ParticleSystem torre5;
+	public ParticleSystem ptorre5;
 	public ParticleSystem torre6;
+	public ParticleSystem ptorre6;
 
 
 
@@ -45,6 +51,13 @@ public class TriggerControl : MonoBehaviour {
 		torre5.renderer.enabled = false;
 		torre6.renderer.enabled = false;
 
+		ptorre1.renderer.enabled = true;
+		ptorre2.renderer.enabled = false;
+		ptorre3.renderer.enabled = false;
+		ptorre4.renderer.enabled = false;
+		ptorre5.renderer.enabled = false;
+		ptorre6.renderer.enabled = false;
+
 
 
 	
@@ -56,40 +69,50 @@ public class TriggerControl : MonoBehaviour {
 			if (gameObject.tag == "1" && Once1) {
 
 			torre1.renderer.enabled = false;
+			ptorre1.renderer.enabled = false;
 			//Once1 = false;
 			check1 = true;
 			torre2.renderer.enabled = true;
+			ptorre2.renderer.enabled = true;
 
 				}
 
 		if (gameObject.tag == "2" && Once2) {
 			torre2.renderer.enabled = false;
+			ptorre2.renderer.enabled = false;
 			//Once2 = false;
 			check2 = true;
 			torre3.renderer.enabled = true;
+			ptorre3.renderer.enabled = true;
 				}
 
 		if (gameObject.tag == "3" && Once3 ) {
 
 			torre3.renderer.enabled = false;
+			ptorre3.renderer.enabled = false;
 			//Once3 = false;
 			check3 = true;
 			torre4.renderer.enabled = true;
+			ptorre4.renderer.enabled = true;
 				}
 
 		if (gameObject.tag == "4" && Once4) {
 			torre4.renderer.enabled = false;
+			ptorre4.renderer.enabled = false;
 			//Once4 = false;
 			check4 = true;
 			torre5.renderer.enabled = true;
+			ptorre5.renderer.enabled = true;
 				}
 
 			if (gameObject.tag == "5" && Once5) {
 
 			torre5.renderer.enabled = false;
+			ptorre5.renderer.enabled = false;
 			//Once5 = false;
 			check5 = true;
 			torre6.renderer.enabled = true;
+			ptorre6.renderer.enabled = true;
 
 				}
 
