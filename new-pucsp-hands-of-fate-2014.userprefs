@@ -1,18 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\HPThings\MasterEnemyClass.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Mecanicas\WaterTerrain.cs">
     <Files>
-      <File FileName="Assets\Scripts\HPThings\Hpsih.cs" Line="203" Column="112" />
-      <File FileName="Assets\Scripts\Magias\Ar\Desoxigen.cs" Line="32" Column="32" />
-      <File FileName="Assets\Scripts\IronRuins\CriarEscada.cs" Line="6" Column="2" />
-      <File FileName="Assets\Scripts\IronRuins\InstanciarEscada.cs" Line="6" Column="2" />
-      <File FileName="Assets\Scripts\IronRuins\ManequimLogic.cs" Line="10" Column="75" />
-      <File FileName="Assets\Scripts\LightTemple\CriadorLabirinto.cs" Line="8" Column="74" />
-      <File FileName="Assets\Scripts\LightTemple\GeradorLabirinto.cs" Line="8" Column="74" />
-      <File FileName="Assets\Imagens\Mapa\mapa.cs" Line="107" Column="35" />
-      <File FileName="Assets\Scripts\Historia\HistoriaControl.cs" Line="6" Column="89" />
-      <File FileName="Assets\Scripts\HPThings\MasterEnemyClass.cs" Line="8" Column="79" />
-      <File FileName="Assets\Modelos3D\TrueSihir\Damaged.cs" Line="42" Column="99" />
+      <File FileName="Assets\Scripts\Mecanicas\WaterTerrain.cs" Line="49" Column="46" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
