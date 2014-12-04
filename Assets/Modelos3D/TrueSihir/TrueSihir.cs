@@ -373,7 +373,7 @@ public class TrueSihir : MonoBehaviour
 				}
 
 		//caso ela colide com algum objeto que nao tenha tag, ela sera jogada levemente para tras, acionando a bool collided e disparando uma Coroutine.
-		if (col.gameObject.tag == "Untagged"){
+		if (col.gameObject.tag == "Untagged" || col.gameObject.tag == "Rocha"){
 			
 
 			gameObject.transform.position -= transform.forward * 0.5f;
