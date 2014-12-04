@@ -83,8 +83,10 @@ public class CutsceneControl : MonoBehaviour {
 
 						if (S4 == null && once4 == false) {
 								once = true;
-								Text.SetActive (false);
-				jogoinicia = true;
+								Text.SetActive (false);		
+								jogoinicia = true;
+								
+
 
 						}
 				}

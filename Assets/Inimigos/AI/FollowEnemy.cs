@@ -26,7 +26,9 @@ public class FollowEnemy : MonoBehaviour {
 	float pos;
 	public ParticleSystem teste;
 	SihirSounds Music;
-	bool already_music = false;
+	bool already_music;
+	bool still_battle;
+	float counter_music = 0;
 
 
 
@@ -38,6 +40,8 @@ public class FollowEnemy : MonoBehaviour {
 		GameObject h = GameObject.Find ("Sihir");
 		HPSihir = h.GetComponent<Hpsih> ();
 		Music = h.GetComponent<SihirSounds> ();
+		still_battle = false;
+		already_music = false;
 
 
 
@@ -80,18 +84,16 @@ public class FollowEnemy : MonoBehaviour {
 								hedgehog.SetBool ("idle", true);
 								//renderer.material.color = Color.yellow;
 								lookAt ();
-								if(already_music == false)
-						{
-								Music.Musics (2);
-								already_music = true;
-						}
+								still_battle = false;
+								//Check_Battle ();
 						}
 
 						if (Distancia > VistaDistancia) {
 			
 								hedgehog.SetBool ("idle", true);
-								already_music = false;
 								//renderer.material.color = Color.grey;
+								still_battle = false;
+								//Check_Battle ();
 						}
 
 						if (Distancia < AttackRange) {
@@ -107,8 +109,16 @@ public class FollowEnemy : MonoBehaviour {
 								hedgehog.SetBool ("walkin", true);
 
 
-
+								
 								chase ();
+								
+								still_battle = true;
+								if (!already_music)
+								{
+								Music.Musics (0);
+								already_music = true;
+								
+								}
 						}
 				}
 
@@ -118,6 +128,14 @@ public class FollowEnemy : MonoBehaviour {
 			hedgehog.SetBool("death", true);
 			Invoke("Smoke", 1.3f);
 
+			if (still_battle)
+			{
+
+				Music.StopMusics();
+				Music.Musics (1);
+
+			}
+			//Check_Battle ();
 
 
 			if (once == false)
@@ -162,7 +180,19 @@ public class FollowEnemy : MonoBehaviour {
 	}
 
 
+	void Check_Battle ()
+	{
 
+		if (!still_battle && already_music)
+		{
+
+
+			Music.Musics (1);
+			already_music = false;
+
+		}
+
+	}
 
 	void chase()
 	{
@@ -197,6 +227,8 @@ public class FollowEnemy : MonoBehaviour {
 			reset = true;
 
 				}
+
+	
 	}
 
 
