@@ -144,6 +144,7 @@ public class SeusFragmentos : MonoBehaviour
 						TextBEpil.SetActive (false);	
 						Textbox.SetActive (false);
 			Continue.SetActive (false);
+			paused = false;
 
 				}
 					
