@@ -19,6 +19,7 @@ public class mapa : MonoBehaviour {
 	bool notcloud4 = false;
 	//Controle para que o mapa nao abra durante a cutscene
 	private CutsceneControl opening;
+	private SeusFragmentos fr2;
 
 
 
@@ -35,6 +36,8 @@ public class mapa : MonoBehaviour {
 
 		GameObject c = GameObject.Find ("Opening Cutscene");
 		opening = c.GetComponent<CutsceneControl> ();
+		GameObject f = GameObject.Find ("Frags");
+		fr2 = f.GetComponent<SeusFragmentos> ();
 
 
 
@@ -47,7 +50,8 @@ public class mapa : MonoBehaviour {
 
 		//Caso o comando de mapa seja usado, apenas abre se o inventario n estiver aberto
 		//ou quando nao existe mais a cutscene inicial.
-		if(Input.GetButtonDown("Mapa") && isinventario == false && opening.jogoinicia == true)
+		if(Input.GetButtonDown("Mapa") && isinventario == false && opening.jogoinicia == true 
+		   && fr2.paused != true)
 		{
 			ismap = !ismap; //Ligar ou desligar o mapa.
 

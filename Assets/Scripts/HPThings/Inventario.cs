@@ -45,6 +45,7 @@ public class Inventario : MonoBehaviour {
 	public bool isinvent = false; //nao utilizado, saber se o inventario esta ligado.
 	private mapa map;//checar o mapa
 	private CutsceneControl opening;//checar para saber se a cutscene inicial ja aconteceu.
+	private SeusFragmentos fr2;
 
 	
 	/*public GameObject armor;
@@ -93,6 +94,9 @@ public class Inventario : MonoBehaviour {
 		GameObject c = GameObject.Find ("Opening Cutscene");
 		opening = c.GetComponent<CutsceneControl> ();
 
+		GameObject f = GameObject.Find ("Frags");
+		fr2 = f.GetComponent<SeusFragmentos> ();
+
 		//Icones dos feitiços desabilitados.
 		Air.SetActive (false);
 		BC.SetActive (false);
@@ -120,7 +124,8 @@ public class Inventario : MonoBehaviour {
 				
 		//Caso ja esteja fora da cutscene do jogo e que o mapa nao esta habilitado.
 		//E o botao do inventario foi pressionado (No caso START ou I).
-		if (Input.GetButtonDown("Inventario") && map.ismap == false && opening.jogoinicia == true) {
+		if (Input.GetButtonDown("Inventario") && map.ismap == false && opening.jogoinicia == true &&
+		    fr2.paused != true) {
 						pause ();//metodo para trocar a bool de pause, controlando o inventario.
 			
 						if (isPause || map.ismap) {

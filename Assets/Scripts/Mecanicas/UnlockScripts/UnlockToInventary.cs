@@ -5,6 +5,9 @@ public class UnlockToInventary : MonoBehaviour {
 
 
 	private Unlockeds un;
+	public GameObject texbox;
+	public GameObject altera;
+	bool once = false;
 	// Use this for initialization
 
 	
@@ -23,8 +26,16 @@ public class UnlockToInventary : MonoBehaviour {
 		}
 		
 		if (gameObject.tag == "BodyChange") {
-			Destroy(gameObject);
+			if (once == false)
+			{
+			gameObject.renderer.enabled = false;
 			un.UnlockedBodyChange = true;
+			texbox.SetActive(true);
+			altera.SetActive(true);
+			Invoke ("back", 3);
+			once = true;
+			}
+
 		}
 		
 		if (gameObject.tag == "Ice") {
@@ -93,4 +104,9 @@ public class UnlockToInventary : MonoBehaviour {
 		}
 
 }
+
+	void back ()
+	{	texbox.SetActive (false);
+		altera.SetActive (false);
+	}
 }
