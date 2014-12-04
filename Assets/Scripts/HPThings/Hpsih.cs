@@ -25,6 +25,7 @@ public class Hpsih : MonoBehaviour {
 
 	public bool counterEnable = false;//Contador para auxiliar o som de batimento cardiaco.
 	public float counter = 4;	
+	public bool already_music = false;
 		
 		
 
@@ -110,6 +111,16 @@ public class Hpsih : MonoBehaviour {
 		//Ao sua vida diminuir, quando nao esta pausado ou na cutscene atual, sua vida troca de cor
 		//com base na vida atual dela, sendo proporiconal a vida maxima.
 		if (pause.isPause == false && history.começacutscene == true && cutsc.jogoinicia == true) {
+							
+			if (!already_music)
+			{
+				SihirSounds.Musics (1);		
+				already_music = true;
+
+			}
+
+
+
 						if (curHealth >= maxHealth || curHealth > maxHealth / 1.25f)
 			{
 				maxH.SetActive (true);

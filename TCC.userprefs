@@ -1,13 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Modelos3D\TrueSihir\TrueSihir.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Inimigos\AI\FollowEnemy.cs">
     <Files>
+      <File FileName="Assets\Scripts\Sounds &amp; Effects\SihirSounds.cs" Line="18" Column="2" />
+      <File FileName="Assets\Scripts\Sounds &amp; Effects\SihirSounds.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Mecanicas\Criação de Magias\SpellCast.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Mecanicas\Criação de Magias\SpellCast.cs" Line="61" Column="25" />
-      <File FileName="Assets\Modelos3D\TrueSihir\TrueSihir.cs" Line="209" Column="11" />
-      <File FileName="Assets\Scripts\Sounds &amp; Effects\SihirSounds.cs" Line="108" Column="21" />
-      <File FileName="Assets\Scripts\Cutscenes\Eras\CutsceneControl.cs" Line="32" Column="26" />
-      <File FileName="Assets\Inimigos\AI\FollowEnemy.cs" Line="83" Column="28" />
+      <File FileName="Assets\Modelos3D\TrueSihir\TrueSihir.cs" Line="35" Column="17" />
+      <File FileName="Assets\Inimigos\AI\FollowEnemy.cs" Line="133" Column="1" />
+      <File FileName="Assets\Scripts\HPThings\Hpsih.cs" Line="28" Column="36" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

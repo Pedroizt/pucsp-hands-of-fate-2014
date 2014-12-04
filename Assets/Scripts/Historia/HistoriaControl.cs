@@ -46,7 +46,7 @@ public class HistoriaControl : MonoBehaviour {
 
 		if (!music_running) {
 
-			Music.Musics(0);
+			Music.History_Music ();
 			music_running = true;
 		}
 
@@ -79,7 +79,7 @@ public class HistoriaControl : MonoBehaviour {
 				Partes[i].renderer.enabled = false;
 				AperteF.renderer.enabled = false;
 
-				Music.StopMusic();
+				Music.StopHistory();
 
 
 					disable = true;
