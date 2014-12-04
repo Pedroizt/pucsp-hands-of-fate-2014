@@ -43,6 +43,7 @@ public class TrueSihir : MonoBehaviour
 		public float counter_f = 0.4f;	//O mesmo do anterior.
 		public bool jumpsound;//bool usada para auxiliar o som de pulo.
 		public float counter2 = 0;//Variavel necessaria para que ela comece a rir aleatoriamente.
+		private Hpsih hp;
 
 		//As variaveis abaixo foram utilizadas no controle de sons.
 		bool already_running = false;
@@ -56,7 +57,9 @@ public class TrueSihir : MonoBehaviour
 		//a variavel ja declarada.
 				GameObject a = GameObject.Find ("Sihir");
 				SihirSounds = a.GetComponent <SihirSounds> ();
-
+				
+		GameObject s = GameObject.Find ("Sihir");
+		hp = s.GetComponent<Hpsih> ();
 
 				rb = GetComponent<Rigidbody> ();//Para que a variavel consiga armazenar o Rigidbody do objeto.
 				pos = 0f;//o pos começara no 0.
@@ -372,13 +375,23 @@ public class TrueSihir : MonoBehaviour
 		//caso ela colide com algum objeto que nao tenha tag, ela sera jogada levemente para tras, acionando a bool collided e disparando uma Coroutine.
 		if (col.gameObject.tag == "Untagged"){
 			
-			Debug.Log ("Collided");
+
 			gameObject.transform.position -= transform.forward * 0.5f;
 			collided = true;
 			StartCoroutine(colcd());
 
 
 		}
+
+		//Recebendo dano ao encostar num objeto com tag fogo.
+		if (col.gameObject.tag == "Fire") {
+			gameObject.transform.position -= transform.forward * 0.5f;
+			collided = true;
+			StartCoroutine(colcd());
+			hp.Damaged = true;
+			hp.curHealth -= 2.0f;
+			Damage();
+				}
 
 
 		
