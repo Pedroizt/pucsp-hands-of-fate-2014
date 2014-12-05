@@ -7,26 +7,42 @@ public class SihirSounds : MonoBehaviour {
 	public AudioSource SihirVoices;
 	public AudioSource Heartbeat;
 	public AudioSource Footsteps;
-	public AudioSource Musics_au;
 	public AudioSource History_au;
+	public AudioSource Eras_au;
+	public AudioSource Battle_au;
+	public AudioSource EnemyAttack_au;
+	public AudioSource SwitchSound_au;
+
 
 	public AudioClip[] audioClip;
 	public AudioClip Heart_Sihir;
 	public AudioClip Footsteps_sihir;
-	public AudioClip[] Musics_ac;
 	public AudioClip History_ac;
-
+	public AudioClip Eras_ac;
+	public AudioClip Battle_ac;
+	public AudioClip EnemyAttack_ac;
+	public AudioClip SwitchSound_ac;
 
 
 	void Start ()
 	{
 
 		SihirVoices = (AudioSource)gameObject.AddComponent ("AudioSource");
+		SihirVoices.volume = 0.5f;
 		Heartbeat = (AudioSource)gameObject.AddComponent ("AudioSource");
+		Heartbeat.volume = 0.5f;
 		Footsteps = (AudioSource)gameObject.AddComponent ("AudioSource");
-		Musics_au = (AudioSource)gameObject.AddComponent ("AudioSource");
+		Footsteps.volume = 0.5f;
+		Eras_au = (AudioSource)gameObject.AddComponent ("AudioSource");
+		Eras_au.volume = 0.65f;
 		History_au = (AudioSource)gameObject.AddComponent ("AudioSource");
-
+		History_au.volume = 0.65f;
+		Battle_au = (AudioSource)gameObject.AddComponent ("AudioSource");
+		Battle_au.volume = 0.65f;
+		EnemyAttack_au = (AudioSource)gameObject.AddComponent ("AudioSource");
+		EnemyAttack_au.volume = 0.5f;
+		SwitchSound_au = (AudioSource)gameObject.AddComponent ("AudioSource");
+		SwitchSound_au.volume = 0.5f;
 
 
 	}
@@ -112,20 +128,68 @@ public class SihirSounds : MonoBehaviour {
 	}
 	#endregion
 
-	#region Musics Script
-	public void Musics (int clip)
+	#region Eras Music Script
+	public void ErasMusic ()
 	{
 		
-		Musics_au.clip = Musics_ac [clip];
-		Musics_au.Play ();
+		Eras_au.clip = Eras_ac;
+		Eras_au.Play ();
 		
 		
 	}
 	
-	public void StopMusics ()
+	public void ErasMute ()
 	{
-		Musics_au.Stop ();
+		Eras_au.mute = true;
+	}
+
+	public void ErasUnmute()
+	{
+		Eras_au.mute = false;
+
+	}
+
+	#endregion
+
+	#region Battle Music Script
+	public void BattleMusic ()
+	{
+		
+		Battle_au.clip = Battle_ac;
+		Battle_au.Play ();
+		
+		
+	}
+	
+	public void BattleMute ()
+	{
+		Battle_au.mute = true ;
+	}
+
+	public void BattleUnmute ()
+	{
+		Battle_au.mute = false;
 	}
 	#endregion
+
+	#region Enemy Attack Script
+	public void EnemyAttack()
+	{
+		EnemyAttack_au.clip = EnemyAttack_ac;
+		EnemyAttack_au.Play ();
+
+	}
+	#endregion
+
+	#region Switch Script
+	public void Switch_Sound ()
+	{
+
+		SwitchSound_au.clip = SwitchSound_ac;
+		SwitchSound_au.Play ();
+
+	}
+	#endregion
+
 
 }

@@ -114,7 +114,7 @@ public class Hpsih : MonoBehaviour {
 							
 			if (!already_music)
 			{
-				SihirSounds.Musics (1);		
+				SihirSounds.ErasMusic ();		
 				already_music = true;
 
 			}

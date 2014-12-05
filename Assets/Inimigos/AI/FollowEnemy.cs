@@ -25,7 +25,7 @@ public class FollowEnemy : MonoBehaviour {
 	Vector3 inipos;
 	float pos;
 	public ParticleSystem teste;
-	SihirSounds Music;
+	SihirSounds Music;	
 	bool already_music;
 	bool still_battle;
 	float counter_music = 0;
@@ -42,7 +42,6 @@ public class FollowEnemy : MonoBehaviour {
 		Music = h.GetComponent<SihirSounds> ();
 		still_battle = false;
 		already_music = false;
-
 
 
 
@@ -85,21 +84,18 @@ public class FollowEnemy : MonoBehaviour {
 								//renderer.material.color = Color.yellow;
 								lookAt ();
 								still_battle = false;
-								//Check_Battle ();
 						}
 
 						if (Distancia > VistaDistancia) {
 			
 								hedgehog.SetBool ("idle", true);
 								//renderer.material.color = Color.grey;
-								still_battle = false;
-								//Check_Battle ();
+				still_battle = false;
 						}
 
 						if (Distancia < AttackRange) {
 
 								hedgehog.SetTrigger ("attack");
-								
 			
 						} else if (Distancia < ChaseRange) {
 
@@ -112,14 +108,20 @@ public class FollowEnemy : MonoBehaviour {
 								
 								chase ();
 								
-								still_battle = true;
+								
 								if (!already_music)
 								{
-								Music.Musics (0);
+								Music.ErasMute ();
+								Music.BattleMusic ();
+								Music.BattleUnmute ();
 								already_music = true;
+								still_battle = true;
+				}
 								
-								}
-						}
+							}
+						
+			
+
 				}
 
 		else {
@@ -128,14 +130,21 @@ public class FollowEnemy : MonoBehaviour {
 			hedgehog.SetBool("death", true);
 			Invoke("Smoke", 1.3f);
 
-			if (still_battle)
+				
+			still_battle = false;
+			Music.BattleMute();
+			if (!still_battle)
 			{
-
-				Music.StopMusics();
-				Music.Musics (1);
-
+				
+				counter_music += Time.deltaTime;
+				if (counter_music >1.5f)
+				{
+					Music.ErasUnmute();
+					counter_music = 0;
+				}
+				already_music = false;
+				
 			}
-			//Check_Battle ();
 
 
 			if (once == false)
@@ -180,19 +189,7 @@ public class FollowEnemy : MonoBehaviour {
 	}
 
 
-	void Check_Battle ()
-	{
 
-		if (!still_battle && already_music)
-		{
-
-
-			Music.Musics (1);
-			already_music = false;
-
-		}
-
-	}
 
 	void chase()
 	{
