@@ -13,12 +13,16 @@ public class CrystalSwitch : MonoBehaviour {
 	private CristalGrande cgrande; //Variavel da classe CristalGrande
 	public GameObject F; //GameObject que armazena a imagem "F" usada para mostrar ao jogador que tecla apertar ao chegar proximo a switch.
 
+	SihirSounds TriggerSound;
+
 	// Use this for initialization
 	void Awake () {
 
 		//O objeto e inicializado com a cor vermelha.
 		gameObject.renderer.material.color = Color.red; 
 
+		GameObject x = GameObject.Find ("Sihir");
+		TriggerSound = x.GetComponent <SihirSounds> ();
 
 
 		//O GameObject F esta desativado na inicializaçao
@@ -61,6 +65,7 @@ public class CrystalSwitch : MonoBehaviour {
 			if (Input.GetButtonDown("Trigger")&& naofucionamais == false)
 			{
 			
+				TriggerSound.Switch_Sound();
 			gameObject.renderer.material.color = Color.blue;
 			gameObject.tag = "On";
 			cgrande.Start ();
