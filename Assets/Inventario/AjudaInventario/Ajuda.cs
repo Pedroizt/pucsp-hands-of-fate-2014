@@ -21,7 +21,7 @@ public class Ajuda : MonoBehaviour {
 
 	//Caso o jogador use o botao indicado, ele saira da ajuda, tirando o objeto homonimo e reativando o botao para clicar na ajuda.
 	void Update(){
-		if(Input.GetButtonDown("Trigger"))
+		if(Input.GetButtonDown("Trigger") || Input.GetButtonDown("Inventario"))
 		help.SetActive (false);
 		crystal.renderer.enabled = true;
 	}

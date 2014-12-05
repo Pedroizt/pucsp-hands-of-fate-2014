@@ -18,14 +18,14 @@ public class UnlockToInventary : MonoBehaviour {
 		un = u.GetComponent<Unlockeds> ();
 	}
 
-	void OnTriggerEnter()
+	void OnTriggerEnter(Collider col)
 	{
 		if (gameObject.tag == "Air") {
 			Destroy (gameObject);
 			un.UnlockedAir = true;
 		}
 		
-		if (gameObject.tag == "BodyChange") {
+		if (gameObject.tag == "BodyChange" && col.gameObject.tag == "Player") {
 			if (once == false)
 			{
 			gameObject.renderer.enabled = false;
