@@ -13,7 +13,7 @@ public class FollowEnemy : MonoBehaviour {
 	Transform Target;
 	float VistaDistancia = 25.0f;
 	float ChaseRange = 10.0f;
-	float AttackRange = 1.0f;
+	float AttackRange = 3.0f;
 	float MoveSpeed = 1.0f;
 	float smoothing = 6.0f;
 	private Animator hedgehog;
@@ -29,13 +29,16 @@ public class FollowEnemy : MonoBehaviour {
 	bool already_music;
 	bool still_battle;
 	float counter_music = 0;
+	CharacterController ch;
+	public NavMeshAgent nv;
+	bool death = false;
 
 
 
 
 	void Start ()
 	{
-		Target = GameObject.Find ("Sihir/Target").transform ;
+		Target = GameObject.Find ("Sihir").transform ;
 
 		GameObject h = GameObject.Find ("Sihir");
 		HPSihir = h.GetComponent<Hpsih> ();
@@ -55,7 +58,7 @@ public class FollowEnemy : MonoBehaviour {
 		cols = gameObject.AddComponent<BoxCollider> ();*/
 
 
-
+		ch = gameObject.GetComponent<CharacterController> ();
 
 		childcol = GameObject.Find ("bigcrush 1(Clone)/idle/Bip001");
 
@@ -105,7 +108,7 @@ public class FollowEnemy : MonoBehaviour {
 								hedgehog.SetBool ("walkin", true);
 
 
-								
+								if (death == false)
 								chase ();
 								
 								
@@ -129,6 +132,7 @@ public class FollowEnemy : MonoBehaviour {
 			hedgehog.SetBool("walkin", false);
 			hedgehog.SetBool("death", true);
 			Invoke("Smoke", 1.3f);
+			death = true;
 
 				
 			still_battle = false;
@@ -167,6 +171,8 @@ public class FollowEnemy : MonoBehaviour {
 			hedgehog.SetBool("death", false);
 			hedgehog.SetTrigger("attack");
 			gameObject.transform.position = inipos;
+			ch.enabled = true;
+			nv.enabled = true;
 
 				}
 
@@ -193,7 +199,7 @@ public class FollowEnemy : MonoBehaviour {
 
 	void chase()
 	{
-		transform.Translate(-Vector3.forward * MoveSpeed * Time.deltaTime);
+		nv.SetDestination (Target.transform.position);
 
 
 		//pos = -transform.forward.x * MoveSpeed * Time.deltaTime;
@@ -214,6 +220,8 @@ public class FollowEnemy : MonoBehaviour {
 
 	IEnumerator respawns()
 	{
+		ch.enabled = false;
+		nv.enabled = false;
 		yield return new WaitForSeconds (2);
 		{
 			foreach(Transform child in this.transform)
@@ -222,6 +230,7 @@ public class FollowEnemy : MonoBehaviour {
 			}
 			yield return new WaitForSeconds(30);
 			reset = true;
+			death = false;
 
 				}
 

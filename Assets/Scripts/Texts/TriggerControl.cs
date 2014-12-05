@@ -64,9 +64,9 @@ public class TriggerControl : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void OnTriggerEnter(){
+	void OnTriggerEnter(Collider col){
 
-			if (gameObject.tag == "1" && Once1) {
+			if (gameObject.tag == "1" && Once1 && col.gameObject.tag == "Player") {
 
 			torre1.renderer.enabled = false;
 			ptorre1.renderer.enabled = false;
@@ -77,7 +77,7 @@ public class TriggerControl : MonoBehaviour {
 
 				}
 
-		if (gameObject.tag == "2" && Once2) {
+		if (gameObject.tag == "2" && Once2&& col.gameObject.tag == "Player") {
 			torre2.renderer.enabled = false;
 			ptorre2.renderer.enabled = false;
 			//Once2 = false;
@@ -86,7 +86,7 @@ public class TriggerControl : MonoBehaviour {
 			ptorre3.renderer.enabled = true;
 				}
 
-		if (gameObject.tag == "3" && Once3 ) {
+		if (gameObject.tag == "3" && Once3 && col.gameObject.tag == "Player") {
 
 			torre3.renderer.enabled = false;
 			ptorre3.renderer.enabled = false;
@@ -96,7 +96,7 @@ public class TriggerControl : MonoBehaviour {
 			ptorre4.renderer.enabled = true;
 				}
 
-		if (gameObject.tag == "4" && Once4) {
+		if (gameObject.tag == "4" && Once4&& col.gameObject.tag == "Player") {
 			torre4.renderer.enabled = false;
 			ptorre4.renderer.enabled = false;
 			//Once4 = false;
@@ -105,7 +105,7 @@ public class TriggerControl : MonoBehaviour {
 			ptorre5.renderer.enabled = true;
 				}
 
-			if (gameObject.tag == "5" && Once5) {
+		if (gameObject.tag == "5" && Once5&& col.gameObject.tag == "Player") {
 
 			torre5.renderer.enabled = false;
 			ptorre5.renderer.enabled = false;
@@ -116,7 +116,7 @@ public class TriggerControl : MonoBehaviour {
 
 				}
 
-		if (gameObject.tag == "6" && Once6 && check5 == true) {
+		if (gameObject.tag == "6" && Once6 && check5 == true&& col.gameObject.tag == "Player") {
 			torre6.renderer.enabled = false;
 			check6 = true;
 			Once6 = false;
